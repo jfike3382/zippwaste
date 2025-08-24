@@ -1,17 +1,17 @@
 This is a [Next.js](https://nextjs.org) project
 
-To run the app localy use:
+### To run the app localy use:
 
-> npm run dev
-> Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. npm run dev
+2. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To run the Cloudlfare server:
+### To run the Cloudlfare server:
 
-> npm run build
-> npx @cloudflare/next-on-pages@1
-> npx wrangler pages dev .vercel/output/static --compatibility-flags=nodejs_compat --port 8789
+1. npm run build
+2. npx @cloudflare/next-on-pages@1
+3. npx wrangler pages dev .vercel/output/static --compatibility-flags=nodejs_compat --port 8789
 
-To push changes to main Github branch:
+### To push changes to main Github branch:
 
 1. Sync everything on staging (commit)
 2. Switch to the main branch (git checkout main)
