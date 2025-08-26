@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 import ProjectLogo from "./project-logo";
@@ -9,8 +8,6 @@ import { ContentCenter, ContentRight } from "./nav-bar-content";
 import NavBarMobile from "./nav-bar-mobile";
 
 export default function NavBar() {
-  const pathname = usePathname();
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleToggleMenu = () => setMenuOpen((prev) => !prev);

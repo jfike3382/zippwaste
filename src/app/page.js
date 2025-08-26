@@ -1,17 +1,19 @@
-import Image from "next/image";
+import generateMetadata from "@/utils/seo-metadata/static";
+import PageWrapper from "./page-wrapper";
 
-export default function Home() {
+export const metadata = generateMetadata({
+  title: "Zippwaste: Find Investors, Pitch Them, Raise Money",
+  description:
+    "Discover top investors, fundraising strategies, and expert guides to scale your startup successfully.",
+  url: "/",
+  keywords:
+    "startup fundraising, venture capital, find investors, startup growth, funding strategies, investor database",
+});
+
+export default async function Page() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center">
-        <Image
-          src="/zippwaste-logo.svg"
-          alt="Zippwaste Logo"
-          width={200}
-          height={100}
-        />
-        <h1 className="text-4xl font-bold">Project launch soon</h1>
-      </main>
-    </div>
+    <main className="main-container">
+      <PageWrapper />
+    </main>
   );
 }
