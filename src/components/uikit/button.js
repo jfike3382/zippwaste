@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useActionRouter } from "@/utils/use-action-router";
-import { useUserState } from "@/providers/user-state-provider";
 import { ensureHttps } from "@/utils/ensure-https";
 
 export default function Button({
@@ -20,15 +18,7 @@ export default function Button({
   selected = false,
   href,
   hrefType = "internal",
-  restriction, // "visitor" or "user"
 }) {
-  const { handleActionRegistration, handleAction } = useActionRouter();
-  const { isVisitor, isUser } = useUserState();
-
-  const restricted =
-    (restriction === "visitor" && isVisitor) ||
-    (restriction === "user" && isUser);
-
   const sizeClass = size ? `button-${size}` : "";
   const variantClass = variant ? `button-${variant}` : "";
   const disabledClass = disabled || loading ? "button-disabled" : "";
@@ -42,11 +32,7 @@ export default function Button({
       e.preventDefault();
       return;
     }
-    if (restriction === "visitor") {
-      handleActionRegistration(e);
-    } else if (restriction === "user") {
-      handleAction(e);
-    } else if (onClick) {
+    if (onClick) {
       onClick(e);
     }
   };
@@ -126,7 +112,7 @@ export default function Button({
     .filter(Boolean)
     .join(" ");
 
-  if (href && !restricted) {
+  if (href) {
     if (hrefType === "external") {
       const safeHref = ensureHttps(href);
       return (
