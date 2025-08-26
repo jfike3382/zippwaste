@@ -3,14 +3,10 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import useNavBarScrollOpacity from "@/utils/use-nav-bar-scroll-opacity";
 
-import ProjectLogo from "@/components/global-elements/project-logo";
-import {
-  ContentCenter,
-  ContentRight,
-} from "@/components/global-elements/nav-bar/nav-bar-content";
-import NavBarMobile from "@/components/global-elements/nav-bar/nav-bar-mobile";
+import ProjectLogo from "./project-logo";
+import { ContentCenter, ContentRight } from "./nav-bar-content";
+import NavBarMobile from "./nav-bar-mobile";
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -32,22 +28,8 @@ export default function NavBar() {
     };
   }, [menuOpen]);
 
-  const bgOpacity = useNavBarScrollOpacity(pathname);
-
-  const isAnimatedPage = pathname === "/";
-
   return (
-    <nav
-      className={`nav-bar ${isAnimatedPage ? "nav-bar-home" : ""}`}
-      style={
-        isAnimatedPage
-          ? {
-              backgroundColor: `rgba(255,255,255,${bgOpacity})`,
-              borderBottom: `1px solid rgba(34,34,34,${bgOpacity})`,
-            }
-          : {}
-      }
-    >
+    <nav className="nav-bar">
       <div onClick={handleCloseMenu}>
         <ProjectLogo />
       </div>

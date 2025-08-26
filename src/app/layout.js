@@ -1,28 +1,23 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "@/styles/global.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { NotificationProvider } from "@/providers/notifications";
+import NavBar from "@/components/nav-bar/nav-bar";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
 });
-
-export const metadata = {
-  title: "Zippwaste",
-  description: "Zippwaste Project",
-};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${inter.variable} `}>
+        <NotificationProvider>
+          <NavBar />
+          {children}
+        </NotificationProvider>
       </body>
     </html>
   );
