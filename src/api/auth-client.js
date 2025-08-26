@@ -44,3 +44,10 @@ export async function PassSetNewPass(data) {
     new_password: data.new_password,
   });
 }
+
+// Auth APIs
+export const AuthApi = {
+  getMe: () => {
+    return apiRequest(`/auth/me`, "GET", null, true);
+  },
+};

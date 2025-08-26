@@ -1,7 +1,7 @@
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import { getCookie, setCookie } from "@/utils/cookies";
-import { AuthApi } from "@/api/support-client";
+import { AuthApi } from "@/api/auth-client";
 
 const UserStateContext = createContext();
 
