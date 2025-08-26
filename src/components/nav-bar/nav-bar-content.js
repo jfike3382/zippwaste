@@ -27,7 +27,7 @@ export function ContentRight() {
           openRegisterModal();
         }}
       >
-        Create account
+        Claim listing
       </Button>
     </div>
   ) : (
@@ -108,7 +108,7 @@ export function ContentMobile({ onClose }) {
               openRegisterModal();
             }}
           >
-            Create account
+            Claim listing
           </Button>
         </div>
       ) : (

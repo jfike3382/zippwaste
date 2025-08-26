@@ -1,5 +1,5 @@
 .button-base {
-  @apply cursor-pointer flex flex-row gap-2 items-center font-semibold transition-all border rounded-4xl;
+  @apply cursor-pointer flex flex-row gap-2 items-center font-semibold transition-all border rounded-xl;
 }
 
 /* Size styles */
@@ -25,7 +25,7 @@
   @apply text-black border-brand-gray-400 bg-white hover:bg-brand-gray-200 active:bg-brand-gray-400;
 }
 .button-black {
-  @apply bg-brand-gray-900 border-brand-gray-900 text-white hover:text-white/60;
+  @apply bg-[#ffd04d] border-[#ffd04d] text-neutral-950 hover:text-white/60;
 }
 .button-transparent {
   @apply text-black bg-transparent border-transparent hover:text-black/60;
