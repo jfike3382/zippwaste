@@ -1,31 +1,110 @@
 @import "tailwindcss";
+@import "./utilities.css";
 
+@import "./checkbox.css";
 @import "./dropdown.css";
-@import "./button.css";
 @import "./input.css";
+@import "./loader.css";
 @import "./modal.css";
 @import "./nav-bar.css";
 @import "./notification.css";
+@import "./switcher.css";
+@import "./tags.css";
+@import "./button.css";
 
 @theme {
-  --color-primary-50: #e0f2ff;
-  --color-primary-100: #cff0ff;
-  --color-primary-200: #beeaff;
-  --color-primary-300: #ade4ff;
-  --color-primary-400: #9cdcff;
-  --color-primary-500: #75ceff;
-  --color-primary-600: #00a3ff;
-  --color-primary-700: #0088d6;
-  --color-primary-800: #006aa3;
-  --color-primary-900: #004466;
+  --color-brand-gray-900: #222222;
+  --color-brand-gray-800: #777777;
+  --color-brand-gray-600: #bbbab8;
+  --color-brand-gray-500: #cccccc;
+  --color-brand-gray-400: #dedddd;
+  --color-brand-gray-300: #e5e5e5;
+  --color-brand-gray-200: #f6f6f6;
+
+  --color-brand-blue-800: #1c74f9;
+  --color-brand-blue-400: #aec5e7;
+  --color-brand-blue-200: #d3e0f3;
+
+  --color-brand-red-800: #e00000;
+  --color-brand-red-400: #ed9f9f;
+  --color-brand-red-200: #ffdbdb;
+
+  --color-brand-green-500: #d9ff55;
+
+  --color-brand-violet-500: #d554e9;
 }
 
-body {
-  @apply inter text-neutral-950 bg-neutral-100 antialiased transition-all duration-200 ease-in-out h-screen flex flex-col overflow-hidden;
+/* Global */
+
+@layer base {
+  body {
+    @apply inter text-brand-gray-900 antialiased transition-all duration-200 ease-in-out h-screen flex flex-col overflow-hidden;
+  }
+}
+
+main {
+  @apply flex overflow-hidden;
+}
+
+strong {
+  @apply font-semibold;
+}
+
+ul {
+  @apply list-disc list-outside pl-5;
+}
+
+li {
+  @apply pl-2;
+}
+
+blockquote {
+  @apply flex flex-col gap-4 p-5 pt-10 bg-white italic font-medium rounded-lg relative overflow-hidden;
+}
+
+blockquote::before {
+  content: "";
+  @apply absolute left-0 top-0 bottom-0 w-1 bg-brand-gray-300  pt-40;
+}
+
+blockquote::after {
+  content: "\201C";
+  @apply absolute top-2 left-4 text-6xl text-brand-gray-400 font-serif;
+}
+
+.rich-text-section {
+  @apply flex flex-col gap-4 paragraph-l;
+}
+
+.rich-text-section a {
+  @apply text-brand-blue-800 cursor-pointer;
+}
+
+.main-container {
+  @apply flex flex-col flex-1 min-h-[calc(100vh-80px)] overflow-y-auto relative;
+}
+
+.main-container-data-block {
+  @apply flex flex-col w-full relative gap-16 p-12 mb-16 max-md:p-5 max-lg:p-10 max-md:pb-10;
+}
+
+.auth-container {
+  @apply flex flex-col gap-6 items-center justify-center w-full max-w-md py-16 max-md:px-5 max-md:py-10;
+}
+
+/* Global */
+
+/* Misc */
+.divider {
+  @apply border-t border-brand-gray-400 w-full;
+}
+
+.divider.vertical {
+  @apply border-l border-brand-gray-400 w-px;
 }
 
 .navigation-cell {
-  @apply flex flex-row items-center gap-2 py-1.5 px-3 w-full text-sm font-medium text-neutral-950 cursor-pointer transition-all hover:bg-neutral-200;
+  @apply flex flex-row items-center gap-2 py-1.5 px-3 w-full text-sm font-medium text-brand-gray-900 cursor-pointer transition-all hover:bg-brand-gray-200;
 }
 
 .navigation-cell.no-click {
@@ -33,7 +112,7 @@ body {
 }
 
 .logo {
-  @apply flex items-center justify-center bg-neutral-200 border-standard overflow-hidden relative text-base font-medium shrink-0;
+  @apply flex items-center justify-center bg-brand-gray-200 border-standard overflow-hidden relative text-base font-medium shrink-0;
 }
 
 .logo.s {

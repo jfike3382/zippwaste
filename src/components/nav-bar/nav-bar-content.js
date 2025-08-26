@@ -1,4 +1,3 @@
-"use client"
 import Link from "next/link";
 
 import Button from "@/components/uikit/button";
@@ -6,8 +5,8 @@ import UserMenu from "./user-menu";
 import { useUserState } from "@/providers/user-state-provider";
 import { useModal } from "@/providers/auth-modal";
 
-export async function ContentRight() {
-  const { isVisitor, isCustomer, companyPage } = useUserState();
+export function ContentRight() {
+  const { isVisitor, isCustomer, startupPage } = useUserState();
   const { openRegisterModal, openLoginModal } = useModal();
 
   return isVisitor ? (
@@ -38,7 +37,7 @@ export async function ContentRight() {
           <p className="violet-gradient-text">Pro</p>
         </div>
       )}
-      {!isCompanyPage && (
+      {!startupPage && (
         <Button variant="black" size="m" href="/edit-startup">
           Publish startup
         </Button>
@@ -49,8 +48,8 @@ export async function ContentRight() {
   );
 }
 
-export async function ContentMobile({ onClose }) {
-  const { isVisitor, isCustomer, isCompanyPage } = await UserState();
+export function ContentMobile({ onClose }) {
+  const { isVisitor, isCustomer, startupPage } = useUserState();
   const { openRegisterModal, openLoginModal } = useModal();
 
   return (
@@ -109,13 +108,13 @@ export async function ContentMobile({ onClose }) {
               openRegisterModal();
             }}
           >
-            Claim your listing
+            Create account
           </Button>
         </div>
       ) : (
         <div className="flex flex-col gap-4 w-full">
           <UserMenu onClose={onClose} variant="extended" />
-          {!isCompanyPage && (
+          {!startupPage && (
             <Button
               variant="black"
               size="m"

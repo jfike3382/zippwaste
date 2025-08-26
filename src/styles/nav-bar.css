@@ -51,3 +51,12 @@
 .nav-bar-mobile.open {
   transform: translateX(0);
 }
+
+/* Home page variant */
+.nav-bar-home {
+  border-bottom: 0;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  background-color: transparent;
+}

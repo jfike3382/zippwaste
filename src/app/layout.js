@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "@/styles/global.css";
+import "../styles/global.css";
 
 import { NotificationProvider } from "@/providers/notifications";
 import { AuthModalProvider } from "@/providers/auth-modal";
@@ -18,10 +18,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} `}>
         <UserStateProvider>
           <NotificationProvider>
-            <AuthModalProvider>
-              <NavBar />
-              {children}
-            </AuthModalProvider>
+            <AuthModalProvider>{children}</AuthModalProvider>
           </NotificationProvider>
         </UserStateProvider>
       </body>

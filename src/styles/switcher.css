@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "./utilities.css";
+
+.switcher-container {
+  @apply flex flex-row gap-3 justify-center border-standard p-1 rounded-4xl shadow-base w-fit bg-brand-gray-200 relative;
+}
+
+.switcher-btn {
+  @apply flex flex-row gap-2 items-center font-semibold text-sm px-3 max-md:px-2 py-1.5 rounded-4xl cursor-pointer h-8 relative z-10 transition-all duration-100 ease-in-out;
+}
+
+.switcher-tag {
+  @apply flex items-center justify-center rounded-2xl py-0.5 px-2.5 bg-white border-standard text-xs font-semibold uppercase h-fit;
+}
+
+.switcher-tag.active {
+  @apply bg-brand-gray-300 border-standard;
+}
+.sliding-background {
+  @apply absolute bg-white border-standard rounded-4xl h-8 w-0 left-1 transition-all duration-300 ease-in-out;
+}
