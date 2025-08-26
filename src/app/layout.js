@@ -18,7 +18,10 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} `}>
         <UserStateProvider>
           <NotificationProvider>
-            <AuthModalProvider>{children}</AuthModalProvider>
+            <AuthModalProvider>
+              <NavBar />
+              {children}
+            </AuthModalProvider>
           </NotificationProvider>
         </UserStateProvider>
       </body>
