@@ -13,11 +13,11 @@ export function NotificationProvider({ children }) {
     setNotification({ type, message });
 
     setTimeout(() => {
-      setVisible(true); // Apply 'show' class
+      setVisible(true);
     }, 10);
 
     setTimeout(() => {
-      setVisible(false); // Remove 'show' class (fade-out)
+      setVisible(false);
       setTimeout(() => setNotification(null), 300);
     }, 5000);
   };
