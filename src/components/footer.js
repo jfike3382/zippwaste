@@ -42,27 +42,8 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <p className="font-medium !text-brand-gray-600">
-        Designed by{" "}
-        <a
-          className="text-white"
-          href="https://homebased.studio/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Home Based Studio
-        </a>
-        , developed by{" "}
-        <a
-          className="text-white"
-          href="https://happy-vibes.tech/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Happy Vibes
-        </a>
-      </p>
-      <p>© 2025 Raizer. All rights reserved.</p>
+
+      <p>© 2025 Zippwaste. All rights reserved.</p>
     </section>
   );
 }
