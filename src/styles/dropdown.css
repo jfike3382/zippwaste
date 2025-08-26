@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.dropdown-list {
+  @apply absolute flex flex-col gap-1 bg-white shadow-l rounded-2xl z-[9999] overflow-hidden;
+}
+
+.dropdown-scroll {
+  @apply max-h-96 overflow-scroll flex flex-col gap-1 py-1 ;
+}

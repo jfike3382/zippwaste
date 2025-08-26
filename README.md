@@ -17,3 +17,4 @@ This is a [Next.js](https://nextjs.org) project
 2. Switch to the main branch (git checkout main)
 3. Merge changes (git merge staging)
 4. Push changes (git push origin main)
+5. Initiate development to the production on Cloudflare
