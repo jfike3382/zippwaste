@@ -68,7 +68,7 @@ export default function Input({
         <p className="input-label">
           {label}
           {optional && (
-            <span className="text-xs text-brand-gray-800"> (Optional)</span>
+            <span className="text-xs text-neutral-600"> (Optional)</span>
           )}
         </p>
       )}

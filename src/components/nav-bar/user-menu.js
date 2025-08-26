@@ -8,7 +8,7 @@ import { useUserState } from "@/providers/user-state-provider";
 import { formatNumber } from "@/utils/format-data/number";
 
 export default function UserMenu({ onClose, variant = "default" }) {
-  const { isCustomer, startupPage } = useUserState();
+  const { isCustomer, companyPage } = useUserState();
 
   const userName = getCookie("user_name");
   const userEmail = getCookie("user_email");
@@ -22,7 +22,7 @@ export default function UserMenu({ onClose, variant = "default" }) {
         <ProfileLogo name={userName} src={userLogo} />
         <div className="flex flex-col gap-0.5 text-xs font-medium line-clamp-1">
           <p>{userName}</p>
-          <p className="text-brand-gray-800 line-clamp-1">{userEmail}</p>
+          <p className="text-neutral-600 line-clamp-1">{userEmail}</p>
         </div>
       </div>
     ) : (
@@ -40,27 +40,19 @@ export default function UserMenu({ onClose, variant = "default" }) {
         <ProfileLogo name={userName} src={userLogo} />
         <div className="flex flex-col gap-0.5 text-xs font-medium line-clamp-1">
           <p>{userName}</p>
-          <p className="text-brand-gray-800 line-clamp-1">{userEmail}</p>
+          <p className="text-neutral-600 line-clamp-1">{userEmail}</p>
         </div>
       </div>
       <div className="divider" />
-      {startupPage && (
+      {companyPage && (
         <Link
-          href={`/startup/${startupPage.slug}`}
+          href={`/company/${companyPage.slug}`}
           className="navigation-cell"
           onClick={onClose}
         >
-          {startupPage.name}
+          {companyPage.name}
         </Link>
       )}
-      <Link href="/exports" className="navigation-cell" onClick={onClose}>
-        <div className="flex flex-row justify-between w-full items-center">
-          <p>Exports</p>
-          {isCustomer && (
-            <p className="text-xs text-brand-gray-800">{userExports} left</p>
-          )}
-        </div>
-      </Link>
       <Link href="/billing" className="navigation-cell" onClick={onClose}>
         Billing
       </Link>

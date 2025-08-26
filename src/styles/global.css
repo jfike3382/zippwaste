@@ -23,3 +23,27 @@
 body {
   @apply inter text-neutral-950 bg-neutral-100 antialiased transition-all duration-200 ease-in-out h-screen flex flex-col overflow-hidden;
 }
+
+.navigation-cell {
+  @apply flex flex-row items-center gap-2 py-1.5 px-3 w-full text-sm font-medium text-neutral-950 cursor-pointer transition-all hover:bg-neutral-200;
+}
+
+.navigation-cell.no-click {
+  @apply cursor-auto hover:bg-white;
+}
+
+.logo {
+  @apply flex items-center justify-center bg-neutral-200 border-standard overflow-hidden relative text-base font-medium shrink-0;
+}
+
+.logo.s {
+  @apply size-8 rounded-full box-border;
+}
+
+.logo.m {
+  @apply size-16 title-m rounded-2xl;
+}
+
+.logo.l {
+  @apply size-32 text-5xl font-semibold rounded-4xl;
+}
