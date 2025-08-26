@@ -47,3 +47,23 @@ body {
 .logo.l {
   @apply size-32 text-5xl font-semibold rounded-4xl;
 }
+
+/* Conditional Visibility */
+
+@media (max-width: 768px) {
+  .mobile-hidden {
+    @apply hidden max-md:hidden;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .tablet-hidden {
+    @apply hidden;
+  }
+}
+
+@media (min-width: 1281px) {
+  .desktop-hidden {
+    @apply hidden;
+  }
+}
