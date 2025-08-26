@@ -1,0 +1,48 @@
+.button-base {
+  @apply cursor-pointer flex flex-row gap-2 items-center font-semibold transition-all border rounded-4xl;
+}
+
+/* Size styles */
+.button-s {
+  @apply text-sm px-2.5 gap-1.5 h-[1.875rem] max-md:h-[2.5rem];
+}
+.button-m {
+  @apply text-base py-2 px-4 h-10;
+}
+.button-l {
+  @apply text-lg/6 py-3 px-4 h-12;
+}
+.button-xl {
+  @apply text-lg py-4 px-6;
+}
+.button-icon_s {
+  @apply max-w-8 max-h-8 max-md:max-w-10 max-md:max-h-10;
+}
+
+/* Variant styles */
+
+.button-secondary {
+  @apply text-black border-brand-gray-400 bg-white hover:bg-brand-gray-200 active:bg-brand-gray-400;
+}
+.button-black {
+  @apply bg-brand-gray-900 border-brand-gray-900 text-white hover:text-white/60;
+}
+.button-transparent {
+  @apply text-black bg-transparent border-transparent hover:text-black/60;
+}
+.button-icon {
+  @apply w-10 h-10 border-standard bg-white hover:bg-brand-gray-200 active:bg-brand-gray-400;
+}
+.button-gradient {
+  @apply violet-gradient text-white border-0 shadow-[0_0_24px_0_#e5e2da] hover:text-white/60;
+}
+
+/* Disabled styles */
+.button-disabled {
+  @apply cursor-not-allowed opacity-50;
+}
+
+/* Selected state */
+.button-selected {
+  @apply !border-black;
+}
