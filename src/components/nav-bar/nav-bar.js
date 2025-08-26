@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import ProjectLogo from "./project-logo";
-import { ContentCenter, ContentRight } from "./nav-bar-content";
+import { ContentRight } from "./nav-bar-content";
 import NavBarMobile from "./nav-bar-mobile";
 
 export default function NavBar() {
@@ -31,9 +31,6 @@ export default function NavBar() {
         <ProjectLogo />
       </div>
 
-      <div className="nav-bar-center tablet-hidden mobile-hidden">
-        <ContentCenter />
-      </div>
       <div className="nav-bar-right tablet-hidden mobile-hidden">
         <ContentRight />
       </div>

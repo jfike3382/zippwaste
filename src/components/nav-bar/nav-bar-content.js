@@ -1,43 +1,14 @@
+"use client";
+
 import Link from "next/link";
 
 import Button from "@/components/uikit/button";
 import UserMenu from "./user-menu";
-import { useUserState } from "@/providers/user-state-provider";
+import { UserState } from "@/utils/server-user-state";
 import { useModal } from "@/providers/auth-modal";
 
-export function ContentCenter() {
-  return (
-    <div className="flex flex-row">
-      <Link href="/investors">
-        <Button variant="transparent" size="m">
-          Investors
-        </Button>
-      </Link>
-      <Link
-        className="cursor-pointer flex flex-row gap-2 items-center font-semibold transition-all border rounded-[2rem] text-black bg-transparent border-transparent hover:text-black/60 text-base py-2 px-4 h-10;"
-        href="/startups"
-      >
-        <p>Startups</p>
-        <p className="bg-brand-blue-800 text-white rounded-sm px-1 geist-mono text-[11px]">
-          NEW
-        </p>
-      </Link>
-      <Link href="/fundraising-guide">
-        <Button variant="transparent" size="m">
-          Guide
-        </Button>
-      </Link>
-      <Link href="/pricing">
-        <Button variant="transparent" size="m">
-          Pricing
-        </Button>
-      </Link>
-    </div>
-  );
-}
-
-export function ContentRight() {
-  const { isVisitor, isCustomer, startupPage } = useUserState();
+export async function ContentRight() {
+  const { isVisitor, isCustomer, isCompanyPage } = await UserState();
   const { openRegisterModal, openLoginModal } = useModal();
 
   return isVisitor ? (
@@ -68,7 +39,7 @@ export function ContentRight() {
           <p className="violet-gradient-text">Pro</p>
         </div>
       )}
-      {!startupPage && (
+      {!isCompanyPage && (
         <Button variant="black" size="m" href="/edit-startup">
           Publish startup
         </Button>
@@ -79,8 +50,8 @@ export function ContentRight() {
   );
 }
 
-export function ContentMobile({ onClose }) {
-  const { isVisitor, isCustomer, startupPage } = useUserState();
+export async function ContentMobile({ onClose }) {
+  const { isVisitor, isCustomer, isCompanyPage } = await UserState();
   const { openRegisterModal, openLoginModal } = useModal();
 
   return (
@@ -139,13 +110,13 @@ export function ContentMobile({ onClose }) {
               openRegisterModal();
             }}
           >
-            Create account
+            Claim your listing
           </Button>
         </div>
       ) : (
         <div className="flex flex-col gap-4 w-full">
           <UserMenu onClose={onClose} variant="extended" />
-          {!startupPage && (
+          {!isCompanyPage && (
             <Button
               variant="black"
               size="m"

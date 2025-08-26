@@ -1,6 +1,6 @@
 "use client";
 
-import { ContentMobile } from "@/components/global-elements/nav-bar/nav-bar-content";
+import { ContentMobile } from "./nav-bar-content";
 
 export default function Content({ isOpen, onClose }) {
   const handleCloseMenu = () => {
