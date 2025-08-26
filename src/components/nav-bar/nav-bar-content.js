@@ -1,14 +1,13 @@
-"use client";
-
+"use client"
 import Link from "next/link";
 
 import Button from "@/components/uikit/button";
 import UserMenu from "./user-menu";
-import { UserState } from "@/utils/server-user-state";
+import { useUserState } from "@/providers/user-state-provider";
 import { useModal } from "@/providers/auth-modal";
 
 export async function ContentRight() {
-  const { isVisitor, isCustomer, isCompanyPage } = await UserState();
+  const { isVisitor, isCustomer, companyPage } = useUserState();
   const { openRegisterModal, openLoginModal } = useModal();
 
   return isVisitor ? (

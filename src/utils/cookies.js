@@ -1,45 +1,16 @@
-const serializeCookie = (name, value, options = {}) => {
-  const opts = {
-    secure: true,
-    sameSite: "Strict",
-    expires: 365,
-    ...options,
-  };
+import Cookies from "js-cookie";
+export { Cookies };
 
-  let cookieString = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
-
-  const date = new Date();
-  date.setTime(date.getTime() + opts.expires * 24 * 60 * 60 * 1000);
-  cookieString += `; expires=${date.toUTCString()}`;
-
-  if (opts.path) cookieString += `; path=${opts.path}`;
-  if (opts.domain) cookieString += `; domain=${opts.domain}`;
-  if (opts.secure) cookieString += "; secure";
-  if (opts.httpOnly) cookieString += "; httpOnly";
-  if (opts.sameSite) cookieString += `; samesite=${opts.sameSite}`;
-
-  return cookieString;
-};
+const defaultOptions = { secure: true, sameSite: "Strict" };
 
 export const setCookie = (name, value, options = {}) => {
-  document.cookie = serializeCookie(name, value, options);
+  Cookies.set(name, value, { ...defaultOptions, ...options });
 };
 
-export const getCookie = (name) => {
-  const nameEQ = encodeURIComponent(name) + "=";
-  const cookies = document.cookie.split(";");
-
-  for (let cookie of cookies) {
-    let c = cookie.trim();
-    if (c.indexOf(nameEQ) === 0) {
-      return decodeURIComponent(c.substring(nameEQ.length));
-    }
-  }
-  return null;
-};
+export const getCookie = (name) => Cookies.get(name) || null;
 
 export const removeCookie = (name, options = {}) => {
-  setCookie(name, "", { ...options, expires: new Date(0) });
+  Cookies.remove(name, options);
 };
 
 export const setAuthCookies = (user, auth_token) => {
@@ -48,11 +19,13 @@ export const setAuthCookies = (user, auth_token) => {
 
   setCookie("auth_token", auth_token);
   setCookie("user_email", user.email);
+  setCookie("user_name", user.name);
   setCookie("user_pricing_plan", user.pricing_plan);
-  setCookie("user_zip_codes", user.zip_codes);
+  setCookie("user_export_credits", user.export_credits);
+  setCookie("user_ai_credits", user.ai_credits);
   setCookie("user_logo", user.logo?.url || "");
-  if (user.company_page) {
-    setCookie("user_company", user.company_page);
+  if (user.startup_page) {
+    setCookie("user_startup", user.startup_page);
   }
   window.location.href = authPaths.includes(currentPath) ? "/" : currentPath;
 };
@@ -60,9 +33,11 @@ export const setAuthCookies = (user, auth_token) => {
 export const logout = () => {
   removeCookie("auth_token");
   removeCookie("user_email");
+  removeCookie("user_name");
   removeCookie("user_pricing_plan");
-  removeCookie("user_zip_codes");
+  removeCookie("user_export_credits");
+  removeCookie("user_ai_credits");
   removeCookie("user_logo");
-  removeCookie("user_company");
+  removeCookie("user_startup");
   window.location.href = "/";
 };
