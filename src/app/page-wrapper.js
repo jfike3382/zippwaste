@@ -5,7 +5,7 @@ export default function PageWrapper() {
   return (
     <>
       <div className="flex flex-col">
-        <main className="flex flex-col gap-[32px] row-start-2 items-center">
+        <main className="flex flex-col gap-12 items-center py-24">
           <Image
             src="/zippwaste-logo.svg"
             alt="Zippwaste Logo"
