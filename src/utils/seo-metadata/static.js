@@ -5,7 +5,7 @@ export default function createMetadata({
   type = "website",
   keywords = "",
 }) {
-  const baseUrl = "https://raizer.app";
+  const baseUrl = "https://zippwaste.com";
   const canonicalUrl = `${baseUrl}${url}`;
 
   return {
