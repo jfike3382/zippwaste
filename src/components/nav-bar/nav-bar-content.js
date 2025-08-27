@@ -11,14 +11,11 @@ export function ContentRight() {
 
   return isVisitor ? (
     <div className="flex flex-row">
-      <Button
-        variant="transparent"
-        size="m"
-        onClick={() => {
-          openLoginModal();
-        }}
-      >
-        Sign in
+      <Button variant="secondary" size="m" href="/pricing">
+        Secondary
+      </Button>
+      <Button variant="transparent" size="m" href="/pricing">
+        Pricing
       </Button>
       <Button
         variant="black"
@@ -90,15 +87,8 @@ export function ContentMobile({ onClose }) {
       <div className="divider" />
       {isVisitor ? (
         <div className="flex flex-col gap-4 w-full">
-          <Button
-            variant="secondary"
-            fullWidth
-            size="m"
-            onClick={() => {
-              openLoginModal();
-            }}
-          >
-            Sign in
+          <Button variant="secondary" fullWidth size="m" href="/pricing">
+            Pricing
           </Button>
           <Button
             variant="black"

@@ -25,7 +25,7 @@
   @apply text-black border-brand-gray-400 bg-white hover:bg-brand-gray-200 active:bg-brand-gray-400;
 }
 .button-black {
-  @apply bg-[#ffd04d] border-[#ffd04d] text-neutral-950;
+  @apply bg-[#ffd04d] border-[#ffd04d] text-neutral-950 hover:bg-[#ffcc00];
 }
 .button-transparent {
   @apply text-black bg-transparent border-transparent hover:text-black/60;
