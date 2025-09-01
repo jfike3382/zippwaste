@@ -9,13 +9,7 @@ import { TableApi } from "@/api/data-client";
 
 const TableContext = createContext();
 
-const TABLE_CONFIG = {
-  companies: {
-    apiCall: (filters) => TableApi.companies(filters),
-  },
-};
-
-export function TableProvider({ children, tableType }) {
+export function TableProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [isInitial, setisInitial] = useState(false);
   const [tableData, setTableData] = useState({ items: [] });
@@ -43,7 +37,7 @@ export function TableProvider({ children, tableType }) {
       setLoading(true);
       scrollToTop();
       try {
-        const response = await TABLE_CONFIG[tableType].apiCall(queryFilters);
+        const response = await TableApi.companies(queryFilters);
         setTableData(response.main_data);
         setisInitial(true);
         return response.main_data;
@@ -53,7 +47,7 @@ export function TableProvider({ children, tableType }) {
         setLoading(false);
       }
     },
-    [tableType, scrollToTop]
+    [scrollToTop]
   );
 
   return (
@@ -62,7 +56,6 @@ export function TableProvider({ children, tableType }) {
         fetchTable,
         loading,
         tableData,
-        tableType,
         tableRef,
         isInitial,
       }}
