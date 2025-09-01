@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { TableProvider, useTable } from "@/providers/table-provider";
 import { FiltersProvider, useFilters } from "@/providers/filters-provider";
 
-import SideBar from "@/components/global-elements/side-bar";
 import FilterComponent from "@/components/filters/filters";
 
 function Table() {
@@ -17,12 +16,10 @@ function Table() {
   }, [filtersReady]);
 
   return (
-    <>
-      <SideBar position="left">
-        <FilterComponent />
-      </SideBar>
-      Data will be Here
-    </>
+    <div className="flex flex-row">
+      <FilterComponent />
+      <div>Data will be Here</div>
+    </div>
   );
 }
 

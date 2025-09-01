@@ -38,12 +38,12 @@
 
 @layer base {
   body {
-    @apply inter text-brand-gray-900 antialiased transition-all duration-200 ease-in-out h-screen flex flex-col overflow-hidden;
+    @apply inter text-brand-gray-900 antialiased transition-all duration-200 ease-in-out h-screen;
   }
 }
 
 main {
-  @apply flex overflow-hidden;
+  @apply flex;
 }
 
 strong {
@@ -81,7 +81,7 @@ blockquote::after {
 }
 
 .main-container {
-  @apply flex flex-col flex-1 min-h-[calc(100vh-80px)] overflow-y-auto relative;
+  @apply flex flex-col flex-1 min-h-[100vh];
 }
 
 .main-container-data-block {
@@ -125,6 +125,10 @@ blockquote::after {
 
 .logo.l {
   @apply size-32 text-5xl font-semibold rounded-4xl;
+}
+
+.navigation-tip {
+  @apply bg-neutral-100 text-xs font-medium p-2 rounded-xl mx-1;
 }
 
 /* Conditional Visibility */
