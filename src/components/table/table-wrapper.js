@@ -1,14 +1,12 @@
 "use client";
 import { useEffect } from "react";
-import { TableProvider } from "@/providers/table-provider";
-import { FiltersProvider } from "@/providers/filters-provider";
-import { useFilters } from "@/providers/filters-provider";
-import { useTable } from "@/providers/table-provider";
+import { TableProvider, useTable } from "@/providers/table-provider";
+import { FiltersProvider, useFilters } from "@/providers/filters-provider";
 
 import SideBar from "@/components/global-elements/side-bar";
 import FilterComponent from "@/components/filters/filters";
 
-function PageContent() {
+function Table() {
   const { filters, filtersReady } = useFilters();
   const { fetchTable } = useTable();
 
@@ -28,11 +26,11 @@ function PageContent() {
   );
 }
 
-export default function PageWrapper() {
+export default function TableWrapper() {
   return (
     <FiltersProvider>
       <TableProvider>
-        <PageContent />
+        <Table />
       </TableProvider>
     </FiltersProvider>
   );
