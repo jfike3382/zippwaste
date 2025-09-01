@@ -1,0 +1,52 @@
+{
+  "type": [{ "name": "Dumpster Rental" }, { "name": "Junk Removal" }],
+  "dumpster_size": [
+    { "name": "3 Yard Dumpster Bag" },
+    { "name": "5 Yard Dumpster Bag" },
+    { "name": "8 Yard Dumpster Bag" },
+    { "name": "10 Yard Roll-Off" },
+    { "name": "14-16 Yard Roll-Off" },
+    { "name": "20 Yard Roll-Off" },
+    { "name": "30 Yard Roll-Off" },
+    { "name": "40 Yard Roll-Off" },
+    { "name": "4-8 Yard Dump Trailer" },
+    { "name": "10 Yard Dump Trailer" },
+    { "name": "14 to 16 Yard Dump Trailer" },
+    { "name": "Front Load" },
+    { "name": "Compactors" }
+  ],
+  "project_size": [
+    { "name": "Small" },
+    { "name": "Medium" },
+    { "name": "Large" },
+    { "name": "Disassembly / Demolition" }
+  ],
+  "debris_type": [
+    { "name": "Residential / Household / Junk" },
+    { "name": "Construction & Demolition Debris" },
+    { "name": "Yard Waste - General" },
+    { "name": "Yard Waste - Stumps / Root Balls" },
+    { "name": "Treated Wood" },
+    { "name": "Mattresses" },
+    { "name": "Appliances" },
+    { "name": "Electronics" },
+    { "name": "Concrete" },
+    { "name": "Asphalt" },
+    { "name": "Brick" },
+    { "name": "Dirt / Soil / Gravel" },
+    { "name": "Recyclables / Metal / Plastic / Paper / Cardboard" },
+    { "name": "Tires" },
+    { "name": "Batteries" },
+    { "name": "Paint / Chemicals" },
+    { "name": "Hazardous" },
+    { "name": "Mixed Debris" },
+    { "name": "Other" }
+  ],
+  "duration": [
+    { "name": "1 Hour / Express Service" },
+    { "name": "Daily / Less than a week" },
+    { "name": "7 Day" },
+    { "name": "Monthly" },
+    { "name": "Long-Term" }
+  ]
+}

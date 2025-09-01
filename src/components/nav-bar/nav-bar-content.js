@@ -11,9 +11,6 @@ export function ContentRight() {
 
   return isVisitor ? (
     <div className="flex flex-row">
-      <Button variant="secondary" size="m" href="/pricing">
-        Secondary
-      </Button>
       <Button variant="transparent" size="m" href="/pricing">
         Pricing
       </Button>
