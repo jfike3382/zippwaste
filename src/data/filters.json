@@ -1,5 +1,5 @@
 {
-  "type": [{ "name": "Dumpster Rental" }, { "name": "Junk Removal" }],
+  "type": [{ "name": "Dumpster rental" }, { "name": "Junk removal" }],
   "dumpster_size": [
     { "name": "3 Yard Dumpster Bag" },
     { "name": "5 Yard Dumpster Bag" },

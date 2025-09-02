@@ -8,7 +8,7 @@ export default function ApplyButton({ onApply, closeDropdown }) {
   };
 
   return (
-    <Button variant="black" size="s" fullWidth onClick={handleClick}>
+    <Button variant="primary" size="s" fullWidth onClick={handleClick}>
       Show results
     </Button>
   );

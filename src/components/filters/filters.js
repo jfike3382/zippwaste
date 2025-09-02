@@ -4,6 +4,7 @@ import { useState } from "react";
 import Modal from "@/uikit/modal";
 import Button from "@/uikit/button";
 import {
+  TypeFilter,
   DumpsterSizeFilter,
   ProjectSizeFilter,
   DebrisTypeFilter,
@@ -32,14 +33,17 @@ export default function FilterComponent({
   };
 
   return (
-    <div className="flex flex-col w-[20rem] min-w-[20rem] h-full p-6 bg-neutral-50 border-r border-neutral-200 mobile-hidden">
+    <div className="flex flex-col w-[24rem] min-w-[24rem] h-full p-6 bg-neutral-50 border-r border-neutral-200 mobile-hidden">
       <div className="flex flex-col gap-6 flex-wrap">
         <p className="title-s">Filters</p>
         <div className="flex flex-col gap-4">
-          <DumpsterSizeFilter
-            dropdownSize={dropdownSize}
-            dropdownOrientation={dropdownOrientation}
-          />
+          <TypeFilter />
+          {(filters.type === "Dumpster rental" || !filters.type) && (
+            <DumpsterSizeFilter
+              dropdownSize={dropdownSize}
+              dropdownOrientation={dropdownOrientation}
+            />
+          )}
           <ProjectSizeFilter
             dropdownSize={dropdownSize}
             dropdownOrientation={dropdownOrientation}
