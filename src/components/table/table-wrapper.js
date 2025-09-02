@@ -18,7 +18,7 @@ function TableContainer() {
   }, [filtersReady]);
 
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row flex-1">
       <FilterComponent />
       <div className="table-container">
         <Header itemsTotal={itemsTotal} />

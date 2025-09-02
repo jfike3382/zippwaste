@@ -14,7 +14,7 @@ export default function Table() {
         loading ? "opacity-70" : "opacity-100"
       }`}
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-6">
         {isInitial && items.length === 0 ? (
           <TableEmptyState />
         ) : (
