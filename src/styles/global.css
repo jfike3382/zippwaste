@@ -38,7 +38,7 @@
 
 @layer base {
   body {
-    @apply inter text-brand-gray-900 antialiased transition-all duration-200 ease-in-out h-screen;
+    @apply inter text-neutral-900 antialiased transition-all duration-200 ease-in-out h-screen;
   }
 }
 
@@ -64,12 +64,12 @@ blockquote {
 
 blockquote::before {
   content: "";
-  @apply absolute left-0 top-0 bottom-0 w-1 bg-brand-gray-300  pt-40;
+  @apply absolute left-0 top-0 bottom-0 w-1 bg-neutral-300  pt-40;
 }
 
 blockquote::after {
   content: "\201C";
-  @apply absolute top-2 left-4 text-6xl text-brand-gray-400 font-serif;
+  @apply absolute top-2 left-4 text-6xl text-neutral-400 font-serif;
 }
 
 .rich-text-section {
@@ -81,7 +81,7 @@ blockquote::after {
 }
 
 .main-container {
-  @apply flex flex-col flex-1 min-h-[100vh];
+  @apply flex flex-col flex-1;
 }
 
 .table-container {
@@ -96,15 +96,15 @@ blockquote::after {
 
 /* Misc */
 .divider {
-  @apply border-t border-brand-gray-400 w-full;
+  @apply border-t border-neutral-400 w-full;
 }
 
 .divider.vertical {
-  @apply border-l border-brand-gray-400 w-px;
+  @apply border-l border-neutral-400 w-px;
 }
 
 .navigation-cell {
-  @apply flex flex-row items-center gap-2 py-1.5 px-3 w-full text-sm font-medium text-brand-gray-900 cursor-pointer transition-all hover:bg-brand-gray-200;
+  @apply flex flex-row items-center gap-2 py-1.5 px-3 w-full text-sm font-medium text-neutral-900 cursor-pointer transition-all hover:bg-neutral-200;
 }
 
 .navigation-cell.no-click {
@@ -112,7 +112,7 @@ blockquote::after {
 }
 
 .logo {
-  @apply flex items-center justify-center bg-brand-gray-200 border-standard overflow-hidden relative text-base font-medium shrink-0;
+  @apply flex items-center justify-center bg-neutral-200 border-standard overflow-hidden relative text-base font-medium shrink-0;
 }
 
 .logo.s {
@@ -127,9 +127,6 @@ blockquote::after {
   @apply size-32 text-5xl font-semibold rounded-4xl;
 }
 
-.navigation-tip {
-  @apply bg-neutral-100 text-xs font-medium p-2 rounded-xl mx-1;
-}
 
 /* Conditional Visibility */
 

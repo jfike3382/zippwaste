@@ -15,7 +15,7 @@ export function ContentRight() {
         Pricing
       </Button>
       <Button
-        variant="black"
+        variant="primary"
         size="m"
         onClick={() => {
           openRegisterModal();
@@ -27,7 +27,7 @@ export function ContentRight() {
   ) : (
     <div className="flex flex-row gap-4 items-center">
       {!companyPage && (
-        <Button variant="black" size="m" href="/edit-company">
+        <Button variant="primary" size="m" href="/edit-company">
           Claim listing
         </Button>
       )}
@@ -59,7 +59,7 @@ export function ContentMobile({ onClose }) {
             Pricing
           </Button>
           <Button
-            variant="black"
+            variant="primary"
             fullWidth
             size="m"
             onClick={() => {
@@ -74,7 +74,7 @@ export function ContentMobile({ onClose }) {
           <UserMenu onClose={onClose} variant="extended" />
           {!companyPage && (
             <Button
-              variant="black"
+              variant="primary"
               size="m"
               fullWidth
               href="/edit-company"
