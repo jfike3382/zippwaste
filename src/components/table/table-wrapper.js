@@ -9,7 +9,7 @@ import FilterComponent from "@/components/filters/filters";
 
 function TableContainer() {
   const { filters, filtersReady } = useFilters();
-  const { fetchTable } = useTable();
+  const { fetchTable, itemsTotal } = useTable();
 
   useEffect(() => {
     if (filtersReady) {
@@ -21,7 +21,7 @@ function TableContainer() {
     <div className="flex flex-row">
       <FilterComponent />
       <div className="table-container">
-        <Header />
+        <Header itemsTotal={itemsTotal} />
         <Table />
       </div>
     </div>

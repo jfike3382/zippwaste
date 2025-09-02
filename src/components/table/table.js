@@ -4,9 +4,9 @@ import TableRow from "./uikit/table-row";
 import TableEmptyState from "./uikit/empty-state";
 import Pagination from "./uikit/pagination";
 
-export default function Table({ items = [], itemsTotal = 0, loading = false }) {
+export default function Table() {
   const { currentPage } = useFilters();
-  const { isInitial } = useTable();
+  const { isInitial, items, itemsTotal, loading } = useTable();
 
   return (
     <div

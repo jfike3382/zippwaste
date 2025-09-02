@@ -12,7 +12,13 @@ const TableContext = createContext();
 export function TableProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [isInitial, setisInitial] = useState(false);
-  const [tableData, setTableData] = useState({ items: [] });
+  const [tableData, setTableData] = useState({
+    items: [],
+    itemsTotal: 0,
+    curPage: 1,
+    perPage: 40,
+    pageTotal: 1,
+  });
   const tableRef = useRef(null);
 
   const scrollToTop = useCallback(() => {
@@ -58,6 +64,8 @@ export function TableProvider({ children }) {
         tableData,
         tableRef,
         isInitial,
+        items: tableData.items,
+        itemsTotal: tableData.itemsTotal,
       }}
     >
       {children}
