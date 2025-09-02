@@ -37,8 +37,12 @@ export default function Header({ itemsTotal = 0 }) {
     <>
       <div className="flex flex-col gap-6">
         <div className="flex flex-row gap-8 items-center">
-          <h1 className="title-m">Companies</h1>
-          <p className="title-m text-secondary">{formatNumber(itemsTotal)} </p>
+          <div className="flex flex-row gap-4 items-center">
+            <h1 className="title-m">Companies</h1>
+            <p className="title-m text-secondary">
+              {formatNumber(itemsTotal)}{" "}
+            </p>
+          </div>
           <div className="flex flex-row items-center justify-between w-full max-md:flex-col gap-4 max-md:items-start max-md:gap-8">
             <div className="flex flex-row gap-2 items-center">
               <FiltersMobile />
