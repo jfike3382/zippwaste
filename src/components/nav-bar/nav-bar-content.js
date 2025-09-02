@@ -6,8 +6,8 @@ import { useUserState } from "@/providers/user-state-provider";
 import { useModal } from "@/providers/auth-modal";
 
 export function ContentRight() {
-  const { isVisitor, isCustomer, startupPage } = useUserState();
-  const { openRegisterModal, openLoginModal } = useModal();
+  const { isVisitor, companyPage } = useUserState();
+  const { openRegisterModal } = useModal();
 
   return isVisitor ? (
     <div className="flex flex-row">
@@ -26,9 +26,9 @@ export function ContentRight() {
     </div>
   ) : (
     <div className="flex flex-row gap-4 items-center">
-      {!startupPage && (
-        <Button variant="black" size="m" href="/edit-startup">
-          Publish startup
+      {!companyPage && (
+        <Button variant="black" size="m" href="/edit-company">
+          Claim listing
         </Button>
       )}
 
@@ -38,42 +38,18 @@ export function ContentRight() {
 }
 
 export function ContentMobile({ onClose }) {
-  const { isVisitor, isCustomer, startupPage } = useUserState();
-  const { openRegisterModal, openLoginModal } = useModal();
+  const { isVisitor, companyPage } = useUserState();
+  const { openRegisterModal } = useModal();
 
   return (
     <div className="flex flex-col gap-6 mt-4 items-start w-full">
       <div className="flex flex-col gap-5 w-full">
         <Link
-          href="/investors"
-          onClick={onClose}
-          className="text-3xl font-medium w-full"
-        >
-          Investors
-        </Link>
-        <Link
-          className="text-3xl font-medium flex flex-row w-full gap-4 items-center "
-          href="/startups"
-          onClick={onClose}
-        >
-          <p>Startups</p>
-          <p className="bg-brand-blue-800 text-white rounded-sm px-1 geist-mono text-base font-semibold items-center justify-center flex">
-            NEW
-          </p>
-        </Link>
-        <Link
-          href="/fundraising-guide"
-          onClick={onClose}
-          className="text-3xl font-medium w-full"
-        >
-          Guide
-        </Link>
-        <Link
-          href="/pricing"
+          href="/blog"
           onClick={onClose}
           className=" text-3xl font-medium w-full"
         >
-          Pricing
+          Blog
         </Link>
       </div>
       <div className="divider" />
@@ -96,15 +72,15 @@ export function ContentMobile({ onClose }) {
       ) : (
         <div className="flex flex-col gap-4 w-full">
           <UserMenu onClose={onClose} variant="extended" />
-          {!startupPage && (
+          {!companyPage && (
             <Button
               variant="black"
               size="m"
               fullWidth
-              href="/edit-startup"
+              href="/edit-company"
               onClick={onClose}
             >
-              Submit startup
+              Claim listing
             </Button>
           )}
         </div>
