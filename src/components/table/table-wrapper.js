@@ -2,10 +2,12 @@
 import { useEffect } from "react";
 import { TableProvider, useTable } from "@/providers/table-provider";
 import { FiltersProvider, useFilters } from "@/providers/filters-provider";
+import Header from "./header";
+import Table from "./table";
 
 import FilterComponent from "@/components/filters/filters";
 
-function Table() {
+function TableContainer() {
   const { filters, filtersReady } = useFilters();
   const { fetchTable } = useTable();
 
@@ -18,7 +20,10 @@ function Table() {
   return (
     <div className="flex flex-row">
       <FilterComponent />
-      <div>Data will be Here</div>
+      <div className="flex flex-col gap-12">
+        <Header />
+        <Table />
+      </div>
     </div>
   );
 }
@@ -27,7 +32,7 @@ export default function TableWrapper() {
   return (
     <FiltersProvider>
       <TableProvider>
-        <Table />
+        <TableContainer />
       </TableProvider>
     </FiltersProvider>
   );

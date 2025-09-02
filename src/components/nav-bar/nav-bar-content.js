@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Button from "@/components/uikit/button";
+import Button from "@/uikit/button";
 import UserMenu from "./user-menu";
 import { useUserState } from "@/providers/user-state-provider";
 import { useModal } from "@/providers/auth-modal";
@@ -26,11 +26,6 @@ export function ContentRight() {
     </div>
   ) : (
     <div className="flex flex-row gap-4 items-center">
-      {isCustomer && (
-        <div className="bg-brand-gray-200  text-base py-2 px-4 h-10 font-semibold rounded-4xl">
-          <p className="violet-gradient-text">Pro</p>
-        </div>
-      )}
       {!startupPage && (
         <Button variant="black" size="m" href="/edit-startup">
           Publish startup

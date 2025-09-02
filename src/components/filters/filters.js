@@ -1,8 +1,8 @@
 import { useFilters } from "@/providers/filters-provider";
 import { useTable } from "@/providers/table-provider";
 import { useState } from "react";
-import Modal from "@/components/uikit/modal";
-import Button from "@/components/uikit/button";
+import Modal from "@/uikit/modal";
+import Button from "@/uikit/button";
 import {
   DumpsterSizeFilter,
   ProjectSizeFilter,

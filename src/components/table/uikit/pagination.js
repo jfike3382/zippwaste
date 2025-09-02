@@ -1,8 +1,8 @@
 "use client";
-import { useActionRouter } from "@/utils/use-action-router";
+
 import { useTable } from "@/providers/table-provider";
 import { useFilters } from "@/providers/filters-provider";
-import Button from "@/components/uikit/button";
+import Button from "@/uikit/button";
 
 const ITEMS_PER_PAGE = 40;
 
@@ -11,9 +11,7 @@ export default function Pagination({
   itemsTotal,
   currentPage = 1,
   onPageChange,
-  type = "investors",
 }) {
-  const { handleAction } = useActionRouter();
   const { fetchTable } = useTable();
   const { updatePage, filters } = useFilters();
 
@@ -26,9 +24,6 @@ export default function Pagination({
   const formattedTotal = new Intl.NumberFormat("en-US").format(itemsTotal);
 
   const handlePrevPage = (e) => {
-    if (!handleAction(() => {}, e)) {
-      return;
-    }
     const newPage = currentPage - 1;
     updatePage(newPage);
     fetchTable({ ...filters, page: newPage });
@@ -36,9 +31,6 @@ export default function Pagination({
   };
 
   const handleNextPage = (e) => {
-    if (!handleAction(() => {}, e)) {
-      return;
-    }
     const newPage = currentPage + 1;
     updatePage(newPage);
     fetchTable({ ...filters, page: newPage });
@@ -67,7 +59,7 @@ export default function Pagination({
         disabled={!hasNextPage}
       />
       <span className="text-brand-gray-800 font-semibold">
-        of {formattedTotal} {type}
+        of {formattedTotal} companies
       </span>
     </div>
   );

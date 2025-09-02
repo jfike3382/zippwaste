@@ -2,7 +2,7 @@
 import { useState, useCallback } from "react";
 import { useNotification } from "@/providers/notifications";
 import * as FileUploadClient from "@/api/file-upload-client";
-import Button from "@/components/uikit/button";
+import Button from "@/uikit/button";
 
 export default function LogoUploader({
   onLogoChange,

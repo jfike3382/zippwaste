@@ -1,6 +1,6 @@
 "use client";
 import { createContext, useContext, useState } from "react";
-import Modal from "@/components/uikit/modal";
+import Modal from "@/uikit/modal";
 import FormRegister from "@/components/auth/form-register";
 import FormLogin from "@/components/auth/form-login";
 
@@ -39,10 +39,7 @@ export const AuthModalProvider = ({ children }) => {
         title={mode === "register" ? "Create account" : "Login"}
       >
         {mode === "register" ? (
-          <FormRegister
-            onSuccess={closeAuthModal}
-            onSwitchMode={toggleMode}
-          />
+          <FormRegister onSuccess={closeAuthModal} onSwitchMode={toggleMode} />
         ) : (
           <FormLogin onSuccess={closeAuthModal} onSwitchMode={toggleMode} />
         )}

@@ -2,24 +2,8 @@
   @apply border border-brand-gray-400;
 }
 
-@utility violet-gradient {
-  @apply bg-gradient-to-br from-[#d554e9] to-[#5499e9];
-}
-
-@utility violet-gradient-text {
-  @apply violet-gradient bg-clip-text text-transparent;
-}
-
-@utility violet-gradient-border {
-  background: linear-gradient(white, white) padding-box,
-    linear-gradient(135deg, #d554e9, #5499e9) border-box;
-  @apply border-transparent;
-}
-
-@utility violet-gradient-border-disabled {
-  background: linear-gradient(white, white) padding-box,
-    linear-gradient(135deg, #efcef8, #cedff8) border-box;
-  @apply border-transparent;
+@utility text-secondary {
+  @apply text-neutral-600;
 }
 
 @utility geist-mono {

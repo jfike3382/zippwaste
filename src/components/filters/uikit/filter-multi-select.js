@@ -1,7 +1,7 @@
 "use client";
-import Dropdown from "@/components/uikit/dropdown";
-import Button from "@/components/uikit/button";
-import Checkbox from "@/components/uikit/checkbox";
+import Dropdown from "@/uikit/dropdown";
+import Button from "@/uikit/button";
+import Checkbox from "@/uikit/checkbox";
 
 export default function FilterDropdown({
   label,

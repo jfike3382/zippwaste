@@ -1,6 +1,6 @@
 "use client";
-import Dropdown from "@/components/uikit/dropdown";
-import Button from "@/components/uikit/button";
+import Dropdown from "@/uikit/dropdown";
+import Button from "@/uikit/button";
 
 export default function FilterSingleSelect({
   label,

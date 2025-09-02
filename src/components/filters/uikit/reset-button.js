@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/components/uikit/button";
+import Button from "@/uikit/button";
 
 export default function ResetButton({ onApply }) {
   return (

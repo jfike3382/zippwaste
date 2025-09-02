@@ -33,9 +33,6 @@
 .button-icon {
   @apply w-10 h-10 border-standard bg-white hover:bg-brand-gray-200 active:bg-brand-gray-400;
 }
-.button-gradient {
-  @apply violet-gradient text-white border-0 shadow-[0_0_24px_0_#e5e2da] hover:text-white/60;
-}
 
 /* Disabled styles */
 .button-disabled {

@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 
-import Button from "@/components/uikit/button";
-import Input from "@/components/uikit/input";
+import Button from "@/uikit/button";
+import Input from "@/uikit/input";
 import {
   PassRequestCode,
   PassVerifyCode,

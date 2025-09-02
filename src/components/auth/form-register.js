@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import Button from "@/components/uikit/button";
-import Input from "@/components/uikit/input";
+import Button from "@/uikit/button";
+import Input from "@/uikit/input";
 import { LoginOrRegister } from "@/api/auth-client";
 import { useNotification } from "@/providers/notifications";
 import { setAuthCookies } from "@/utils/cookies";
