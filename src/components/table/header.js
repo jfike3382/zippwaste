@@ -34,33 +34,27 @@ export default function Header({ itemsTotal = 0 }) {
   }, [filters.search]);
 
   return (
-    <>
-      <div className="flex flex-col gap-6">
-        <div className="flex flex-row gap-8 items-center">
-          <div className="flex flex-row gap-4 items-center">
-            <h1 className="title-m">Companies</h1>
-            <p className="title-m text-secondary">
-              {formatNumber(itemsTotal)}{" "}
-            </p>
-          </div>
-          <div className="flex flex-row items-center justify-between w-full max-md:flex-col gap-4 max-md:items-start max-md:gap-8">
-            <div className="flex flex-row gap-2 items-center">
-              <FiltersMobile />
-            </div>
-            <div className="min-w-[20rem] max-md:w-full relative">
-              <Input
-                placeholder="Filter by zip code"
-                value={searchInput}
-                onChange={(e) => setSearchInput(e.target.value)}
-                onKeyPress={handleKeyPress}
-              />
-              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-brand-gray-600 bg-white pl-1">
-                <ZoomIcon size={24} />
-              </div>
-            </div>
-          </div>
+    <div className="flex flex-row gap-8 items-center">
+      <div className="flex flex-row gap-4 items-center">
+        <h1 className="title-m">Companies</h1>
+        <p className="title-m text-secondary">{formatNumber(itemsTotal)} </p>
+      </div>
+      <div className="min-w-[20rem] max-md:w-full relative">
+        <Input
+          placeholder="Filter by zip code"
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+          onKeyPress={handleKeyPress}
+        />
+        <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-brand-gray-600 bg-white pl-1">
+          <ZoomIcon size={24} />
         </div>
       </div>
-    </>
+      <div className="flex flex-row items-center justify-between w-full max-md:flex-col gap-4 max-md:items-start max-md:gap-8">
+        <div className="flex flex-row gap-2 items-center">
+          <FiltersMobile />
+        </div>
+      </div>
+    </div>
   );
 }
