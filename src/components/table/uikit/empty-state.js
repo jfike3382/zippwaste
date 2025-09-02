@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function TableEmptyState({
   title = "No results found",
   subtitle = "Please try another filters",
-  imagePath = "/assets/images/empty_state.png",
+  imagePath = "/assets/images/empty-state.png",
 }) {
   return (
     <div className="flex flex-col gap-6 items-center justify-center py-12">

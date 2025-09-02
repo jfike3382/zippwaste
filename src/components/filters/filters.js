@@ -28,37 +28,45 @@ export default function FilterComponent({
 
   const handleReset = () => {
     resetFilters();
-    fetchTable({ page: 1 });
+    fetchTable({ page: 1, type: filters.type });
     onCloseModal?.();
   };
 
   return (
-    <div className="flex flex-col w-[24rem] min-w-[24rem] h-full p-6 bg-neutral-50 border-r border-neutral-200 mobile-hidden">
-      <div className="flex flex-col gap-6 flex-wrap">
-        <p className="title-s">Filters</p>
+    <div className="flex flex-col w-[24rem] min-w-[24rem] h-full p-6 pt-10 bg-neutral-50 border-r border-neutral-200 mobile-hidden">
+      <div className="flex flex-col gap-8 flex-wrap">
+        <TypeFilter />
         <div className="flex flex-col gap-4">
-          <TypeFilter />
-          {(filters.type === "Dumpster rental" || !filters.type) && (
-            <DumpsterSizeFilter
+          <p className="text-base font-medium text-secondary">Filters</p>
+          <div className="flex flex-col gap-3">
+            {(filters.type === "Dumpster rental" || !filters.type) && (
+              <DumpsterSizeFilter
+                dropdownSize={dropdownSize}
+                dropdownOrientation={dropdownOrientation}
+              />
+            )}
+            {filters.type === "Junk removal" && (
+              <ProjectSizeFilter
+                dropdownSize={dropdownSize}
+                dropdownOrientation={dropdownOrientation}
+              />
+            )}
+            <DebrisTypeFilter
               dropdownSize={dropdownSize}
               dropdownOrientation={dropdownOrientation}
             />
-          )}
-          <ProjectSizeFilter
-            dropdownSize={dropdownSize}
-            dropdownOrientation={dropdownOrientation}
-          />
-          <DebrisTypeFilter
-            dropdownSize={dropdownSize}
-            dropdownOrientation={dropdownOrientation}
-          />
-          <DurationFilter
-            dropdownSize={dropdownSize}
-            dropdownOrientation={dropdownOrientation}
-          />
+            {(filters.type === "Dumpster rental" || !filters.type) && (
+              <DurationFilter
+                dropdownSize={dropdownSize}
+                dropdownOrientation={dropdownOrientation}
+              />
+            )}
+          </div>
         </div>
-        <ApplyButton onApply={handleContinue} />
-        <ResetButton onApply={handleReset} />
+        <div className="flex flex-col gap-4">
+          <ApplyButton onApply={handleContinue} />
+          <ResetButton onApply={handleReset} />
+        </div>
       </div>
     </div>
   );

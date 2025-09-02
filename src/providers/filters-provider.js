@@ -3,6 +3,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 
 const initialState = {
   page: 1,
+  type: "Dumpster rental",
 };
 
 const FiltersContext = createContext();
@@ -35,7 +36,10 @@ export function FiltersProvider({ children }) {
   };
 
   const resetFilters = () => {
-    const newFilters = { ...initialState };
+    const newFilters = {
+      page: 1,
+      type: filters.type,
+    };
     setFilters(newFilters);
   };
 

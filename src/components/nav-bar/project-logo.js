@@ -5,7 +5,7 @@ export default function ProjectLogo() {
   return (
     <Link href="/">
       <Image
-        src="/zippwaste-logo.svg"
+        src="/assets/images/zippwaste-logo.svg"
         alt="Zippwaste Logo"
         width={166}
         height={32}
