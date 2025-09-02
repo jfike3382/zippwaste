@@ -4,8 +4,9 @@ import { useFilters } from "@/providers/filters-provider";
 import { useTable } from "@/providers/table-provider";
 import { FiltersMobile } from "@/components/filters/filters";
 import ZoomIcon from "@/uikit/icons/zoom";
+import { formatNumber } from "@/utils/format-data/number";
 
-export default function Header({ itemsTotal }) {
+export default function Header({ itemsTotal = 0 }) {
   const [searchInput, setSearchInput] = useState("");
   const { updateSearch, filters } = useFilters();
   const { fetchTable } = useTable();
@@ -35,15 +36,16 @@ export default function Header({ itemsTotal }) {
   return (
     <>
       <div className="flex flex-col gap-6">
-        <div className="flex flex-col gap-8 items-start">
-          <h1 className="title-l">Companies</h1>
+        <div className="flex flex-row gap-8 items-center">
+          <h1 className="title-m">Companies</h1>
+          <p className="title-m text-secondary">{formatNumber(itemsTotal)} </p>
           <div className="flex flex-row items-center justify-between w-full max-md:flex-col gap-4 max-md:items-start max-md:gap-8">
             <div className="flex flex-row gap-2 items-center">
               <FiltersMobile />
             </div>
             <div className="min-w-[20rem] max-md:w-full relative">
               <Input
-                placeholder="Enter zip code"
+                placeholder="Filter by zip code"
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
                 onKeyPress={handleKeyPress}

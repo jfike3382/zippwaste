@@ -20,7 +20,7 @@ function TableContainer() {
   return (
     <div className="flex flex-row">
       <FilterComponent />
-      <div className="flex flex-col gap-12">
+      <div className="table-container">
         <Header />
         <Table />
       </div>

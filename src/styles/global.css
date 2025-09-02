@@ -84,7 +84,7 @@ blockquote::after {
   @apply flex flex-col flex-1 min-h-[100vh];
 }
 
-.main-container-data-block {
+.table-container {
   @apply flex flex-col w-full relative gap-16 p-12 mb-16 max-md:p-5 max-lg:p-10 max-md:pb-10;
 }
 
