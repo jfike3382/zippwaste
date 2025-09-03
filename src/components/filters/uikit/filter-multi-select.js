@@ -38,11 +38,11 @@ export default function FilterDropdown({
       dropdownOrientation={dropdownOrientation}
       horizontalPosition="top"
     >
-      {tip && <div className="navigation-tip">{tip}</div>}
+      {tip && <div className="dropdown-tip">{tip}</div>}
       <div>
         {options.map((value) => (
           <div
-            className="navigation-cell"
+            className="dropdown-cell"
             key={value}
             onClick={() =>
               handleFilterChange(value, !selectedValues.includes(value))

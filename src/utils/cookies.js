@@ -20,12 +20,10 @@ export const setAuthCookies = (user, auth_token) => {
   setCookie("auth_token", auth_token);
   setCookie("user_email", user.email);
   setCookie("user_name", user.name);
-  setCookie("user_pricing_plan", user.pricing_plan);
-  setCookie("user_export_credits", user.export_credits);
-  setCookie("user_ai_credits", user.ai_credits);
+  setCookie("user_pricing_package", user.pricing_package);
   setCookie("user_logo", user.logo?.url || "");
-  if (user.startup_page) {
-    setCookie("user_startup", user.startup_page);
+  if (user.company_page) {
+    setCookie("user_company", user.company_page);
   }
   window.location.href = authPaths.includes(currentPath) ? "/" : currentPath;
 };
@@ -34,10 +32,10 @@ export const logout = () => {
   removeCookie("auth_token");
   removeCookie("user_email");
   removeCookie("user_name");
-  removeCookie("user_pricing_plan");
+  removeCookie("user_pricing_package");
   removeCookie("user_export_credits");
   removeCookie("user_ai_credits");
   removeCookie("user_logo");
-  removeCookie("user_startup");
+  removeCookie("user_company");
   window.location.href = "/";
 };

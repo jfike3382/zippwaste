@@ -33,7 +33,7 @@ export default function FilterComponent({
   };
 
   return (
-    <div className="flex flex-col w-[24rem] min-w-[24rem] h-full p-6 pt-10 bg-neutral-50 border-r border-neutral-200 mobile-hidden">
+    <div className="flex flex-col w-[24rem] min-w-[24rem] h-full p-6 pt-10 bg-neutral-50 border-r border-neutral-200 ">
       <div className="flex flex-col gap-8 flex-wrap">
         <TypeFilter />
         <div className="flex flex-col gap-4">

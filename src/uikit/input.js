@@ -1,10 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import {
-  formatNumberInput,
-  unformatNumberInput,
-} from "@/utils/format-data/number";
 
 export default function Input({
   name,
@@ -23,15 +19,6 @@ export default function Input({
 }) {
   const [showPassword, setShowPassword] = useState(false);
   const textareaRef = useRef(null);
-  const [internalValue, setInternalValue] = useState(value || "");
-
-  useEffect(() => {
-    if (type === "number") {
-      setInternalValue(formatNumberInput(value ? String(value) : ""));
-    } else {
-      setInternalValue(value || "");
-    }
-  }, [value, type]);
 
   useEffect(() => {
     if (type === "textarea" && textareaRef.current) {
@@ -41,23 +28,7 @@ export default function Input({
   }, [value, type]);
 
   const handleInput = (e) => {
-    if (type === "number") {
-      let raw = unformatNumberInput(e.target.value).replace(/\D/g, "");
-      setInternalValue(formatNumberInput(raw));
-      if (onChange) {
-        onChange({
-          ...e,
-          target: {
-            ...e.target,
-            name: name,
-            value: raw,
-          },
-        });
-      }
-    } else {
-      setInternalValue(e.target.value);
-      if (onChange) onChange(e);
-    }
+    if (onChange) onChange(e);
   };
 
   const inputStyles = `input ${error ? "border-red-400 ring-red-400" : ""}`;
@@ -92,10 +63,10 @@ export default function Input({
                 ? showPassword
                   ? "text"
                   : "password"
-                : "text"
+                : type
             }
             name={name}
-            value={type === "number" ? internalValue : value}
+            value={value}
             autoComplete={autoComplete}
             onInput={handleInput}
             onFocus={onFocus}

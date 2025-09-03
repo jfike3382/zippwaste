@@ -13,19 +13,19 @@ export const UserStateProvider = ({ children }) => {
   const [isCustomer, setIsCustomer] = useState(false);
   const [startupPage, setStartupPage] = useState(null);
   const [pricingPlan, setPricingPlan] = useState(
-    getCookie("user_pricing_plan")
+    getCookie("user_pricing_package")
   );
   const [isRefreshed, setIsRefreshed] = useState(false);
 
   const updateUserState = () => {
     const authToken = getCookie("auth_token");
-    const pricingPlanCookie = getCookie("user_pricing_plan");
+    const pricingPlanCookie = getCookie("user_pricing_package");
     const startupPageCookie = getCookie("user_startup");
 
     setPricingPlan(pricingPlanCookie);
     setIsVisitor(!authToken);
-    setIsUser(authToken && pricingPlanCookie === "Free");
-    setIsCustomer(authToken && pricingPlanCookie !== "Free");
+    setIsUser(authToken && pricingPlanCookie === "Starter");
+    setIsCustomer(authToken && pricingPlanCookie !== "Starter");
     setStartupPage(startupPageCookie ? JSON.parse(startupPageCookie) : null);
   };
 
@@ -39,18 +39,18 @@ export const UserStateProvider = ({ children }) => {
 
     const authMe = async () => {
       const response = await AuthApi.getMe();
-      if (!response.error) {
-        const oldPricingPlan = getCookie("user_pricing_plan");
+      if (!response.error && response.user) {
+        const oldPricingPlan = getCookie("user_pricing_package");
 
-        setCookie("user_pricing_plan", response.user.pricing_plan);
-        setPricingPlan(response.user.pricing_plan);
+        setCookie("user_pricing_package", response.user.pricing_package);
+        setPricingPlan(response.user.pricing_package);
         setCookie("user_export_credits", response.user.export_credits);
         setCookie("user_ai_credits", response.user.ai_credits);
         if (response.user.startup) {
           setCookie("user_startup", JSON.stringify(response.user.startup));
         }
 
-        if (oldPricingPlan !== response.user.pricing_plan) {
+        if (oldPricingPlan !== response.user.pricing_package) {
           updateUserState();
         }
       }

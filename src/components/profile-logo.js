@@ -2,7 +2,7 @@ import Image from "next/image";
 import Initials from "@/utils/format-data/initials";
 
 const logoSizes = {
-  s: { width: 32, height: 32 },
+  s: { width: 40, height: 40 },
   m: { width: 64, height: 64 },
   l: { width: 128, height: 128 },
 };

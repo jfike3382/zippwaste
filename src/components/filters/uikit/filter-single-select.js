@@ -35,7 +35,7 @@ export default function FilterSingleSelect({
         <div className="dropdown-scroll">
           {options.map((value) => (
             <div
-              className="navigation-cell"
+              className="dropdown-cell"
               key={value}
               onClick={() => handleFilterChange(value, closeDropdown)}
             >

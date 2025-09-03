@@ -27,7 +27,7 @@ export function ContentRight() {
   ) : (
     <div className="flex flex-row gap-4 items-center">
       {!companyPage && (
-        <Button variant="primary" size="m" href="/edit-company">
+        <Button variant="primary" size="m" href="/edit-listing">
           Claim listing
         </Button>
       )}
@@ -77,7 +77,7 @@ export function ContentMobile({ onClose }) {
               variant="primary"
               size="m"
               fullWidth
-              href="/edit-company"
+              href="/edit-listing"
               onClick={onClose}
             >
               Claim listing
