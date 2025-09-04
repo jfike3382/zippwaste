@@ -5,6 +5,9 @@ import Dropdown from "../../uikit/dropdown";
 import ProfileLogo from "../profile-logo";
 import { getCookie, logout } from "@/utils/cookies";
 import { useUserState } from "@/providers/user-state-provider";
+import UpgradeIcon from "@/uikit/icons/upgrade";
+import SettingsIcon from "@/uikit/icons/settings";
+import LogoutIcon from "@/uikit/icons/logout";
 
 export default function UserMenu({ onClose, variant = "default" }) {
   const { companyPage } = useUserState();
@@ -50,10 +53,12 @@ export default function UserMenu({ onClose, variant = "default" }) {
           {companyPage.name}
         </Link>
       )}
-      <Link href="/billing" className="dropdown-cell" onClick={onClose}>
-        Billing
+      <Link href="/pricing" className="dropdown-cell" onClick={onClose}>
+        <UpgradeIcon size={18} />
+        Upgrade plan
       </Link>
       <Link href="/settings" className="dropdown-cell" onClick={onClose}>
+        <SettingsIcon size={18} />
         Settings
       </Link>
       <div
@@ -63,6 +68,7 @@ export default function UserMenu({ onClose, variant = "default" }) {
           onClose();
         }}
       >
+        <LogoutIcon size={18} />
         Log out
       </div>
     </Dropdown>
