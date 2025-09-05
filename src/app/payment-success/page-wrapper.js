@@ -11,24 +11,19 @@ export default function PageWrapper() {
     <>
       <GlobalLoader show={!isRefreshed} />
       {isRefreshed && (
-        <section className="py-32 px-5 max-md:py-10">
-          <div className="flex flex-col gap-8 items-center text-center">
-            <div className="tag white">
-              <p className="violet-gradient-text uppercase tracking-widest">
-                Raizer Pro
-              </p>
-            </div>
+        <section className="py-32 px-5 max-md:py-10 flex flex-col gap-12 items-center justify-center">
+          <div className="flex flex-col gap-4 items-center text-center">
             <h1 className="title-l">You’ve been upgraded to {pricingPlan} </h1>
-            <p className="paragraph-xl max-w-xl ">
-              Now you can use more features available for {pricingPlan} users.
-              If you have any questions, feel free to send us a message.
+            <p className="paragraph-l text-secondary max-w-2xl ">
+              Now you have access to all features available for {pricingPlan}{" "}
+              listing plan.
             </p>
-            <Link href="/">
-              <Button variant="black" size="l">
-                Go to main page
-              </Button>
-            </Link>
           </div>
+          <Link href="/">
+            <Button variant="black" size="l">
+              Go to main page
+            </Button>
+          </Link>
         </section>
       )}
     </>
