@@ -55,7 +55,7 @@ export default function UserMenu({ onClose, variant = "default" }) {
       )}
       <Link href="/pricing" className="dropdown-cell" onClick={onClose}>
         <UpgradeIcon size={18} />
-        Upgrade listing plan
+        Listing plans
       </Link>
       <Link href="/settings" className="dropdown-cell" onClick={onClose}>
         <SettingsIcon size={18} />

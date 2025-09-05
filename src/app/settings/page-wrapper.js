@@ -1,22 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
 import GlobalLoader from "@/components/global-elements/global-loader";
-import Modal, { useModal } from "@/uikit/modal";
 import { SettingsApi } from "@/api/actions-client";
-import { setCookie } from "@/utils/cookies";
-import SettingsItem from "@/components/global-elements/settings-item";
-import NameModal from "@/app/settings/modals/name-modal";
-import EmailModal from "@/app/settings/modals/email-modal";
-import PasswordModal from "@/app/settings/modals/password-modal";
+import UserSettings from "@/app/settings/content/user-settings";
+import Billing from "@/app/settings/content/billing";
 
 export default function PageWrapper() {
   const [userInfo, setUserInfo] = useState({});
   const [loading, setLoading] = useState(true);
-
-  const { isOpen, openModal, closeModal } = useModal();
-  const [modalType, setModalType] = useState(null);
 
   useEffect(() => {
     const fetchUserInfo = async () => {
@@ -30,97 +22,18 @@ export default function PageWrapper() {
     fetchUserInfo();
   }, []);
 
-  const handleOpenModal = (type) => {
-    setModalType(type);
-    openModal();
-  };
-
-  const handleNameChange = (newName) => {
-    setUserInfo((prev) => ({
-      ...prev,
-      name: newName,
-    }));
-    setCookie("user_name", newName);
-  };
-
-  const getModalContent = () => {
-    switch (modalType) {
-      case "name":
-        return {
-          title: "Change name",
-          content: (
-            <NameModal
-              userInfo={userInfo}
-              setUserInfo={setUserInfo}
-              closeModal={closeModal}
-              onNameChange={handleNameChange}
-            />
-          ),
-        };
-      case "email":
-        return {
-          title: "Change email address",
-          content: (
-            <EmailModal
-              userInfo={userInfo}
-              setUserInfo={setUserInfo}
-              closeModal={closeModal}
-            />
-          ),
-        };
-      case "password":
-        return {
-          title: userInfo.password ? "Change password" : "Create password",
-          content: (
-            <PasswordModal
-              userInfo={userInfo}
-              setUserInfo={setUserInfo}
-              closeModal={closeModal}
-            />
-          ),
-        };
-      default:
-        return { title: "", content: null };
-    }
-  };
-
-  const modalContent = getModalContent();
-
   return (
     <>
       <GlobalLoader show={loading} />
       <section className="main-data-container max-w-4xl">
         <h1 className="title-l text-center">Settings</h1>
         {userInfo && Object.keys(userInfo).length > 0 && (
-          <div className="flex flex-col gap-8">
-            <SettingsItem
-              title={userInfo.name}
-              subtitle="User name"
-              buttonText="Change"
-              onClick={() => handleOpenModal("name")}
-            />
-
-            <SettingsItem
-              title={userInfo.email}
-              subtitle="Email address"
-              buttonText="Change"
-              onClick={() => handleOpenModal("email")}
-            />
-
-            <SettingsItem
-              title={
-                userInfo.password ? "**********" : "Password doesn't exist"
-              }
-              subtitle="Password"
-              buttonText={userInfo.password ? "Change" : "Create password"}
-              onClick={() => handleOpenModal("password")}
-            />
+          <div className="flex flex-col gap-12">
+            <UserSettings userInfo={userInfo} setUserInfo={setUserInfo} />
+            <div className="divider" />
+            <Billing userInfo={userInfo} setLoading={setLoading} />
           </div>
         )}
-
-        <Modal isOpen={isOpen} onClose={closeModal} title={modalContent.title}>
-          {modalContent.content}
-        </Modal>
       </section>
     </>
   );
