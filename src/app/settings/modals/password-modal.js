@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Input from "@/uikit/input";
 import Button from "@/uikit/button";
-import { SettingsApi } from "@/api/support-client";
+import { SettingsApi } from "@/api/actions-client";
 import { useNotification } from "@/providers/notifications";
 
 export default function PasswordModal({ userInfo, setUserInfo, closeModal }) {

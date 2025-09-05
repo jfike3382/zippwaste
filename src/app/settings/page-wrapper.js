@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import GlobalLoader from "@/components/global-elements/global-loader";
 import Modal, { useModal } from "@/uikit/modal";
-import { SettingsApi } from "@/api/support-client";
+import { SettingsApi } from "@/api/actions-client";
 import { setCookie } from "@/utils/cookies";
 import SettingsItem from "@/components/global-elements/settings-item";
 import NameModal from "@/app/settings/modals/name-modal";
