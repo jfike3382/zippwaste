@@ -1,4 +1,4 @@
-import PlansContainer from "./plans/plans-container";
+import PlansContainer from "./plans-container";
 import RaizerLogoIcon from "@/uikit/icons/raizer-icon";
 
 export default function FirstScreen() {
