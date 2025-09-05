@@ -1,20 +1,19 @@
-import FormRegister from "@/components/auth/form-register";
 import generateMetadata from "@/utils/seo-metadata/static";
+import PageWrapper from "./page-wrapper";
 
 export const metadata = generateMetadata({
-  title: "Pricing - Zippwaste",
-  description: "Pricing.",
+  title: "Pricing — Ziipwaste",
+  description:
+    "Explore Ziipwaste pricing and unlock full access to investors, fundraising tools, and exclusive features.",
   url: "/pricing",
-  keywords: "pricing, plans, subscription",
+  keywords:
+    "Ziipwaste pricing, startup tools, investor database, fundraising plans, Ziipwaste features",
 });
 
-export default function PricingPage() {
+export default function Page() {
   return (
-    <main className="main-container items-center">
-      <section className="auth-container">
-        <h1 className="title-m text-center">Pricing</h1>
-        <FormRegister />
-      </section>
+    <main className="main-container">
+      <PageWrapper />
     </main>
   );
 }

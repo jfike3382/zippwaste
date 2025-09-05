@@ -1,0 +1,142 @@
+[
+  {
+    "category": "About Raizer",
+    "question": "What is it?",
+    "answer": "Raizer is a platform designed to help startups and investors find each other, close deals, and grow faster by providing access to a massive database of startups, venture capital (VC) investors, angel investors, and other records (soon) coupled with powerful filtering and export options."
+  },
+  {
+    "category": "About Raizer",
+    "question": "Who is it for?",
+    "answer": "Raizer is ideal for business development teams, startup founders, venture capitalists, and anyone looking to discover and connect with high-quality contacts in the startup and investment ecosystem."
+  },
+
+  {
+    "category": "Plans and Payments",
+    "question": "Do you provide a free trial?",
+    "answer": "Raizer has a free plan which you can use to explore whether Raizer is right for you."
+  },
+  {
+    "category": "Using Raizer",
+    "question": "How does filtering work on the platform?",
+    "answer": "The platform features advanced filtering options that allow you to narrow down results by industries, regions, investment stages, diversity criteria, and more, enabling precise targeting."
+  },
+  {
+    "category": "Using Raizer",
+    "question": "Where can I find my exported data?",
+    "answer": "Exported CSV files are emailed to you directly and can also be accessed in the “Exports” page."
+  },
+
+  {
+    "category": "Data Quality",
+    "question": "How reliable is the data on Raizer?",
+    "answer": "Raizer ensures high-quality, actionable data by maintaining a regularly updated databases from credible, verified sources."
+  },
+  {
+    "category": "Data Quality",
+    "question": "Does Raizer include contact information for investors, and other records?",
+    "answer": "Yes, depending on the availability, you can find details such as email addresses, phone numbers, website, linkedin link, x account link, and other."
+  },
+
+  {
+    "category": "Support and Help",
+    "question": "I’m having trouble with the platform. How can I get help?",
+    "answer": "Our support team is here to assist you. Reach out through the chat form on the website, or email us at <a href=\"mailto:hey@raizer.app\">hey@raizer.app</a>."
+  },
+  {
+    "featured_pricing": true,
+    "category": "Support and Help",
+    "question": "Can I request custom data or features?",
+    "answer": "Yes, we welcome feedback and feature requests! Let us know your needs, and we’ll do our best to accommodate them in future updates."
+  },
+
+  {
+    "category": "Support and Help",
+    "question": "How can I stay updated on new features?",
+    "answer": "Subscribe to our <a href=\"https://x.com/raizerapp\" target=\"_blank\" rel=\"noopener noreferrer\">X account</a> to stay informed about updates, new features, and platform improvements."
+  },
+  {
+    "featured_main": true,
+    "featured_pricing": false,
+    "category": "Using Raizer",
+    "question": "How many startups are using Raizer?",
+    "answer": "Over 10,000 founders from all over the world, including founders of YC startups, successfully use Raizer in their fundraising process. Our platform has become the go-to solution for serious entrepreneurs looking to connect with the right investors efficiently."
+  },
+  {
+    "featured_main": true,
+
+    "category": "Using Raizer",
+    "question": "How exactly would I use Raizer?",
+    "answer": "You can submit your startup with fundraising info to showcase your startup, or search our network of thousands of verified investors to find and reach out to relevant matches. We recommend doing both for maximum results - your fundraising page attracts investors while you proactively connect with the right ones."
+  },
+  {
+    "featured_main": true,
+    "category": "Data Quality",
+    "question": "Are investors on the platform opted in?",
+    "answer": "Huge part of investors opted in, while others came from our personal network or were added from open sources. All information is gathered legally and in compliance with data protection regulation."
+  },
+  {
+    "featured_main": true,
+
+    "category": "Using Raizer",
+    "question": "What type of investors can I find on the platform?",
+    "answer": "We have active investors covering every industry and continent (except Antarctica, sorry!). Our network includes Angel investors, Angel groups, Venture Capital funds, Family Offices, Accelerators, Private Equity funds, and other investor types - all actively funding startups from pre-seed to growth stage."
+  },
+  {
+    "featured_main": true,
+
+    "category": "Using Raizer",
+    "question": "Can I export investors?",
+    "answer": "Yes, you can export investor information and contact details in CSV format. This allows you to manage information however works best for your process."
+  },
+  {
+    "featured_pricing": false,
+    "category": "Usign Raizer",
+    "question": "What if I don't get any responses from investors?",
+    "answer": "Our verified contact information and targeted matching significantly improve your chances of getting responses. Most founders see results within the first few weeks. If you're not getting responses despite following best practices, it's often a signal to refine your pitch deck or fundraising criteria."
+  },
+  {
+    "featured_pricing": false,
+    "category": "Usign Raizer",
+    "question": "How much time will Raizer save me in my fundraising process?",
+    "answer": "Instead of spending months researching investors and crafting cold emails, Raizer founders typically cut their fundraising timeline from 6-12 months down to 2-4 months."
+  },
+
+  {
+    "featured_pricing": true,
+    "category": "Plans and Payments",
+    "question": "How can I purchase the plan?",
+    "answer": "Sign up for free, then choose your paid plan to unlock the full power of Raizer."
+  },
+  {
+    "featured_pricing": true,
+    "category": "Using Raizer",
+    "question": "Do you take a success fee?",
+    "answer": "No, we don't take any success fees or commissions from your fundraising. You pay only the subscription fee - any funding you raise is 100% yours to keep."
+  },
+  {
+    "featured_pricing": true,
+    "category": "Plans and Payments",
+    "question": "Can I cancel anytime?",
+    "answer": "Absolutely. There are no long-term contracts or cancellation fees. You can cancel your subscription at any time from your account settings, and you'll retain access until the end of your current billing period."
+  },
+  {
+    "category": "Startup featuring",
+    "question": "When I’ll be featured?",
+    "answer": "You’ll be featured within 24 hours after the payment."
+  },
+  {
+    "category": "Startup featuring",
+    "question": "What does being 'Featured' mean?",
+    "answer": "Being featured gives you priority placement on the platform, an exclusive 'Featured' badge, and direct exposure to active investors interested in startups like yours."
+  },
+  {
+    "category": "Startup featuring",
+    "question": "How will investors find me?",
+    "answer": "Your profile will be highlighted across Raizer, making it easier for investors to discover and contact you directly."
+  },
+  {
+    "category": "Startup featuring",
+    "question": "How do I get started?",
+    "answer": "Click the “Get featured” button and complete your payment."
+  }
+]
