@@ -11,7 +11,7 @@ export const UserStateProvider = ({ children }) => {
   const [isVisitor, setIsVisitor] = useState(false);
   const [isUser, setIsUser] = useState(false);
   const [isCustomer, setIsCustomer] = useState(false);
-  const [startupPage, setStartupPage] = useState(null);
+  const [compayPage, setcompayPage] = useState(null);
   const [pricingPlan, setPricingPlan] = useState(
     getCookie("user_pricing_package")
   );
@@ -20,13 +20,13 @@ export const UserStateProvider = ({ children }) => {
   const updateUserState = () => {
     const authToken = getCookie("auth_token");
     const pricingPlanCookie = getCookie("user_pricing_package");
-    const startupPageCookie = getCookie("user_startup");
+    const compayPageCookie = getCookie("user_company");
 
     setPricingPlan(pricingPlanCookie);
     setIsVisitor(!authToken);
     setIsUser(authToken && pricingPlanCookie === "Starter");
     setIsCustomer(authToken && pricingPlanCookie !== "Starter");
-    setStartupPage(startupPageCookie ? JSON.parse(startupPageCookie) : null);
+    setcompayPage(compayPageCookie ? JSON.parse(compayPageCookie) : null);
   };
 
   useEffect(() => {
@@ -44,10 +44,8 @@ export const UserStateProvider = ({ children }) => {
 
         setCookie("user_pricing_package", response.user.pricing_package);
         setPricingPlan(response.user.pricing_package);
-        setCookie("user_export_credits", response.user.export_credits);
-        setCookie("user_ai_credits", response.user.ai_credits);
-        if (response.user.startup) {
-          setCookie("user_startup", JSON.stringify(response.user.startup));
+        if (response.user.company) {
+          setCookie("user_company", JSON.stringify(response.user.company));
         }
 
         if (oldPricingPlan !== response.user.pricing_package) {
@@ -68,7 +66,7 @@ export const UserStateProvider = ({ children }) => {
         isVisitor,
         isUser,
         isCustomer,
-        startupPage,
+        compayPage,
         pricingPlan,
         isRefreshed,
       }}

@@ -43,7 +43,15 @@
 }
 
 main {
-  @apply flex;
+  @apply flex flex-col flex-1 relative;
+}
+
+.main-data-container {
+  @apply flex flex-col w-full relative gap-16 p-12 pt-10 max-md:p-5 max-lg:p-10;
+}
+
+.auth-container {
+  @apply flex flex-col gap-6 items-center justify-center w-full max-w-md py-16 max-md:px-5 max-md:py-10;
 }
 
 strong {
@@ -80,17 +88,7 @@ blockquote::after {
   @apply text-brand-blue-800 cursor-pointer;
 }
 
-.main-container {
-  @apply flex flex-col flex-1;
-}
 
-.table-container {
-  @apply flex flex-col w-full relative gap-16 p-12 pt-10 max-md:p-5 max-lg:p-10 ;
-}
-
-.auth-container {
-  @apply flex flex-col gap-6 items-center justify-center w-full max-w-md py-16 max-md:px-5 max-md:py-10;
-}
 
 /* Global */
 
@@ -102,8 +100,6 @@ blockquote::after {
 .divider.vertical {
   @apply border-l border-neutral-300 w-px;
 }
-
-
 
 .logo {
   @apply flex items-center justify-center bg-neutral-200 border-standard overflow-hidden relative text-base font-medium shrink-0;
@@ -120,7 +116,6 @@ blockquote::after {
 .logo.l {
   @apply size-32 text-5xl font-semibold rounded-4xl;
 }
-
 
 /* Conditional Visibility */
 

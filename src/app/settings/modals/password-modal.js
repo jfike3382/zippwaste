@@ -106,6 +106,11 @@ export default function PasswordModal({ userInfo, setUserInfo, closeModal }) {
       >
         {userInfo.password ? "Update password" : "Create password"}
       </Button>
+      <p className="text-base text-center">
+        <a className="text-brand-blue-800" href="/forgot-password">
+          Forgot password?
+        </a>
+      </p>
     </>
   );
 }

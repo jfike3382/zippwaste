@@ -12,7 +12,7 @@ export const metadata = generateMetadata({
 
 export default async function Page() {
   return (
-    <main className="main-container">
+    <main>
       <PageWrapper />
     </main>
   );

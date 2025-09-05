@@ -10,8 +10,6 @@ import SettingsItem from "@/components/global-elements/settings-item";
 import NameModal from "@/app/settings/modals/name-modal";
 import EmailModal from "@/app/settings/modals/email-modal";
 import PasswordModal from "@/app/settings/modals/password-modal";
-import LogoUploader from "@/utils/logo-uploader";
-import ProfileLogo from "@/components/profile-logo";
 
 export default function PageWrapper() {
   const [userInfo, setUserInfo] = useState({});
@@ -37,12 +35,12 @@ export default function PageWrapper() {
     openModal();
   };
 
-  const handleLogoChange = (logoUrl, response) => {
+  const handleNameChange = (newName) => {
     setUserInfo((prev) => ({
       ...prev,
-      logo: { url: logoUrl },
+      name: newName,
     }));
-    setCookie("user_logo", response?.user?.logo?.url);
+    setCookie("user_name", newName);
   };
 
   const getModalContent = () => {
@@ -55,6 +53,7 @@ export default function PageWrapper() {
               userInfo={userInfo}
               setUserInfo={setUserInfo}
               closeModal={closeModal}
+              onNameChange={handleNameChange}
             />
           ),
         };
@@ -90,22 +89,10 @@ export default function PageWrapper() {
   return (
     <>
       <GlobalLoader show={loading} />
-      <section className="main-container-data-block max-w-4xl">
+      <section className="main-data-container max-w-4xl">
         <h1 className="title-l text-center">Settings</h1>
         {userInfo && Object.keys(userInfo).length > 0 && (
           <div className="flex flex-col gap-8">
-            <div className="flex flex-col items-center gap-4">
-              <ProfileLogo
-                name={userInfo.name}
-                size="xl"
-                src={userInfo.logo?.url}
-              />
-              <LogoUploader
-                onLogoChange={handleLogoChange}
-                apiName="UserLogo"
-                text="Change logo"
-              />
-            </div>
             <SettingsItem
               title={userInfo.name}
               subtitle="User name"

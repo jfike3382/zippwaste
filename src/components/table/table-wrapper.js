@@ -19,10 +19,10 @@ function TableContainer() {
 
   return (
     <div className="flex flex-row flex-1">
-      <div className="mobile-hidden">
+      <div className="tablet-hidden">
         <FilterComponent />
       </div>
-      <div className="table-container">
+      <div className="main-data-container">
         <Header itemsTotal={itemsTotal} />
         <Table />
       </div>
