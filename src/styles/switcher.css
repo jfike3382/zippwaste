@@ -10,7 +10,7 @@
 }
 
 .switcher-tag {
-  @apply flex items-center justify-center rounded-2xl py-0.5 px-2.5 bg-white border-standard text-xs font-semibold uppercase h-fit;
+  @apply flex items-center justify-center rounded-2xl py-0.5 px-2.5 mr-[-6px] bg-white border-standard text-xs font-semibold uppercase h-fit;
 }
 
 .switcher-tag.active {

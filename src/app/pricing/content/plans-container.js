@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import PlansHeader from "./plans-header";
 import PlansFeatures from "./plans-features";
@@ -77,13 +77,12 @@ export default function Content() {
   }, [isCollapsed]);
 
   return (
-    <div className="flex flex-col gap-16 items-center justify-center relative mx-auto max-xl:mx-0">
+    <div className="flex flex-col gap-8 items-center justify-center relative mx-auto max-xl:mx-0">
       <div ref={sentinelRef} className="h-1 w-full absolute top-0" />
       <div className="sticky top-0 z-10 w-full">
         <PlansHeader plans={plans} isCollapsed={isCollapsed} />
       </div>
       <PlansFeatures plans={plans} />
-      <p>No contract or commitment – cancel anytime you want.</p>
     </div>
   );
 }

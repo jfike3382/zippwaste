@@ -6,215 +6,129 @@
   ],
   "plans": [
     {
-      "id": "free",
-      "name": "Free",
-      "price": "$0",
-      "accessDuration": "Get started for free",
-      "exports": "0",
+      "id": "starter",
+      "name": "Starter",
+      "price_monthly": "0",
+      "price_yearly": "0",
+      "period_monthly": "mo",
+      "period_yearly": "year",
+      "price_description": "Join for free",
+      "discount_yearly": "16%",
       "features": [
         {
-          "name": "Startup page",
+          "name": "Company Page",
           "icon": "startup",
           "items": [
-            { "name": "Startup Page", "available": true },
-            { "name": "Verified Checkmark", "available": false },
-            { "name": "Docs & Links", "available": false }
+            { "name": "Verified badge", "available": false },
+            { "name": "Up to 5 ZIP codes", "available": true },
+            { "name": "One contact method", "available": true }
           ]
         },
         {
-          "name": "Investor Search",
+          "name": "Analytics",
           "icon": "search",
-          "items": [
-            { "name": "Access to All Investors", "available": false },
-            { "name": "Access to Contact Info", "available": false },
-            { "name": "Exports", "available": false }
-          ]
-        },
-        {
-          "name": "AI Features",
-          "icon": "raizer-icon",
-          "items": [
-            { "name": "Match Score with AI", "available": false },
-            { "name": "Best way to pitch with AI", "available": false },
-            { "name": "AI credits", "available": false }
-          ]
+          "items": [{ "name": "Views and clicks", "available": false }]
         },
         {
           "name": "Extra",
           "icon": "extra",
-          "items": [
-            { "name": "Fundraising Guide", "available": false },
-            { "name": "Priority Support", "available": false }
-          ]
+          "items": [{ "name": "Priority Support", "available": false }]
         }
       ]
     },
     {
-      "id": "basic-3-month",
-      "name": "Basic",
-      "price": "$99",
-      "tag": "$33/mo",
-      "accessDuration": "3-month access",
-      "exports": "2,000",
+      "id": "local",
+      "name": "Local",
+      "price_monthly": "19",
+      "price_yearly": "191",
+      "period_monthly": "mo",
+      "period_yearly": "year",
+      "price_description": "Start your journey",
+      "discount_yearly": "16%",
       "features": [
         {
-          "name": "Startup page",
+          "name": "Company Page",
           "icon": "startup",
           "items": [
-            { "name": "Startup Page", "available": true },
-            { "name": "Verified Checkmark", "available": true },
-            { "name": "Docs & Links", "available": true }
+            { "name": "Verified badge", "available": true },
+            { "name": "Up to 50 ZIP codes", "available": true },
+            { "name": "Unlimited contact methods", "available": true }
           ]
         },
         {
-          "name": "Investor Search",
+          "name": "Analytics",
           "icon": "search",
-          "items": [
-            { "name": "Access to All Investors", "available": true },
-            { "name": "Access to Contact Info", "available": true },
-            { "name": "Exports: 2,000 included", "available": true }
-          ]
-        },
-        {
-          "name": "AI Features",
-          "icon": "raizer-icon",
-          "items": [
-            { "name": "Match Score with AI", "available": false },
-            { "name": "Best way to pitch with AI", "available": false },
-            { "name": "AI credits", "available": false }
-          ]
+          "items": [{ "name": "Views and clicks", "available": true }]
         },
         {
           "name": "Extra",
           "icon": "extra",
-          "items": [
-            { "name": "Fundraising Guide", "available": false },
-            { "name": "Priority Support", "available": false }
-          ]
+          "items": [{ "name": "Priority Support", "available": false }]
         }
       ]
     },
     {
-      "id": "pro-6-month",
-      "name": "Pro",
-      "price": "$179",
-      "tag": "$29/mo",
-      "accessDuration": "6-month access",
-      "exports": "5,000",
-      "aiCredits": "200",
+      "id": "regional",
+      "name": "Regional",
+      "price_monthly": "49",
+      "price_yearly": "493",
+      "period_monthly": "mo",
+      "period_yearly": "year",
+      "price_description": "Scale your growth",
+      "discount_yearly": "16%",
+      "badge": "Most Popular",
       "features": [
         {
-          "name": "Startup page",
+          "name": "Company Page",
           "icon": "startup",
           "items": [
-            { "name": "Startup Page", "available": true },
-            { "name": "Verified Checkmark", "available": true },
-            { "name": "Docs & Links", "available": true }
+            { "name": "Verified badge", "available": true },
+            { "name": "Up to 100 ZIP codes", "available": true },
+            { "name": "Unlimited contact methods", "available": true }
           ]
         },
         {
-          "name": "Investor Search",
+          "name": "Analytics",
           "icon": "search",
-          "items": [
-            { "name": "Access to All Investors", "available": true },
-            { "name": "Access to Contact Info", "available": true },
-            { "name": "Exports: 5,000 included", "available": true }
-          ]
-        },
-        {
-          "name": "AI Features",
-          "icon": "raizer-icon",
-          "items": [
-            { "name": "Match Score with AI", "available": true },
-            { "name": "Best way to pitch with AI", "available": true },
-            { "name": "AI credits: 200 included", "available": true }
-          ]
+          "items": [{ "name": "Views and clicks", "available": true }]
         },
         {
           "name": "Extra",
           "icon": "extra",
-          "items": [
-            { "name": "Fundraising Guide", "available": true },
-            { "name": "Priority Support", "available": true }
-          ]
+          "items": [{ "name": "Priority Support", "available": true }]
         }
       ]
     },
     {
-      "id": "ultimate-lifetime",
-      "name": "Ultimate",
-      "price": "$599",
-      "tag": "BEST VALUE",
-      "accessDuration": "Lifetime access",
-      "exports": "15,000",
-      "aiCredits": "1,000",
-      "paywall_description": "Lifetime access to all features, including 15,000 free exports and priority support.",
-      "badge": "BEST VALUE",
+      "id": "expanded",
+      "name": "Expanded",
+      "price_monthly": "99",
+      "price_yearly": "995",
+      "period_monthly": "mo",
+      "period_yearly": "year",
+      "price_description": "Maximize your success",
+      "discount_yearly": "16%",
       "features": [
         {
-          "name": "Startup page",
+          "name": "Company Page",
           "icon": "startup",
           "items": [
-            { "name": "Startup Page", "available": true },
-            { "name": "Verified Checkmark", "available": true },
-            { "name": "Docs & Links", "available": true }
+            { "name": "Verified badge", "available": true },
+            { "name": "Up to 300 ZIP codes", "available": true },
+            { "name": "Unlimited contact methods", "available": true }
           ]
         },
         {
-          "name": "Investor Search",
+          "name": "Analytics",
           "icon": "search",
-          "items": [
-            { "name": "Access to All Investors", "available": true },
-            { "name": "Access to Contact Info", "available": true },
-            { "name": "Exports: 15,000 included", "available": true }
-          ]
-        },
-        {
-          "name": "AI Features",
-          "icon": "raizer-icon",
-          "items": [
-            { "name": "Match Score with AI", "available": true },
-            { "name": "Best way to pitch with AI", "available": true },
-            { "name": "AI credits: 1,000 included", "available": true }
-          ]
+          "items": [{ "name": "Views and clicks", "available": true }]
         },
         {
           "name": "Extra",
           "icon": "extra",
-          "items": [
-            { "name": "Fundraising Guide", "available": true },
-            { "name": "Priority Support", "available": true }
-          ]
+          "items": [{ "name": "Priority Support", "available": true }]
         }
       ]
     }
-  ],
-  "export_rows_prices": [
-    [
-      { "min": 1, "max": 100, "price": 900 },
-      { "min": 101, "max": 200, "price": 1400 },
-      { "min": 201, "max": 300, "price": 1900 },
-      { "min": 301, "max": 400, "price": 2400 },
-      { "min": 401, "max": 500, "price": 2900 },
-      { "min": 501, "max": 600, "price": 3400 },
-      { "min": 601, "max": 700, "price": 3900 },
-      { "min": 701, "max": 800, "price": 4400 },
-      { "min": 801, "max": 900, "price": 4900 },
-      { "min": 901, "max": 1000, "price": 5400 },
-      { "min": 1001, "max": 1500, "price": 6400 },
-      { "min": 1501, "max": 2000, "price": 7400 },
-      { "min": 2001, "max": 3000, "price": 8900 },
-      { "min": 3001, "max": 5000, "price": 10900 },
-      { "min": 5001, "max": 7500, "price": 13900 },
-      { "min": 7501, "max": 10000, "price": 16900 },
-      { "min": 10001, "max": 15000, "price": 24900 },
-      { "min": 15001, "max": 20000, "price": 39900 },
-      { "min": 20001, "max": 30000, "price": 54900 },
-      { "min": 30001, "max": 40000, "price": 69900 },
-      { "min": 40001, "max": 50000, "price": 74900 },
-      { "min": 50001, "max": 75000, "price": 99900 },
-      { "min": 75001, "max": 100000, "price": 129900 },
-      { "min": 100001, "max": 150000, "price": 149900 }
-    ]
   ]
 }

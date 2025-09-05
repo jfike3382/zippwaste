@@ -29,7 +29,7 @@
 }
 
 .tag.uppercase {
-  @apply uppercase tracking-widest;
+  @apply uppercase tracking-wide;
 }
 
 .tag.white {
