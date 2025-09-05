@@ -1,5 +1,5 @@
-import Section1 from "../../components/content/pricing/hero-section";
-import Section5 from "../../components/content/pricing/faq";
+import Section1 from "../../components/pricing/hero-section";
+import Section5 from "../../components/pricing/faq";
 import Footer from "@/components/global-elements/footer";
 
 export default function PageWrapper() {
