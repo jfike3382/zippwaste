@@ -12,6 +12,7 @@ export default function PageWrapper() {
       <GlobalLoader show={!isRefreshed} />
       {isRefreshed && (
         <section className="py-32 px-5 max-md:py-10 flex flex-col gap-12 items-center justify-center">
+          <p className="title-xl">🎉</p>
           <div className="flex flex-col gap-4 items-center text-center">
             <h1 className="title-l">You’ve been upgraded to {pricingPlan} </h1>
             <p className="paragraph-l text-secondary max-w-2xl ">
