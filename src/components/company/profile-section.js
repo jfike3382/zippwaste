@@ -1,0 +1,71 @@
+import ProfileLogo from "../../global-elements/profile/profile-logo";
+import ConnectButtons from "@/components/table/investors/connect-buttons";
+import CharacteristicsList from "./characteristics_list";
+import FormatLocation from "@/utils/format-data/location";
+import ProfileStats from "./stats";
+import ProfileSubtitle from "@/components/global-elements/profile/profile-subtitle";
+import ProfileName from "@/components/global-elements/profile/profile-name";
+import WebsiteLink from "@/components/global-elements/profile/website-link";
+import FAQ from "./faq";
+import ProfileViews from "@/components/global-elements/profile/profile-views";
+
+export default function MainContent({ item }) {
+  if (!item) {
+    return null;
+  }
+
+  return (
+    <>
+      <div className="flex flex-col gap-8">
+        <ProfileLogo name={item.name} size="xl" src={item.logo?.url} />
+
+        <div className="flex flex-col gap-2 paragraph-l">
+          <ProfileName
+            size="l"
+            name={item.name}
+            verified={item.verified}
+            tag="h1"
+          />
+          <ProfileSubtitle item={item} size="m" />
+          <WebsiteLink website={item.website} size={20} />
+        </div>
+
+        <ConnectButtons item={item} size="m" />
+      </div>
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <p className="text-brand-gray-800 title-s">Description</p>
+          <p className="paragraph-l ">
+            {item.description ? item.description : item.firm_data?.description}
+          </p>
+        </div>
+        <div className="flex flex-col gap-2">
+          <p className="text-brand-gray-800 title-s">Location</p>
+          <p className="paragraph-l">{FormatLocation(item)}</p>
+        </div>
+
+        <CharacteristicsList
+          data={item.filters ? item.filters.geography : item.geography}
+          characteristic={"regions"}
+          visibleItems={10}
+          titleSize="title-s"
+        />
+        <CharacteristicsList
+          data={item.filters ? item.filters.stages : item.stages}
+          characteristic={"stages"}
+          visibleItems={10}
+          titleSize="title-s"
+        />
+        <CharacteristicsList
+          data={item.filters ? item.filters.industries : item.industries}
+          characteristic={"industries"}
+          visibleItems={10}
+          titleSize="title-s"
+        />
+        <ProfileStats data={item.filters ? item.filters : item} />
+      </div>
+      <FAQ item={item} />
+      <ProfileViews views={item.views} />
+    </>
+  );
+}

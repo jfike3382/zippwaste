@@ -1,4 +1,4 @@
-import FormRegister from "@/components/auth/form-register";
+import PageWrapper from "./page-wrapper";
 import generateMetadata from "@/utils/seo-metadata/static";
 
 export const metadata = generateMetadata({
@@ -9,12 +9,10 @@ export const metadata = generateMetadata({
   keywords: "edit listing, update listing",
 });
 
-export default function RegisterPage() {
+export default function Page() {
   return (
-    <main className="main-container items-center">
-      <section className="auth-container">
-        <h1 className="title-m text-center">Edit listing flow here</h1>
-      </section>
+    <main>
+      <PageWrapper />
     </main>
   );
 }
