@@ -3,13 +3,12 @@ import Footer from "@/components/global-elements/footer";
 import generateMetadata from "@/utils/seo-metadata/static";
 
 export const metadata = generateMetadata({
-  title:
-    "Stroke - Your personal AI. Create anything with AI that sounds (and feels) like you",
+  title: "Business Directory by Zip Code | Search, Filter & Connect",
   description:
-    "Train your own AI and use it for anything. Work on docs, craft content, or write an entire book with your digital AI twin.",
+    "Discover local businesses by zip code with advanced search and filters. Claim your listing, manage memberships, and grow visibility with our custom online directory.",
   url: "/privacy-policy",
   keywords:
-    "Stroke, AI desktop app, content creation, AI writing tool, creative workflow, desktop AI, train AI, personal AI",
+    "business directory, search by zip code, company listings, local businesses, directory platform, Wized Xano Webflow Memberstack, custom directory, claim business listing, membership tiers",
 });
 
 export default function Page() {
