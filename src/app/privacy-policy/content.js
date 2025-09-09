@@ -2,56 +2,51 @@ const Content = () => {
   return (
     <div className="rich-text-section">
       <p>
-        Stroke.so (<strong>“Stroke”, “we”, “us”, and “our”</strong>) is a
-        desktop application designed to help you create and edit content, such
-        as text and images, using an AI co-creator. Our Privacy Policy (“Privacy
-        Policy”) covers the personal information we collect about you when you
-        use our application, or otherwise interact with us, including through
-        our website at stroke.so, and our related online and offline offerings
-        (collectively, the <strong>“Service”</strong>).
+        Zippwaste (<strong>“Zippwaste”, “we”, “us”, and “our”</strong>) is a
+        digital fundraising tool. Our Privacy Policy (“Privacy Policy”) covers
+        the personal information we collect about you when you use our products
+        or services, or otherwise interact with us, including on our website at
+        https://zippwaste.com, and our related online and offline offerings
+        (collectively, the <strong>“Services”</strong>).
       </p>
       <p>
-        This Privacy Policy does not apply to any third-party websites,
-        services, or applications, even if they are accessible through our
-        Service. In addition, a separate privacy notice, which is available upon
-        request if it applies to you, governs personal information we receive
-        from our current or prospective employees and contractors.
+        This Privacy Policy does not apply to any third-party websites, services
+        or applications, even if they are accessible through our Services. In
+        addition, a separate privacy notice, which is available upon request if
+        it applies to you, governs personal information we receive from our
+        current or prospective employees and contractors.
       </p>
       <p>
-        If you are using the Service as an employee, contractor, or other
-        representative of an organization (e.g., your employer) and you have any
-        questions about our privacy practices or would like to exercise any
-        rights with respect to your personal information, please contact your
-        organization, as they may be responsible for managing your data.
-      </p>
-      <p>
-        By using our Service, you agree to be bound by this Privacy Policy. If
-        you don’t agree to this Privacy Policy, do not use the Service. If you
-        access and use the Service on behalf of a company (such as your
+        By using our Services, you agree to be bound by this Privacy Policy. If
+        you don’t agree to this Privacy Policy, do not use the Services. If you
+        access and use the Services on behalf of a company (such as your
         employer) or other legal entity, you represent and warrant that you have
         the authority to bind that company or other legal entity to this Privacy
         Policy. In that case, “you” and “your” will refer to that company or
         other legal entity.
       </p>
       <section className="rich-text-section" id="information">
-        <h2 className="title-s mt-8">1. Personal information we collect</h2>
+        <p>
+          <strong>1. Personal information we collect</strong>
+        </p>
         <p>
           We collect personal information when you provide it to us, when you
-          use our Service, and when other sources provide it to us, as further
+          use our Services, and when other sources provide it to us, as further
           described below.
         </p>
         <p>
           <strong>A. Information You Provide to Us</strong>
         </p>
         <p>
-          <strong>Account Creation. </strong>When you create an account, we
-          collect information such as your name, email address, password, and an
-          optional profile photo.
+          <strong>Account Creation. </strong>When you create an account we
+          collect information such as your name, email address, password, your
+          company name, role within your team or enterprise, and an optional
+          profile photo.
         </p>
         <p>
           <strong>Your Communications with us. </strong>We collect personal
           information from you such as email address, phone number, or mailing
-          address when you request information about our Service, register for
+          address when you request information about our Services, register for
           our newsletter, request customer or technical support, or otherwise
           communicate with us. We also collect the contents of messages or
           attachments that you may send to us, as well as other information you
@@ -63,30 +58,26 @@ const Content = () => {
           Services. When you make purchases through the Services, we may use a
           third-party application to process your payments. These third-party
           applications may collect certain financial information from you to
-          process a payment on behalf of Raizer, including your name, email
+          process a payment on behalf of Zippwaste, including your name, email
           address, mailing address, payment card information, and other billing
-          information. Raizer does not store or receive your payment
+          information. Zippwaste does not store or receive your payment
           information, but it may store and receive information associated with
           your payment information (e.g., your billing details).
         </p>
         <p>
           <strong>Surveys. </strong>We may contact you to participate in
-          surveys, especially as part of the beta testing of Stroke.so. If you
-          decide to participate, you may be asked to provide certain
-          information, which may include personal information.
+          surveys. If you decide to participate, you may be asked to provide
+          certain information which may include personal information.
         </p>
         <p>
           <strong>Use of the Services. </strong>We collect information you
-          provide to the Service for the purpose of providing the Service to
-          you, which may include personal information. This includes text,
-          images, or other materials you create, edit, or upload (&quot;User
-          Content&quot;), as well as content generated by the AI co-creator
-          (&quot;Generated Content&quot;).
+          provide to the Services for the purpose of providing the Services to
+          you, which may include personal information.
         </p>
         <p>
           <strong>Customer Service, Training and Quality Assurance. </strong>
-          If you call or otherwise interact with Stroke’s sales, customer
-          service, or support personnel, we may collect the information you
+          If you call or otherwise interact with Zippwaste sales, customer
+          service or support personnel, we may collect the information you
           provide to our representatives. In addition, we may record telephone
           calls or video conferences between you and our representatives for
           training or quality assurance purposes.
@@ -96,129 +87,77 @@ const Content = () => {
         </p>
         <p>
           <strong>Automatic Data Collection. </strong>We may collect certain
-          information automatically when you use the Service. This information
-          may include your Internet protocol (IP) address, user settings,
-          details about your operating system or device, location information
-          (inferred based on your IP address), Internet service provider, and
-          information about how you interact with and use the Service. In some
-          instances, a User ID may be generated to track usage counts and
-          product performance for development purposes during beta testing.
+          information automatically when you use the Services. This information
+          may include your Internet protocol (IP) address, user settings, MAC
+          address, cookie identifiers, mobile advertising and other unique
+          identifiers, details about your browser, operating system or device,
+          location information (inferred based off of your IP address), Internet
+          service provider, pages that you visit before, during and after using
+          the Services, information about the links you click, and information
+          about how you interact with and use the Services.
         </p>
         <p>
-          <strong>Analytics. </strong>We may use third-party service providers
-          to collect and process analytics and other information about our
-          Service. These third-party service providers may collect and store
-          analytics and other information about your usage of the Service. They
-          have their own privacy policies addressing how they use the analytics
-          and other information, and we do not have access to, nor control over,
-          third parties’ use of analytics data.
+          <strong>
+            Cookies, Pixel Tags/Web Beacons, and Analytics Information.{" "}
+          </strong>
+          We, as well as third parties that may provide content, advertising, or
+          other functionality on the Services, may use cookies, pixel tags,
+          local storage, and other technologies (“Technologies”) to
+          automatically collect information through the Services. Technologies
+          are essentially small data files placed on your device that allow us
+          and our partners to record certain pieces of information whenever you
+          visit or interact with our Services.
+        </p>
+        <ul>
+          <li>
+            <strong>Cookies: </strong>Cookies are small text files placed in
+            device browsers to store their preferences. Most browsers allow you
+            to block and delete cookies. However, if you do that, the Services
+            may not work properly.
+          </li>
+          <li>
+            <strong>Pixel Tags/Web Beacons: </strong>A pixel tag (also known as
+            a web beacon) is a piece of code embedded in the Services that
+            collects information about engagement on the Services. The use of a
+            pixel tag allows us to record, for example, that a user has visited
+            a particular web page or clicked on a particular advertisement. We
+            may also include web beacons in e-mails to understand whether
+            messages have been opened, acted on, or forwarded.
+          </li>
+        </ul>
+        <p>
+          <strong>Analytics: </strong>We may also use third-party service
+          providers to collect and process analytics and other information on
+          our Services. These third-party service providers may use cookies,
+          pixel tags, web beacons or other storage technology to collect and
+          store analytics and other information. They have their own privacy
+          policies addressing how they use the analytics and other information
+          and we do not have access to, nor control over, third parties’ use of
+          cookies or other tracking technologies.
         </p>
         <p>
-          <strong>Cookies (Website Only). </strong>
-          On our website (e.g., stroke.so), we may use cookies and similar
-          technologies to collect information about your interactions, such as
-          pages visited and links clicked. Cookies are small text files placed
-          in device browsers to store preferences. Most browsers allow you to
-          block and delete cookies, but if you do so, some features of the
-          website may not work properly. For more information, see Section 6
-          (&quot;Your Choices&quot;).
+          <strong>Information from Other Sources</strong>
         </p>
         <p>
-          <strong>C. Information from Other Sources</strong>
+          <strong>Enterprise Customers. </strong>If you use our Services on
+          behalf of an organization (e.g., your employer), that organization may
+          provide us with information about you so that we can provision your
+          account.
         </p>
         <p>
           <strong>Third Party Services and Organizations. </strong>We may obtain
           information about you from other sources, including through
-          third-party services and organizations. For example, if you use
-          third-party integrations (such as Google Drive or Dropbox) with our
-          Service, we may collect information about you from that third party
-          that you have made available via your privacy settings.
-        </p>
-        <p>
-          <strong>D. Information We Do Not Collect</strong>
-        </p>
-        <p>
-          We do not intentionally collect sensitive or special category personal
-          information, such as genetic data, biometric data for the purposes of
-          uniquely identifying a natural person, health information, or
-          religious information.
-        </p>
-        <p>
-          We do not knowingly collect information from or direct any of our
-          Service or content specifically to children under the age of 13. If we
-          learn or have reason to suspect that a user is under the age of 13, we
-          will close that account.
-        </p>
-      </section>
-      <section className="rich-text-section" id="lawful-basis">
-        <h2 className="title-s mt-8">
-          {" "}
-          2. Lawful Basis and Purposes for Processing Your Personal Information
-        </h2>
-        <p>
-          If you are an individual in the United Kingdom or European Economic
-          Area (EEA), we collect and process information about you only where we
-          have legal bases for doing so under applicable United Kingdom and/or
-          EU laws. The legal bases depend on the Service you use and how you use
-          it. This means we collect and use your information only where:
-        </p>
-        <p>
-          <strong>
-            To Fulfill a Contract or Take Steps Linked to a Contract with You:
-          </strong>
-        </p>
-        <ul>
-          <li>Administer access to your accounts;</li>
-          <li>
-            Provide our Service, including generating content using the AI
-            co-creator;
-          </li>
-          <li>Send you service-related communications;</li>
-          <li>Provide you with customer support.</li>
-        </ul>
-        <p>
-          <strong>Legitimate Interests:</strong>
-        </p>
-        <ul>
-          <li>Improve and personalize your experience with our Service;</li>
-          <li>
-            Understand how you use our Service to develop new features,
-            functionality, and services, especially during beta testing;
-          </li>
-          <li>
-            Monitor and improve the performance of our Service for
-            administrative, security, and fraud prevention purposes;
-          </li>
-          <li>Conduct internal research and analytics;</li>
-          <li>Enforce compliance with our Terms of Use and other policies;</li>
-          <li>Respond to your requests, questions, and feedback;</li>
-          <li>
-            Comply with applicable laws, lawful requests, and legal processes,
-            such as responding to subpoenas or requests from government
-            authorities.
-          </li>
-        </ul>
-        <p>
-          <strong>Consent:</strong>
-        </p>
-        <ul>
-          <li>
-            Where you have expressly indicated your consent to the processing of
-            your personal information (e.g., to receive marketing
-            communications);
-          </li>
-          <li>
-            On other occasions where we ask for your consent, for the purpose we
-            explain at the time.
-          </li>
-        </ul>
-        <p>
-          You may withdraw your consent at any time by contacting us using the
-          details in Section 10 (&quot;Contact Us&quot;).
+          third-party services and organizations. For example, if you access our
+          Services through a third-party application, such as a social
+          networking site or a third-party login service, we may collect
+          information about you from that third party that you have made
+          available via your privacy settings.
         </p>
       </section>
       <section className="rich-text-section" id="use-information">
-        <h2 className="title-s mt-8"> 3. How we use your information</h2>
+        <p>
+          <strong>2. How we use your information</strong>
+        </p>
         <p>
           We use your personal information for a variety of business purposes,
           including to:
@@ -241,9 +180,6 @@ const Content = () => {
             Providing access to certain areas, functionalities, and features of
             our Services;
           </li>
-          <li>
-            Generating content using the AI co-creator based on your inputs;
-          </li>
           <li>Answering requests for customer or technical support.</li>
         </ul>
         <p>
@@ -253,15 +189,17 @@ const Content = () => {
         </p>
         <ul>
           <li>
-            Pursuing legitimate interests, such as research and development
-            (including improving the AI co-creator), network and information
-            security, and fraud prevention;
+            Pursuing legitimate interests, such as direct marketing, research
+            and development (including marketing research), network and
+            information security, and fraud prevention;
           </li>
           <li>
-            Measuring interest and engagement in our Service, including
-            analyzing your usage of the Service during beta testing;
+            Measuring interest and engagement in our Services, including
+            analyzing your usage of the Services;
           </li>
-          <li>Developing new features and improving the Service;</li>
+          <li>
+            Developing new products and services and improving the Services;
+          </li>
           <li>Ensuring internal quality control and safety;</li>
           <li>Authenticating and verifying individual identities;</li>
           <li>Carrying out audits;</li>
@@ -277,40 +215,23 @@ const Content = () => {
           <li>Complying with our legal obligations;</li>
         </ul>
         <p>
-          <strong>Use of User Content and Generated Content: </strong>
+          <strong>Marketing of Products and Services: </strong>We may use
+          personal information to tailor and provide you with content and
+          advertisements.
         </p>
-
-        <ul>
-          <li>
-            We use your User Content to provide the Service, including
-            generating Generated Content via the AI co-creator.
-          </li>
-          <li>
-            Unless you enable Privacy Mode (as described in our Terms of Use),
-            we may use your User Content and Generated Content to improve and
-            enhance the Service, including for training AI models, and for other
-            development, diagnostic, and corrective purposes in connection with
-            the Service and other Happy Vibes, Inc. offerings. If Privacy Mode
-            is enabled, your User Content is used only to generate Generated
-            Content in real-time and is deleted afterward, and it is not used
-            for training AI models.
-          </li>
-        </ul>
         <p>
-          <strong>De-identified and Aggregated Information Use:</strong>We may
+          <strong>Consent: </strong>We may use personal information for other
+          purposes that are clearly disclosed to you at the time you provide
+          personal information or with your consent.
+        </p>
+        <p>
+          <strong>De-identified and Aggregated Information Use: </strong>We may
           use personal information and other data about you to create
           de-identified and/or aggregated information. De-identified and/or
           aggregated information is not personal information, and we may use and
           disclose such information in a number of ways, including research,
           internal analysis, analytics, and any other legally permissible
-          purposes, such as publishing reports on trends in the usage of our
-          Service.
-        </p>
-        <p>
-          <strong>Cross-Device Tracking: </strong>Your activity may be tracked
-          across different devices. For example, we may attempt to match your
-          activity on one device with your activity on another device to improve
-          the Service and provide a consistent experience.
+          purposes.
         </p>
         <p>
           <strong>How We Use Automatic Collection Technologies: </strong>Our
@@ -327,11 +248,20 @@ const Content = () => {
           Technologies and does not govern the use of Technologies by any third
           parties.
         </p>
+        <p>
+          <strong>Cross-Device Tracking: </strong>Your browsing activity may be
+          tracked across different websites and different devices or apps. For
+          example, we may attempt to match your browsing activity on your mobile
+          device with your browsing activity on your laptop. To do this our
+          technology partners may share data, such as your browsing patterns,
+          geo-location and device identifiers, and will match the information of
+          the browser and devices that appear to be used by the same person.
+        </p>
       </section>
       <section className="rich-text-section" id="third-parties">
-        <h2 className="title-s mt-8">
-          4. Disclosing your information to third parties
-        </h2>
+        <p>
+          <strong>3. Disclosing your information to third parties</strong>
+        </p>
         <p>
           We may share your personal information with the following categories
           of third parties:
@@ -341,27 +271,31 @@ const Content = () => {
           information we collect about you with our third-party service
           providers. The categories of service providers to whom we entrust
           personal information include service providers for: (i) the provision
-          of the Service; (ii) the provision of information, products, and other
-          services you have requested; (iii) customer service activities; and
-          (iv) the provision of IT and related services, including third-party
-          AI models used for the AI co-creator functionality. Examples of such
-          providers include:
+          of the Services; (ii) the provision of information, products, and
+          other services you have requested; (iii) marketing and advertising;
+          (iv) payment and transaction processing; (v) customer service
+          activities; and (vi) the provision of IT and related services.
         </p>
-        <ul>
-          <li>Cloud hosting providers;</li>
-          <li>Analytics providers;</li>
-          <li>Collaboration tools.</li>
-        </ul>
+        <p>
+          <strong>Business Partners. </strong>We may provide personal
+          information to business partners to provide you with a product or
+          service you have requested. We may also provide personal information
+          to business partners with whom we jointly offer products or services.
+        </p>
         <p>
           <strong>Affiliates. </strong>We may share personal information with
           our affiliated entities.
         </p>
         <p>
-          <strong>Third-Party Integrations. </strong>If you use third-party
-          integrations (such as Google Drive or Dropbox) with our Service, we
-          may share your information with those third parties as necessary to
-          provide the integration. These third parties have their own privacy
-          policies, and we are not responsible for their privacy practices.
+          <strong>Advertising Partners. </strong>We do not share your
+          information, including personal information, to advertise any third
+          party’s products or services via the Services. We may use and share
+          your personal information with third-party advertising partners to
+          market our own Services and grow our Services’ user base, such as to
+          provide targeted marketing about our own Services via third-party
+          services. If you prefer not to share your personal information with
+          third-party advertising partners, you may follow the instructions
+          below.
         </p>
         <p>
           <strong>Your Organization. </strong>If you access the Services on
@@ -392,60 +326,31 @@ const Content = () => {
           by law and/or contract.
         </p>
       </section>
-      <section className="rich-text-section" id="transfer-information">
-        <h2 className="title-s mt-8">
-          5. Cross-Border Transfer of Personal Information
-        </h2>
-        <p>
-          The Service is hosted in the United States, and the personal
-          information we collect will be stored and processed on our servers in
-          the United States. Our employees, contractors, and affiliated
-          organizations that process information for us may be located in the
-          United States or in other countries outside of your home country,
-          which may have different data protection standards than those in your
-          home country.
-        </p>
-        <p>
-          Where your personal information is transferred outside of the EEA,
-          Switzerland, or the UK, and where this is to a country not subject to
-          an adequacy decision by the EU Commission or considered adequate as
-          determined by applicable data protection laws, we will take steps to
-          ensure your personal information is adequately protected by safeguards
-          such as Standard Contractual Clauses (SCCs) approved by the EU
-          Commission or the UK Government. A copy of the relevant mechanism can
-          be obtained for your review on request by using the contact details in
-          Section 10 (&quot;Contact Us&quot;).
-        </p>
-      </section>
       <section className="rich-text-section" id="your-choices">
-        <h2 className="title-s mt-8">6. Your Choices</h2>
+        <p>
+          <strong>4. Your Choices</strong>
+        </p>
         <p>
           <strong>General. </strong>You may have the right to opt out of certain
           uses of your personal information.
         </p>
         <p>
-          <strong>Email Communications.</strong>We may send you certain
-          non-promotional communications regarding us and our Service, and you
-          will not be able to opt out of those communications (e.g.,
-          communications regarding the Service or updates to this Privacy
-          Policy).
+          <strong>Email Communications.</strong>You will receive
+          transaction-related emails regarding products or services you have
+          requested. We may also send you certain non-promotional communications
+          regarding us and our Services, and you will not be able to opt out of
+          those communications (e.g., communications regarding the Services or
+          updates to this Privacy Policy).
         </p>
         <p>
-          <strong>Privacy Mode.</strong>You may enable Privacy Mode in the
-          Service settings to prevent your User Content from being used to train
-          AI models. When Privacy Mode is enabled, your User Content is used
-          only to generate Generated Content in real-time and is deleted
-          afterward.
-        </p>
-        <p>
-          <strong>Cookies. </strong>You may stop or restrict the placement of
-          Technologies on your device or remove them by adjusting your
-          preferences as your browser or device permits. The online advertising
-          industry also provides websites from which you may opt out of
-          receiving targeted ads from data partners and other advertising
-          partners that participate in self-regulatory programs. You can access
-          these websites and learn more about targeted advertising and consumer
-          choice and privacy, at{" "}
+          <strong>Cookies and Interest-Based Advertising. </strong>You may stop
+          or restrict the placement of Technologies on your device or remove
+          them by adjusting your preferences as your browser or device permits.
+          The online advertising industry also provides websites from which you
+          may opt out of receiving targeted ads from data partners and other
+          advertising partners that participate in self-regulatory programs. You
+          can access these websites and learn more about targeted advertising
+          and consumer choice and privacy, at{" "}
           <a href="https://www.networkadvertising.org/">
             www.networkadvertising.org
           </a>
@@ -475,80 +380,111 @@ const Content = () => {
         </p>
       </section>
       <section className="rich-text-section" id="privacy-rights">
-        <h2 className="title-s mt-8">7. Your Privacy Rights</h2>
+        <p>
+          <strong>5. Your Privacy Rights</strong>
+        </p>
         <p>In accordance with applicable laws, you may have the right to:</p>
         <ul>
           <li>
-            <strong>Access </strong>personal information about you consistent
-            with legal requirements;
+            <strong>Access</strong>personal information about you consistent
+            with legal requirements.
           </li>
           <li>
             <strong>Request Correction </strong>of your personal information
-            where it is inaccurate or incomplete;
+            where it is inaccurate or incomplete.
           </li>
           <li>
             <strong>Request Deletion </strong>of your personal information,
-            subject to certain exceptions prescribed by law;
+            subject to certain exceptions prescribed by law.
           </li>
           <li>
             <strong>Request Restriction </strong>of our processing of your
-            personal information;
+            personal information
           </li>
           <li>
             <strong>Withdraw your Consent </strong>to our processing of your
-            personal information;
+            personal information.
           </li>
         </ul>
-        <p>
-          These rights may be limited, for example, if fulfilling your request
-          would reveal personal information about another person, or if you ask
-          us to delete information that we are required by law or have
-          compelling legitimate interests to keep.
-        </p>
         <p>
           If you would like to exercise any of these rights, please contact us
           as set forth below. We will process such requests in accordance with
           applicable laws. To protect your privacy, we will take steps to verify
           your identity before fulfilling your request.
         </p>
-      </section>
-      <section className="rich-text-section" id="data-retention">
-        <h2 className="title-s mt-8">8. Data Retention and Deleteion</h2>
         <p>
-          We store the personal information we receive as described in this
-          Privacy Policy for as long as your account is active or as necessary
-          to fulfill the purpose(s) for which it was collected, provide our
-          Service, resolve disputes, establish legal defenses, conduct audits,
-          pursue legitimate business purposes, enforce our agreements, and/or
-          comply with applicable laws.
+          Please note that if you use our Services on behalf of an organization
+          (e.g., your employer), that organization may be responsible for
+          fulfilling the individual rights requests referenced above.
+        </p>
+      </section>
+      <section className="rich-text-section" id="google-data">
+        <p>
+          <strong>6. Google User Data</strong>
         </p>
         <p>
-          Retention periods will be determined taking into account the type of
-          information collected and the purpose for which it is collected,
-          bearing in mind the requirements applicable to the situation and the
-          need to destroy outdated, unused information at the earliest
-          reasonable opportunity. For example:
+          <strong>IMPORTANT: </strong>Zippwaste’s use and transfer of
+          information received from Google APIs will adhere to{" "}
+          <a href="https://developers.google.com/terms/api-services-user-data-policy">
+            Google API Services User Data Policy
+          </a>
+          , including the Limited Use requirements.
+        </p>
+        <p>
+          <strong>
+            We do not access your Sent emails through your Gmail account.{" "}
+          </strong>
+          We use access to draft sending in your Gmail account to ensure the
+          operability of the Send Later feature.
+        </p>
+        <p>
+          We may add a <strong>tracking pixel</strong> to the body of emails
+          sent through our service to track email opens and wrap your links with
+          a tracking domain to track link clicks. We use the data acquired
+          through these tracking methods to maintain email campaign operability
+          and provide campaign reports.
+        </p>
+        <p>
+          You may revoke Zippwaste’s access to your Gmail account in the
+          Account’s settings page. If you decide to do so, we will lose access
+          to your Gmail account and will no longer be able to provide you
+          campaign sending services through Gmail API.
+        </p>
+        <p>
+          We delete all data collected from your Gmail account upon request.
+        </p>
+        <p>
+          Not all Google User Data may contain personal data. Some statistical
+          data will be anonymized.
+        </p>
+        <p>
+          With regard to the access to Google User Data as specified above, we
+          will:
         </p>
         <ul>
           <li>
-            Data related to your account will be retained as long as your
-            account is active.
+            only use access to read, write, modify, or control Gmail message
+            bodies (including attachments), metadata, headers, and settings to
+            provide a web email client that allows users to compose, send, read,
+            and process emails and will not transfer this Gmail data to others
+            unless doing so is necessary to provide and improve these features,
+            comply with applicable law, or as part of a merger, acquisition, or
+            sale of assets;
           </li>
+          <li>not use this Gmail data for serving advertisements;</li>
           <li>
-            User Content and Generated Content may be retained longer if used
-            for training AI models (unless Privacy Mode is enabled).
+            not allow humans to read this data unless we have your affirmative
+            agreement for specific messages, doing so is necessary for security
+            purposes such as investigating abuse, to comply with applicable law,
+            or for the Platform’s internal operations and even then only when
+            the data have been aggregated and anonymized.
           </li>
         </ul>
-        <p>
-          If you already have an account on the Service, you may access, update,
-          alter, or delete your basic user profile information by logging into
-          your account and updating your profile settings. For more information
-          on our retention periods, you can contact us using the details in
-          Section 10 (&quot;Contact Us&quot;).
-        </p>
       </section>
       <section className="rich-text-section" id="other-conditions">
-        <h2 className="title-s mt-8">9. Other Conditions</h2>
+        <p>
+          <strong>7. Other Conditions</strong>
+        </p>
         <p>
           <strong>International Data Transfers.</strong> All information
           processed by us may be transferred, processed, and stored anywhere in
@@ -556,6 +492,17 @@ const Content = () => {
           countries, which may have data protection laws that are different from
           the laws where you live. We endeavor to safeguard your information
           consistent with the requirements of applicable laws.
+        </p>
+        <p>
+          <strong>Data Retention.</strong> We store the personal information we
+          receive as described in this Privacy Policy for as long as you use our
+          Services or as necessary to fulfill the purpose(s) for which it was
+          collected, provide our Services, resolve disputes, establish legal
+          defenses, conduct audits, pursue legitimate business purposes, enforce
+          our agreements, and/or comply with applicable laws. We may also retain
+          your personal information for our compliance with a legal, accounting,
+          or reporting obligation or for archiving purposes in historical
+          research purposes or statistical purposes.
         </p>
         <p>
           <strong>Security of your information.</strong> We take steps to ensure
@@ -566,28 +513,28 @@ const Content = () => {
           liability for unauthorized disclosure.
         </p>
         <p>
-          By using the Service or providing personal information to us, you
+          By using the Services or providing personal information to us, you
           agree that we may communicate with you electronically regarding
           security, privacy, and administrative issues relating to your use of
-          the Service. If we learn of a security system’s breach, we may attempt
-          to notify you electronically by posting a notice on the Service, by
-          mail, or by sending an email to you.
+          the Services. If we learn of a security system’s breach, we may
+          attempt to notify you electronically by posting a notice on the
+          Services, by mail or by sending an email to you.
         </p>
         <p>
           You are responsible for selecting any password and its overall
           security strength, ensuring the security of your own information
-          within the bounds of our Service.
+          within the bounds of our services.
         </p>
         <p>
-          <strong>Third-Party Websites/Applications.</strong>The Service may
-          contain links to other websites/applications (such as Google Drive or
-          Dropbox) and other websites/applications may reference or link to our
-          Service. These third-party services are not controlled by us. We
-          encourage our users to read the privacy policies of each website and
-          application with which they interact. We do not endorse, screen, or
-          approve, and are not responsible for, the privacy practices or content
-          of such other websites or applications. Visiting these other websites
-          or applications is at your own risk.
+          <strong>Third-Party Websites/Applications.</strong>The Services may
+          contain links to other websites/applications and other
+          websites/applications may reference or link to our Services. These
+          third-party services are not controlled by us. We encourage our users
+          to read the privacy policies of each website and application with
+          which they interact. We do not endorse, screen or approve, and are not
+          responsible for, the privacy practices or content of such other
+          websites or applications. Visiting these other websites or
+          applications is at your own risk.
         </p>
         <p>
           <strong>Children’s Privacy.</strong> The Services are not directed to
@@ -600,7 +547,7 @@ const Content = () => {
           account.
         </p>
         <p>
-          <strong>Supervisory Authority.</strong> . If you are located in the
+          <strong>Supervisory Authority.</strong> If you are located in the
           European Economic Area or the UK, you have the right to lodge a
           complaint with a supervisory authority if you believe our processing
           of your personal information violates applicable law.
@@ -611,19 +558,19 @@ const Content = () => {
           any material changes to this Privacy Policy, we will notify you as
           required by applicable law. You understand and agree that you will be
           deemed to have accepted the updated Privacy Policy if you continue to
-          use the Service after the new Privacy Policy takes effect.
+          use the Services after the new Privacy Policy takes effect.
         </p>
       </section>
       <section className="rich-text-section" id="contact-us">
-        <h2 className="title-s mt-8"> 10. Contact Us</h2>
+        <p>
+          <strong>8. Contact Us</strong>
+        </p>
         <p>
           If you have any questions or concerns regarding our privacy practices
-          or this Privacy Policy, please contact us via email to hello@stroke.so
+          or this Privacy Policy, please contact us via email to
+          jason.fike@zippwaste.com
         </p>
-        <p>
-          Happy Vibes, Inc.<br></br>1606 Headway Cir STE 9794<br></br> Austin,
-          Texas 78754, United States
-        </p>
+        <p>[Company name]</p>
       </section>
     </div>
   );
