@@ -1,5 +1,6 @@
 import PageWrapper from "./page-wrapper";
-import generateMetadata from "@/utils/seo/metadata";
+import Footer from "@/components/global-elements/footer";
+import generateMetadata from "@/utils/seo-metadata/static";
 
 export const metadata = generateMetadata({
   title:
@@ -15,6 +16,7 @@ export default function Page() {
   return (
     <main>
       <PageWrapper />
+      <Footer />
     </main>
   );
 }

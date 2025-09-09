@@ -2,7 +2,7 @@
 
 import StartupIcon from "@/uikit/icons/startup";
 import SearchIcon from "@/uikit/icons/search";
-import RaizerIcon from "@/uikit/icons/raizer-icon";
+
 import ExtraIcon from "@/uikit/icons/extra";
 import CheckSimpleIcon from "@/uikit/icons/check-simple";
 import CancelIcon from "@/uikit/icons/cancel";
@@ -10,7 +10,6 @@ import CancelIcon from "@/uikit/icons/cancel";
 const iconMap = {
   startup: StartupIcon,
   search: SearchIcon,
-  "raizer-icon": RaizerIcon,
   extra: ExtraIcon,
 };
 
