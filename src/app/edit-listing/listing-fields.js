@@ -44,7 +44,7 @@ export default function ListingFields({
     zip_codes,
     handleSelectorChange,
     setZipCodeInput,
-    data?.zip_code_limit
+    data?.zip_codes_limit
   );
   const removeZipCodeHandler = removeZipCode(handleSelectorChange);
 
@@ -114,7 +114,7 @@ export default function ListingFields({
           onKeyDown={handleZipCodeKeyDownEvent}
           placeholder="Enter zip codes (press space to add)"
           type="number"
-          max={data?.zip_code_limit}
+          max={data?.zip_codes_limit}
           maxUsed={zip_codes.length}
         />
         <div className="flex flex-row gap-3 flex-wrap">

@@ -15,6 +15,7 @@ import {
 export default function Section({ data, onFormDataChange }) {
   const name = data?.name || "";
   const logo = data?.logo || null;
+  const zip_codes_limit = data?.zip_codes_limit || 5;
 
   const [saving, setSaving] = useState(false);
   const [publishing, setPublishing] = useState(false);
@@ -122,6 +123,7 @@ export default function Section({ data, onFormDataChange }) {
       </div>
       <ListingFields
         data={data}
+
         handleInputChange={handleInputChange}
         handleSelectorChange={handleSelectorChange}
         removeAppliedType={removeAppliedType}

@@ -17,6 +17,7 @@ export default function PageWrapper() {
         const info = {
           ...response.data,
           logo: response.data?.logo?.url || null,
+          zip_codes_limit: response.zip_codes_limit || 5,
         };
         setFormData(info);
       }
