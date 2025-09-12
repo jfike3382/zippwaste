@@ -4,7 +4,7 @@ import Footer from "@/components/global-elements/footer";
 export default function PageWrapper() {
   return (
     <>
-      <div className="flex min-h-screen">
+      <div className="flex  min-h-screen h-full">
         <div className="flex flex-1 ">
           <TableWrapper />
         </div>

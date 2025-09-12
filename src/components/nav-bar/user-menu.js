@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Dropdown from "../../uikit/dropdown";
-import ProfileLogo from "../profile-logo";
+import ProfileLogo from "../../uikit/profile-logo";
 import { getCookie, logout } from "@/utils/cookies";
 import { useUserState } from "@/providers/user-state-provider";
 import UpgradeIcon from "@/uikit/icons/upgrade";

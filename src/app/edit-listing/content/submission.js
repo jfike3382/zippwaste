@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { useNotification } from "@/providers/notifications";
-import Button from "@/components/uikit/button";
-import ProfileSection from "@/components/profile/startup/profile-section";
+import Button from "@/uikit/button";
+import ProfileSection from "@/components/company-page/profile-wrapper";
 import { PublishStartup } from "@/api/actions-client";
 import { setCookie } from "@/utils/cookies";
 

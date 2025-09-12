@@ -1,5 +1,6 @@
 import PageWrapper from "./page-wrapper";
 import generateMetadata from "@/utils/seo-metadata/static";
+import Footer from "@/components/global-elements/footer";
 
 export const metadata = generateMetadata({
   title: "Edit Listing - Zippwaste",
@@ -11,8 +12,11 @@ export const metadata = generateMetadata({
 
 export default function Page() {
   return (
-    <main>
-      <PageWrapper />
-    </main>
+    <>
+      <main>
+        <PageWrapper />
+      </main>
+      <Footer />
+    </>
   );
 }

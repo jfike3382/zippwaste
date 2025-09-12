@@ -1,6 +1,6 @@
 import ConnectButtons from "./connect-buttons";
 import WebsiteLink from "@/uikit/website-link";
-import ProfileLogo from "@/components/profile-logo";
+import ProfileLogo from "@/uikit/profile-logo";
 import formatLocation from "@/utils/format-data/location";
 import VerifiedIcon from "@/uikit/icons/verified";
 import Link from "next/link";

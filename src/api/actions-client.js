@@ -21,3 +21,22 @@ export const SettingsApi = {
     return apiRequest(`settings/change_password`, "POST", data, true);
   },
 };
+
+// Listing APIs
+export const ListingApi = {
+  getCompanyInfo: () => {
+    return apiRequest(`listing/get_info`, "GET", null, true);
+  },
+
+  editCompanyInfo: (data) => {
+    return apiRequest(`listing/edit_info`, "POST", data, true);
+  },
+
+  publishCompany: () => {
+    return apiRequest(`listing/publish`, "POST", null, true);
+  },
+
+  unlistCompany: () => {
+    return apiRequest(`listing/unlist`, "POST", null, true);
+  },
+};

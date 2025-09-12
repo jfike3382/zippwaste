@@ -1,12 +1,9 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import MenuSidebar from "./menu-sidebar";
-import TipsSidebar from "./components/tips-sidebar";
 import GlobalLoader from "@/components/global-elements/global-loader";
 import { GetStartupInfo } from "@/api/actions-client";
 
 import MainInfo from "./content/main-info";
-import Goals from "./content/goals";
 import ContactInfo from "./content/contact-info";
 import Submission from "./content/submission";
 
@@ -17,7 +14,6 @@ export default function PageWrapper() {
 
   const sectionComponents = {
     "Main info": MainInfo,
-    Goals: Goals,
     "Contact info": ContactInfo,
     Submission: Submission,
   };
@@ -66,15 +62,6 @@ export default function PageWrapper() {
 
   return (
     <>
-      <MenuSidebar
-        activeSection={activeSection}
-        onSectionChange={handleSectionChange}
-        sectionsCompleted={{
-          "Main info": formData?.section_1_fill,
-          Goals: formData?.section_2_fill,
-          "Contact info": formData?.section_3_fill,
-        }}
-      />
       <section className="main-container" key={activeSection}>
         <GlobalLoader show={loading} />
         {!loading && (
@@ -83,7 +70,6 @@ export default function PageWrapper() {
           </div>
         )}
       </section>
-      <TipsSidebar activeSection={activeSection} />
     </>
   );
 }

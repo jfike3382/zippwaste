@@ -1,4 +1,4 @@
-import ProfileLogo from "@/components/profile-logo";
+import ProfileLogo from "@/uikit/profile-logo";
 import ConnectButtons from "@/components/table/uikit/connect-buttons";
 import CharacteristicsList from "./characteristics-list";
 import FormatLocation from "@/utils/format-data/location";
@@ -55,6 +55,26 @@ export default function MainContent({ item }) {
               titleSize="title-s"
             />
           )}
+          <div className="hidden max-lg:flex flex-col gap-8">
+            <div className="flex flex-col gap-6">
+              <CharacteristicsList
+                data={item.dumpster_size}
+                characteristic={"Dumpsters"}
+              />
+              <CharacteristicsList
+                data={item.project_size}
+                characteristic={"Project Size"}
+              />
+              <CharacteristicsList
+                data={item.debris_type}
+                characteristic={"Debris Types"}
+              />
+              <CharacteristicsList
+                data={item.duration}
+                characteristic={"Duration"}
+              />
+            </div>
+          </div>
         </div>
         <FAQ item={item} />
         <ProfileViews views={item.views} />

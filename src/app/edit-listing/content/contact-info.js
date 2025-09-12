@@ -1,9 +1,8 @@
-import Input from "@/components/uikit/input";
-import Selector from "@/components/uikit/selector";
+import Input from "@/uikit/input";
+import Selector from "@/uikit/selector";
 import LogoUploader from "@/utils/logo-uploader";
-import ProfileLogo from "@/components/global-elements/profile/profile-logo";
+import ProfileLogo from "@/uikit/profile-logo";
 
-import NavigationButtons from "../components/navigation-buttons";
 import {
   useInputChangeHandler,
   useSelectorChangeHandler,
@@ -130,12 +129,6 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
           </div>
         </div>
       </div>
-      <NavigationButtons
-        nextSection="Submission"
-        getDataToSave={getDataToSave}
-        step={3}
-        onSectionChange={onSectionChange}
-      />
     </>
   );
 }

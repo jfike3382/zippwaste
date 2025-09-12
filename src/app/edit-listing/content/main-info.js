@@ -1,8 +1,8 @@
-import Input from "@/components/uikit/input";
-import NavigationButtons from "../components/navigation-buttons";
+import Input from "@/uikit/input";
+
 import LogoUploader from "@/utils/logo-uploader";
-import ProfileLogo from "@/components/global-elements/profile/profile-logo";
-import Selector from "@/components/uikit/selector";
+import ProfileLogo from "@/uikit/profile-logo";
+import Selector from "@/uikit/selector";
 import filtersData from "@/data/filters.json";
 import Image from "next/image";
 import { useState } from "react";
@@ -192,12 +192,6 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
           optional
         />
       </div>
-      <NavigationButtons
-        nextSection="Goals"
-        getDataToSave={getDataToSave}
-        step={1}
-        onSectionChange={onSectionChange}
-      />
     </>
   );
 }
