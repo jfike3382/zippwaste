@@ -3,6 +3,11 @@ import Button from "@/uikit/button";
 import Selector from "@/uikit/selector";
 import Cancel from "@/uikit/icons/cancel";
 import filtersData from "@/data/filters.json";
+import { useState } from "react";
+import {
+  useZipCodeChangeHandler,
+  useRemoveZipCodeHandler,
+} from "./form-handlers";
 
 export default function ListingFields({
   data,
@@ -27,6 +32,21 @@ export default function ListingFields({
   const website = data?.website || "";
   const phone = data?.phone || "";
   const email = data?.email || "";
+  const zip_codes = data?.zip_codes || [];
+
+  const [zipCodeInput, setZipCodeInput] = useState("");
+
+  const handleZipCodeKeyDown = useZipCodeChangeHandler();
+  const removeZipCode = useRemoveZipCodeHandler();
+
+  const handleZipCodeKeyDownEvent = handleZipCodeKeyDown(
+    zipCodeInput,
+    zip_codes,
+    handleSelectorChange,
+    setZipCodeInput,
+    data?.zip_code_limit
+  );
+  const removeZipCodeHandler = removeZipCode(handleSelectorChange);
 
   const stateOptions = filtersData.us_state.map((state) => state.name);
   const typeOptions = filtersData.type.map((type) => type.name);
@@ -58,14 +78,7 @@ export default function ListingFields({
         placeholder="What's your company about?"
         required
       />
-      <Input
-        name="address"
-        label="Full address"
-        value={address}
-        onChange={handleInputChange}
-        placeholder="Enter your full address"
-        required
-      />
+
       <Input
         name="city"
         label="City"
@@ -84,6 +97,43 @@ export default function ListingFields({
         required
         multiSelect={false}
       />
+      <Input
+        name="address"
+        label="Full address"
+        value={address}
+        onChange={handleInputChange}
+        placeholder="Enter your full address"
+        required
+      />
+      <div className="flex flex-col gap-4">
+        <Input
+          name="zip_codes"
+          label="Zip codes"
+          value={zipCodeInput}
+          onChange={(e) => setZipCodeInput(e.target.value)}
+          onKeyDown={handleZipCodeKeyDownEvent}
+          placeholder="Enter zip codes (press space to add)"
+          type="number"
+          max={data?.zip_code_limit}
+          maxUsed={zip_codes.length}
+        />
+        <div className="flex flex-row gap-3 flex-wrap">
+          {zip_codes.map((zipCode, idx) => (
+            <div className="tag white icon-right" key={idx}>
+              {zipCode}
+              <span
+                className="inline-block h-full border-l border-[#222] ml-1"
+                aria-hidden="true"
+              />
+              <Cancel
+                size={20}
+                className="cursor-pointer"
+                onClick={() => removeZipCodeHandler(zipCode, zip_codes)}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="divider" />
       <div className="flex flex-col gap-4">
         <Selector

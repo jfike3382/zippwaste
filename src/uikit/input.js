@@ -10,9 +10,12 @@ export default function Input({
   onChange,
   onFocus,
   onKeyPress,
+  onKeyDown,
   autoComplete,
   required = false,
   optional = false,
+  max,
+  maxUsed,
   error = false,
   visible = true,
   placeholder,
@@ -39,7 +42,16 @@ export default function Input({
         <p className="input-label">
           {label}
           {optional && (
-            <span className="text-xs text-neutral-600"> (Optional)</span>
+            <span className="ml-1 text-xs text-neutral-600"> (Optional)</span>
+          )}
+          {max && maxUsed !== undefined && (
+            <span className="ml-1 text-xs text-neutral-600">
+              {" "}
+              (Used {maxUsed} / {max})
+            </span>
+          )}
+          {max && maxUsed === undefined && (
+            <span className="ml-1 text-xs text-neutral-600"> (Max {max})</span>
           )}
         </p>
       )}
@@ -59,11 +71,7 @@ export default function Input({
         ) : (
           <input
             type={
-              type === "password"
-                ? showPassword
-                  ? "text"
-                  : "password"
-                : type
+              type === "password" ? (showPassword ? "text" : "password") : type
             }
             name={name}
             value={value}
@@ -71,6 +79,7 @@ export default function Input({
             onInput={handleInput}
             onFocus={onFocus}
             onKeyPress={onKeyPress}
+            onKeyDown={onKeyDown}
             required={required}
             placeholder={placeholder}
             className={`input ${error ? "border-red-400 ring-red-400" : ""}`}

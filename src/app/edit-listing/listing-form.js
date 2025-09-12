@@ -3,6 +3,7 @@ import LogoUploader from "@/utils/logo-uploader";
 import ProfileLogo from "@/uikit/profile-logo";
 import ListingFields from "./listing-fields";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { ListingApi } from "@/api/actions-client";
 import { useNotification } from "@/providers/notifications";
 import {
@@ -18,14 +19,11 @@ export default function Section({ data, onFormDataChange }) {
   const [saving, setSaving] = useState(false);
   const [publishing, setPublishing] = useState(false);
   const { showNotification } = useNotification();
+  const router = useRouter();
 
-  const handleInputChange = useInputChangeHandler(null, data, onFormDataChange);
-  const handleLogoChange = useLogoChangeHandler(null, data, onFormDataChange);
-  const handleSelectorChange = useSelectorChangeHandler(
-    null,
-    data,
-    onFormDataChange
-  );
+  const handleInputChange = useInputChangeHandler(onFormDataChange);
+  const handleLogoChange = useLogoChangeHandler(onFormDataChange);
+  const handleSelectorChange = useSelectorChangeHandler(onFormDataChange);
 
   const removeAppliedDebrisType = (debrisType) => {
     const updatedDebrisTypes = (data?.debris_type || []).filter(
@@ -83,10 +81,7 @@ export default function Section({ data, onFormDataChange }) {
       // Then publish
       const publishResponse = await ListingApi.publishCompany();
       if (!publishResponse.error) {
-        showNotification(
-          "success",
-          publishResponse.success_message || "Company published successfully!"
-        );
+        router.push(`/company/${publishResponse.data.slug}`);
       } else {
         showNotification("error", publishResponse.error);
       }
