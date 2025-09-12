@@ -67,7 +67,6 @@ export default function ConnectButtons({ item, size = "s" }) {
 
   return (
     <div className="flex flex-row gap-2">
-      {renderButton("website", item.website, "website", "Website")}
       {renderButton(
         "email",
         item.email ? `mailto:${item.email}` : null,

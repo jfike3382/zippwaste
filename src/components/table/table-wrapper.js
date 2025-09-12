@@ -19,7 +19,7 @@ function TableContainer() {
 
   return (
     <div className="flex flex-row flex-1">
-      <div className="tablet-hidden">
+      <div className=" max-lg:hidden flex flex-col w-[24rem] min-w-[24rem] h-full p-6 pt-10 bg-neutral-50 border-r border-neutral-200">
         <FilterComponent />
       </div>
       <div className="main-data-container">

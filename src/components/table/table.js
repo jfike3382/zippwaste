@@ -14,9 +14,11 @@ export default function Table() {
         loading ? "opacity-70" : "opacity-100"
       }`}
     >
-      <div className="flex flex-col gap-6">
+      <div className="grid grid-cols-2 max-xl:grid-cols-1 gap-6">
         {isInitial && items.length === 0 ? (
-          <TableEmptyState />
+          <div className="col-span-2 max-lg:col-span-1">
+            <TableEmptyState />
+          </div>
         ) : (
           items?.map((item, index) => (
             <TableRow key={item.slug || index} item={item} />

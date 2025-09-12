@@ -33,40 +33,38 @@ export default function FilterComponent({
   };
 
   return (
-    <div className="flex flex-col w-[24rem] min-w-[24rem] h-full p-6 pt-10 bg-neutral-50 border-r border-neutral-200 ">
-      <div className="flex flex-col gap-8 flex-wrap">
-        <TypeFilter />
-        <div className="flex flex-col gap-4">
-          <p className="text-base font-medium text-secondary">Filters</p>
-          <div className="flex flex-col gap-3">
-            {(filters.type === "Dumpster rental" || !filters.type) && (
-              <DumpsterSizeFilter
-                dropdownSize={dropdownSize}
-                dropdownOrientation={dropdownOrientation}
-              />
-            )}
-            {filters.type === "Junk removal" && (
-              <ProjectSizeFilter
-                dropdownSize={dropdownSize}
-                dropdownOrientation={dropdownOrientation}
-              />
-            )}
-            <DebrisTypeFilter
+    <div className="flex flex-col gap-8 flex-wrap">
+      <TypeFilter />
+      <div className="flex flex-col gap-4">
+        <p className="text-base font-medium text-secondary">Filters</p>
+        <div className="flex flex-col gap-3">
+          {(filters.type === "Dumpster rental" || !filters.type) && (
+            <DumpsterSizeFilter
               dropdownSize={dropdownSize}
               dropdownOrientation={dropdownOrientation}
             />
-            {(filters.type === "Dumpster rental" || !filters.type) && (
-              <DurationFilter
-                dropdownSize={dropdownSize}
-                dropdownOrientation={dropdownOrientation}
-              />
-            )}
-          </div>
+          )}
+          {filters.type === "Junk removal" && (
+            <ProjectSizeFilter
+              dropdownSize={dropdownSize}
+              dropdownOrientation={dropdownOrientation}
+            />
+          )}
+          <DebrisTypeFilter
+            dropdownSize={dropdownSize}
+            dropdownOrientation={dropdownOrientation}
+          />
+          {(filters.type === "Dumpster rental" || !filters.type) && (
+            <DurationFilter
+              dropdownSize={dropdownSize}
+              dropdownOrientation={dropdownOrientation}
+            />
+          )}
         </div>
-        <div className="flex flex-col gap-4">
-          <ApplyButton onApply={handleContinue} />
-          <ResetButton onApply={handleReset} />
-        </div>
+      </div>
+      <div className="flex flex-col gap-4">
+        <ApplyButton onApply={handleContinue} />
+        <ResetButton onApply={handleReset} />
       </div>
     </div>
   );
@@ -77,13 +75,13 @@ export function FiltersMobile() {
 
   return (
     <>
-      <div className="desktop-hidden tablet-hidden">
+      <div className="hidden max-lg:block">
         <Button
           variant="secondary"
           size="m"
           onClick={() => setIsFilterModalOpen(true)}
         >
-          Filters
+          Add Filters
         </Button>
       </div>
       <Modal

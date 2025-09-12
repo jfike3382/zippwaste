@@ -6,8 +6,8 @@ import InstagramIcon from "@/uikit/icons/instagram";
 
 export default function Footer() {
   return (
-    <section className="flex flex-col gap-16 p-16 bg-neutral-950 text-white items-center max-md:px-5">
-      <div className="max-w-5xl flex flex-row gap-8 w-full max-md:flex-col">
+    <section className="flex flex-col gap-16 p-16 bg-neutral-950 text-white items-center max-md:px-5 max-md:items-start">
+      <div className="max-w-5xl flex flex-row gap-8 w-full max-md:flex-col max-md:items-start">
         <div className="flex flex-col gap-3 flex-1 items-center">
           <div className="flex flex-col gap-3 items-start">
             <span className="text-neutral-400">Company</span>

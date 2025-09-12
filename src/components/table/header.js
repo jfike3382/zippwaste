@@ -34,7 +34,7 @@ export default function Header({ itemsTotal = 0 }) {
   }, [filters.search]);
 
   return (
-    <div className="flex flex-row gap-8 items-center">
+    <div className="flex flex-row gap-8 items-center max-lg:flex-col max-lg:items-start">
       <div className="flex flex-row gap-4 items-center">
         <h1 className="title-m">Companies</h1>
         <p className="title-m text-secondary">{formatNumber(itemsTotal)} </p>
@@ -50,11 +50,8 @@ export default function Header({ itemsTotal = 0 }) {
           <ZoomIcon size={24} />
         </div>
       </div>
-      <div className="flex flex-row items-center justify-between w-full max-md:flex-col gap-4 max-md:items-start max-md:gap-8">
-        <div className="flex flex-row gap-2 items-center">
-          <FiltersMobile />
-        </div>
-      </div>
+
+      <FiltersMobile />
     </div>
   );
 }
