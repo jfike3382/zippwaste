@@ -18,8 +18,8 @@ function TableContainer() {
   }, [filtersReady]);
 
   return (
-    <div className="flex flex-row flex-1">
-      <div className=" filter-container">
+    <div className="flex flex-row flex-1 ">
+      <div className="filter-container">
         <FilterComponent />
       </div>
       <div className="main-data-container">

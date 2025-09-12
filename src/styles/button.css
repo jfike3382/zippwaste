@@ -30,7 +30,7 @@
 }
 
 .button-secondary {
-  @apply text-black border-standard bg-white hover:bg-neutral-200 active:bg-neutral-400;
+  @apply text-black border-standard bg-white hover:bg-neutral-100 active:bg-neutral-200;
 }
 
 .button-transparent {
