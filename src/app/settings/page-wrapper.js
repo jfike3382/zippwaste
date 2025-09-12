@@ -25,10 +25,10 @@ export default function PageWrapper() {
   return (
     <>
       <GlobalLoader show={loading} />
-      <section className="main-data-container max-w-4xl">
+      <section className="main-data-container w-full max-w-4xl">
         <h1 className="title-l text-center">Settings</h1>
         {userInfo && Object.keys(userInfo).length > 0 && (
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-12 w-full">
             <UserSettings userInfo={userInfo} setUserInfo={setUserInfo} />
             <div className="divider" />
             <Billing userInfo={userInfo} setLoading={setLoading} />
