@@ -18,9 +18,7 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
   const logo = data?.logo || null;
   const tagline = data?.tagline || "";
   const description = data?.description || "";
-  const industries = data?.industries || [];
-  const stage = data?.stage || "";
-  const company_size = data?.company_size || "";
+  const debris_type = data?.debris_type || [];
   const website = data?.website || "";
   const x_account = data?.x_account || "";
 
@@ -34,26 +32,17 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
 
   const getDataToSave = useGetDataToSave(
     null,
-    [
-      "name",
-      "logo",
-      "tagline",
-      "description",
-      "industries",
-      "stage",
-      "company_size",
-      "website",
-    ],
+    ["name", "logo", "tagline", "description", "debris_type", "website"],
     data,
     { sectionFillKey: "section_1_fill", sectionStep: 1 }
   );
 
-  const removeAppliedIndustry = (industry) => {
-    const updatedIndustries = industries.filter((i) => i !== industry);
-    onFormDataChange({ industries: updatedIndustries });
+  const removeAppliedDebrisType = (debrisType) => {
+    const updatedDebrisTypes = debris_type.filter((i) => i !== debrisType);
+    onFormDataChange({ debris_type: updatedDebrisTypes });
   };
 
-  const industriesOptions = filtersData.industries.map(
+  const debrisTypeOptions = filtersData.debris_type.map(
     (industry) => industry.name
   );
 
@@ -121,21 +110,21 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
         />
         <div className="flex flex-col gap-4">
           <Selector
-            name="industries"
-            label="Industries"
-            value={industries}
-            onChange={(value) => handleSelectorChange("industries", value)}
-            options={industriesOptions}
-            placeholder="Select your main industries"
+            name="debris_type"
+            label="Debris Type"
+            value={debris_type}
+            onChange={(value) => handleSelectorChange("debris_type", value)}
+            options={debrisTypeOptions}
+            placeholder="Select your debris types"
             required
             multiSelect={true}
             maxSelections={3}
           />
-          {/* Applied Industries Tags */}
+          {/* Applied Debris Types Tags */}
           <div className="flex flex-row gap-3 flex-wrap ">
-            {industries.map((industry, idx) => (
+            {debris_type.map((debrisType, idx) => (
               <div className="tag white icon-right" key={idx}>
-                {industry}
+                {debrisType}
                 <span
                   className="inline-block h-full border-l border-[#222] ml-1"
                   aria-hidden="true"
@@ -146,36 +135,12 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
                   width={20}
                   height={20}
                   className="cursor-pointer"
-                  onClick={() => removeAppliedIndustry(industry)}
+                  onClick={() => removeAppliedDebrisType(debrisType)}
                 />
               </div>
             ))}
           </div>
         </div>
-        <Selector
-          name="stage"
-          label="Current stage"
-          value={stage}
-          onChange={(value) => handleSelectorChange("stage", value)}
-          options={[
-            "Idea stage",
-            "MVP",
-            "First customers",
-            "Early revenue",
-            "PMF / Growth stage",
-          ]}
-          placeholder="Select your current stage"
-          required
-        />
-        <Selector
-          name="company_size"
-          label="Company size"
-          value={company_size}
-          onChange={(value) => handleSelectorChange("company_size", value)}
-          options={["1-10", "11-50", "51-100", "101-500", "501-1000", "1,000+"]}
-          placeholder="Select your company size"
-          required
-        />
         <Input
           name="website"
           label="Website"
