@@ -1,9 +1,15 @@
 import Image from "next/image";
 import ConnectButtons from "./connect-buttons";
+import Link from "next/link";
 
-export default function TableRow({ item, disabled = false }) {
+export default function TableRow({ item }) {
   return (
-    <div className="w-full p-6 border-standard rounded-3xl bg-white">
+    <div className="w-full p-6 border-standard rounded-3xl bg-white  group">
+      <Link
+        href={`/company/${item.slug}`}
+        className="absolute inset-0 z-15"
+      ></Link>
+
       <div className="flex flex-row items-center gap-6">
         {/* Company Logo */}
         <div className="flex-shrink-0">
@@ -26,7 +32,9 @@ export default function TableRow({ item, disabled = false }) {
 
         {/* Company Info */}
         <div className="flex-grow flex flex-col gap-2">
-          <h3 className="text-lg font-semibold text-gray-900">{item.name}</h3>
+          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-brand-blue-800">
+            {item.name}
+          </h3>
           <p className="text-sm text-gray-600">{item.address}</p>
           <p className="text-sm text-gray-500">
             {item.city}, {item.state}
@@ -34,7 +42,7 @@ export default function TableRow({ item, disabled = false }) {
         </div>
 
         {/* Connect Buttons */}
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 relative z-30">
           <ConnectButtons item={item} size="s" />
         </div>
       </div>

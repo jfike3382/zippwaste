@@ -1,13 +1,10 @@
-import ProfileLogo from "../../global-elements/profile/profile-logo";
-import ConnectButtons from "@/components/table/investors/connect-buttons";
+import ProfileLogo from "@/components/profile-logo";
+import ConnectButtons from "@/components/table/uikit/connect-buttons";
 import CharacteristicsList from "./characteristics_list";
 import FormatLocation from "@/utils/format-data/location";
-import ProfileStats from "./stats";
-import ProfileSubtitle from "@/components/global-elements/profile/profile-subtitle";
-import ProfileName from "@/components/global-elements/profile/profile-name";
-import WebsiteLink from "@/components/global-elements/profile/website-link";
+import WebsiteLink from "@/uikit/website-link";
 import FAQ from "./faq";
-import ProfileViews from "@/components/global-elements/profile/profile-views";
+import ProfileViews from "./profile-views";
 
 export default function MainContent({ item }) {
   if (!item) {
@@ -20,13 +17,8 @@ export default function MainContent({ item }) {
         <ProfileLogo name={item.name} size="xl" src={item.logo?.url} />
 
         <div className="flex flex-col gap-2 paragraph-l">
-          <ProfileName
-            size="l"
-            name={item.name}
-            verified={item.verified}
-            tag="h1"
-          />
-          <ProfileSubtitle item={item} size="m" />
+          <p>{item.name}</p>
+          <p>{item.address}</p>
           <WebsiteLink website={item.website} size={20} />
         </div>
 
@@ -62,7 +54,6 @@ export default function MainContent({ item }) {
           visibleItems={10}
           titleSize="title-s"
         />
-        <ProfileStats data={item.filters ? item.filters : item} />
       </div>
       <FAQ item={item} />
       <ProfileViews views={item.views} />
