@@ -28,7 +28,7 @@ export default function FundraisingGoal({
               />
               <div className="flex flex-col gap-2 flex-1">
                 <h3 className="title-s">Fundraising</h3>
-                <p className="text-sm text-brand-gray-800">
+                <p className="text-sm text-neutral-800">
                   Raise money to grow faster
                 </p>
               </div>

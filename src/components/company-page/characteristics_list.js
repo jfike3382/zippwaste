@@ -27,7 +27,7 @@ export default function CharacteristicsList({
 
   return (
     <div className="flex flex-col gap-2 flex-wrap">
-      <p className={`text-brand-gray-800 ${titleSize}`}>
+      <p className={`text-neutral-800 ${titleSize}`}>
         Invest in {characteristic}
       </p>
       <div className="flex flex-row gap-2 flex-wrap">

@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { SoloApi } from "@/api/data-client";
 import PageWrapper from "./page-wrapper";
 import Metadata from "@/utils/seo-metadata/company-profile";
+import Footer from "@/components/global-elements/footer";
 
 const getProfile = cache(async (slug) => {
   try {
@@ -31,8 +32,11 @@ export default async function Page({ params }) {
   }
 
   return (
-    <main>
-      <PageWrapper item={data.main_data} similar={data.similar} />
-    </main>
+    <>
+      <main>
+        <PageWrapper item={data.main_data} />
+      </main>
+      <Footer />
+    </>
   );
 }

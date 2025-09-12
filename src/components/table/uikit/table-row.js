@@ -25,7 +25,7 @@ export default function TableRow({ item }) {
               {item.name}
             </h3>
             <div className="flex flex-row gap-2 items-center text-sm max-2xl:flex-col max-2xl:items-start ">
-              <p className="line-clamp-1 text-brand-gray-900">
+              <p className="line-clamp-1 text-neutral-900">
                 {formatLocation(item)}
               </p>
               <div className="relative z-30">

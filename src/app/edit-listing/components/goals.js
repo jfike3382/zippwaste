@@ -67,7 +67,7 @@ export default function Goals({ selectedGoals = {}, onGoalsChange }) {
           />
           <div className="flex flex-col gap-2 flex-1">
             <h3 className="title-s">{goal.title}</h3>
-            <p className="text-sm text-brand-gray-800">{goal.description}</p>
+            <p className="text-sm text-neutral-800">{goal.description}</p>
           </div>
           <ToggleSwitcher
             checked={isGoalSelected(goal.id)}

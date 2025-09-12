@@ -33,7 +33,7 @@ export default function FilterComponent({
   };
 
   return (
-    <div className="flex flex-col gap-8 flex-wrap">
+    <div className="flex flex-col gap-8 flex-wrap ">
       <TypeFilter />
       <div className="flex flex-col gap-4">
         <p className="text-base font-medium text-secondary">Filters</p>

@@ -11,7 +11,7 @@ export default function ProfileStats({ data }) {
     <div className="flex flex-row gap-4 max-md:flex-col max-md:gap-8">
       {stats.map((stat) => (
         <div key={stat.label} className="flex flex-col gap-2 max-w-40 w-full">
-          <p className="text-brand-gray-800 font-semibold text-lg">{stat.label}</p>
+          <p className="text-neutral-800 font-semibold text-lg">{stat.label}</p>
           <div className="flex justify-start">
             <p className="tag white">{formatNumber(stat.value)}</p>
           </div>

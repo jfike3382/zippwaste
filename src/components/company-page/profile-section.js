@@ -26,13 +26,13 @@ export default function MainContent({ item }) {
       </div>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
-          <p className="text-brand-gray-800 title-s">Description</p>
+          <p className="text-neutral-800 title-s">Description</p>
           <p className="paragraph-l ">
             {item.description ? item.description : item.firm_data?.description}
           </p>
         </div>
         <div className="flex flex-col gap-2">
-          <p className="text-brand-gray-800 title-s">Location</p>
+          <p className="text-neutral-800 title-s">Location</p>
           <p className="paragraph-l">{FormatLocation(item)}</p>
         </div>
 

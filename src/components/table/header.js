@@ -46,7 +46,7 @@ export default function Header({ itemsTotal = 0 }) {
           onChange={(e) => setSearchInput(e.target.value)}
           onKeyPress={handleKeyPress}
         />
-        <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-brand-gray-600 bg-white pl-1">
+        <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-neutral-600 bg-white pl-1">
           <ZoomIcon size={24} />
         </div>
       </div>

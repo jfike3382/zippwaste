@@ -13,14 +13,6 @@
 @import "./button.css";
 
 @theme {
-  --color-brand-gray-900: #222222;
-  --color-brand-gray-800: #777777;
-  --color-brand-gray-600: #bbbab8;
-  --color-brand-gray-500: #cccccc;
-  --color-brand-gray-400: #dedddd;
-  --color-brand-gray-300: #e5e5e5;
-  --color-brand-gray-200: #f6f6f6;
-
   --color-brand-blue-800: #1c74f9;
   --color-brand-blue-400: #aec5e7;
   --color-brand-blue-200: #d3e0f3;
@@ -29,7 +21,6 @@
   --color-brand-red-400: #ed9f9f;
   --color-brand-red-200: #ffdbdb;
 
-  --color-brand-green-500: #d9ff55;
 
   --color-brand-violet-500: #d554e9;
 }
@@ -60,6 +51,10 @@ main {
 
 .card-container {
   @apply bg-white border-standard rounded-2xl shadow-md max-w-4xl w-full mx-auto;
+}
+
+.filter-container {
+  @apply max-lg:hidden flex flex-col w-[24rem] min-w-[24rem] !h-full p-6 pt-10 bg-neutral-50 border-r border-neutral-200;
 }
 
 strong {
@@ -95,8 +90,6 @@ blockquote::after {
 .rich-text-section a {
   @apply text-brand-blue-800 cursor-pointer;
 }
-
-
 
 /* Global */
 

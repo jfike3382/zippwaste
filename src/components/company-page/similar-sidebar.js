@@ -13,7 +13,7 @@ export default function SimilarProfiles({ data }) {
           />
         ))
       ) : (
-        <p className="text-brand-gray-800">No similar investors found</p>
+        <p className="text-neutral-800">No similar investors found</p>
       )}
     </div>
   );

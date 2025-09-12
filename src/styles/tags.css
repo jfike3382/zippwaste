@@ -9,11 +9,11 @@
 }
 
 .tag.gray {
-  @apply bg-brand-gray-300 text-brand-gray-800;
+  @apply bg-neutral-300 text-neutral-800;
 }
 
 .tag.black {
-  @apply bg-brand-gray-900 text-brand-gray-200;
+  @apply bg-neutral-900 text-neutral-200;
 }
 
 .tag.red {
@@ -41,5 +41,5 @@
 }
 
 .tag.small {
-  @apply text-xs font-semibold py-0.5 px-2 ;
+  @apply text-xs font-semibold py-0.5 px-2;
 }

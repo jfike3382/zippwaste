@@ -19,12 +19,11 @@ This is a [Next.js](https://nextjs.org) project
 4. Push changes (git push origin main)
 5. Initiate development to the production on Cloudflare
 
-
-## To-do 
+## To-do
 
 Define Global Color Styles
 Define Global Text Style
 Remove Sign in Button from Nav-Bar
-Remove Brand-Gray Color from everywhere – use Neutral Instead
+Remove neutral Color from everywhere – use Neutral Instead
 Remove Unused Things from Footer
 Remove Name from Registration Flow

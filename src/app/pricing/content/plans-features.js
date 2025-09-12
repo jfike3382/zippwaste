@@ -2,7 +2,6 @@
 
 import StartupIcon from "@/uikit/icons/startup";
 import SearchIcon from "@/uikit/icons/search";
-
 import ExtraIcon from "@/uikit/icons/extra";
 import CheckSimpleIcon from "@/uikit/icons/check-simple";
 import CancelIcon from "@/uikit/icons/cancel";
@@ -26,23 +25,9 @@ const renderFeatureSection = (features) => {
         key={index}
       >
         <div className="flex flex-col gap-5 w-full">
-          <div
-            className={`flex items-center gap-3 ${
-              feature.name === "AI Features" && hasAnyAvailable
-                ? "text-brand-violet-500"
-                : ""
-            }`}
-          >
+          <div className="flex items-center gap-3">
             <IconComponent size={24} />
-            <span
-              className={`font-medium ${
-                feature.name === "AI Features" && hasAnyAvailable
-                  ? "violet-gradient-text"
-                  : ""
-              }`}
-            >
-              {feature.name}
-            </span>
+            <span className="font-medium">{feature.name}</span>
           </div>
           {feature.items.map((item, itemIndex) => (
             <div
@@ -68,7 +53,7 @@ const renderFeatureSection = (features) => {
 
 export default function PricingFeatures({ plans }) {
   return (
-    <div className="border-standard p-4 bg-brand-gray-200 rounded-4xl w-fit tablet-hidden mobile-hidden">
+    <div className="border-standard p-4 bg-neutral-200 rounded-4xl w-fit tablet-hidden mobile-hidden">
       <div className="flex flex-row">
         <div className="flex flex-col gap-6 items-start p-6 w-[300px]">
           {renderFeatureSection(plans[0].features)}

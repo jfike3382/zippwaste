@@ -30,14 +30,14 @@
 }
 
 .button-secondary {
-  @apply text-black border-brand-gray-400 bg-white hover:bg-brand-gray-200 active:bg-brand-gray-400;
+  @apply text-black border-standard bg-white hover:bg-neutral-200 active:bg-neutral-400;
 }
 
 .button-transparent {
   @apply text-black bg-transparent border-transparent hover:text-black/60;
 }
 .button-icon {
-  @apply w-10 h-10 border-standard bg-white hover:bg-brand-gray-200 active:bg-brand-gray-400;
+  @apply w-10 h-10 border-standard bg-white hover:bg-neutral-200 active:bg-neutral-400;
 }
 
 /* Disabled styles */

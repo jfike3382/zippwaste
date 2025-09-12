@@ -13,9 +13,11 @@ export const metadata = generateMetadata({
 
 export default function Page() {
   return (
-    <main>
-      <PageWrapper />
+    <>
+      <main>
+        <PageWrapper />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

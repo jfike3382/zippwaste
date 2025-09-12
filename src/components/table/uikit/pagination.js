@@ -48,7 +48,7 @@ export default function Pagination({
         onClick={handlePrevPage}
         disabled={!hasPrevPage}
       />
-      <p className="text-brand-gray-800 font-semibold">
+      <p className="text-neutral-800 font-semibold">
         {start}-{end}
       </p>
       <Button
@@ -58,7 +58,7 @@ export default function Pagination({
         onClick={handleNextPage}
         disabled={!hasNextPage}
       />
-      <span className="text-brand-gray-800 font-semibold">
+      <span className="text-neutral-800 font-semibold">
         of {formattedTotal} companies
       </span>
     </div>
