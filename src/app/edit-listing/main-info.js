@@ -61,17 +61,11 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
 
   return (
     <>
-      <div className="flex flex-col gap-4 items-start">
-        <h1 className="title-l">Main info</h1>
-        <p className="paragraph-l">
-          Share the core information about your project
-        </p>
-      </div>
       <div className="flex flex-col gap-8 items-start">
-        <ProfileLogo name={name} size="xl" src={logo || null} placeholder="🖼" />
+        <ProfileLogo name={name} size="l" src={logo || null} placeholder="🖼" />
         <LogoUploader
           onLogoChange={handleLogoChange}
-          apiName="StartupLogo"
+          apiName="CompanyLogo"
           text="Upload company logo"
         />
       </div>

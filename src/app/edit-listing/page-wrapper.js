@@ -32,14 +32,16 @@ export default function PageWrapper() {
   return (
     <>
       <GlobalLoader show={loading} />
-      <div className="flex min-h-screen">
-        <div className="flex flex-1 ">
+      <div className="min-h-screen">
           {!loading && (
             <div className="main-data-container">
               <div className="card-container flex flex-col gap-8 p-8 max-md:px-4">
                 <section className="flex flex-col gap-4">
-                  <h1 className="title-m">Listing your company</h1>
-                  <p className="paragraph-l">Effective Date: Sep 8, 2025</p>
+                  <h1 className="title-m">Claim your business</h1>
+                  <p className="paragraph-l">
+                    {" "}
+                    Share the core information about your company
+                  </p>
                 </section>
                 <div className="divider" />
                 <MainInfo
@@ -50,7 +52,7 @@ export default function PageWrapper() {
             </div>
           )}
         </div>
-      </div>
+ 
     </>
   );
 }
