@@ -10,7 +10,7 @@ export default function TableEmptyState({
       <Image src={imagePath} alt="Empty state" width={64} height={64} />
       <div className="flex flex-col gap-2 items-center">
         <p className="text-lg font-semibold">{title}</p>
-        <p className="text-sm text-neutral-800">{subtitle}</p>
+        <p className="text-sm text-secondary">{subtitle}</p>
       </div>
     </div>
   );

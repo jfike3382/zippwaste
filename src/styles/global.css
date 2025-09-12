@@ -40,7 +40,11 @@ main {
   @apply flex flex-col gap-32 py-20 px-12 items-center justify-center max-md:px-6 max-md:py-16 max-md:gap-16;
 }
 
-.table-container {
+.sidebar-container {
+  @apply max-lg:hidden flex flex-col w-[24rem] min-w-[24rem] !h-full p-6 pt-10 bg-neutral-50 border-r border-neutral-200;
+}
+
+.main-data-right-container {
   @apply flex flex-col w-full relative gap-16 p-12 pt-10 max-lg:px-5 max-lg:py-10;
 }
 
@@ -52,9 +56,7 @@ main {
   @apply bg-white border-standard rounded-2xl shadow-md max-w-4xl w-full mx-auto;
 }
 
-.filter-container {
-  @apply max-lg:hidden flex flex-col w-[24rem] min-w-[24rem] !h-full p-6 pt-10 bg-neutral-50 border-r border-neutral-200;
-}
+
 
 /* Global */
 
@@ -95,7 +97,6 @@ blockquote::after {
 }
 
 /* Text Styles */
-
 
 /* Misc */
 .divider {
