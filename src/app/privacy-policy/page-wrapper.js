@@ -2,7 +2,7 @@ import Content from "./content";
 
 export default function PageWrapper() {
   return (
-    <div className="page-container">
+    <div className="main-data-container">
       <div className="card-container flex flex-col gap-8 p-8 max-md:px-4">
         <section className="flex flex-col gap-4">
           <h1 className="title-m">Privacy Policy</h1>

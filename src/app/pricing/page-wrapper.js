@@ -5,7 +5,7 @@ import Footer from "@/components/global-elements/footer";
 export default function PageWrapper() {
   return (
     <>
-      <div className="page-container">
+      <div className="main-data-container">
         <Pricing />
         <FAQ />
       </div>
