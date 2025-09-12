@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 import GlobalLoader from "@/components/global-elements/global-loader";
 import { ListingApi } from "@/api/actions-client";
 
-import MainInfo from "./content/main-info";
+import MainInfo from "./main-info";
 
 export default function PageWrapper() {
   const [formData, setFormData] = useState(null);
@@ -31,14 +31,26 @@ export default function PageWrapper() {
 
   return (
     <>
-      <section className="main-container">
-        <GlobalLoader show={loading} />
-        {!loading && (
-          <div className="main-container-data-block">
-            <MainInfo data={formData} onFormDataChange={handleFormDataChange} />
-          </div>
-        )}
-      </section>
+      <GlobalLoader show={loading} />
+      <div className="flex min-h-screen">
+        <div className="flex flex-1 ">
+          {!loading && (
+            <div className="main-data-container">
+              <div className="card-container flex flex-col gap-8 p-8 max-md:px-4">
+                <section className="flex flex-col gap-4">
+                  <h1 className="title-m">Listing your company</h1>
+                  <p className="paragraph-l">Effective Date: Sep 8, 2025</p>
+                </section>
+                <div className="divider" />
+                <MainInfo
+                  data={formData}
+                  onFormDataChange={handleFormDataChange}
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </>
   );
 }

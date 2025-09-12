@@ -1,4 +1,3 @@
-
 import PageWrapper from "./page-wrapper";
 
 // Add generateMetadata for robots meta tag
@@ -10,7 +9,7 @@ export function generateMetadata() {
 
 export default function Page() {
   return (
-    <main className="main-container">
+    <main>
       <PageWrapper />
     </main>
   );

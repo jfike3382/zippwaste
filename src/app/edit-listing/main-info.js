@@ -11,7 +11,7 @@ import {
   useLogoChangeHandler,
   useSelectorChangeHandler,
   useGetDataToSave,
-} from "../components/form-handlers";
+} from "./form-handlers";
 
 export default function Section({ onSectionChange, data, onFormDataChange }) {
   const name = data?.name || "";
