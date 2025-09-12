@@ -77,7 +77,7 @@ export default function Selector({
       {!multiSelect && displayValue() ? (
         displayValue()
       ) : (
-        <span className="text-neutral-600">{placeholder}</span>
+        <span className="text-neutral-400">{placeholder}</span>
       )}
       <Image
         src="/assets/icons/down.svg"
@@ -111,7 +111,7 @@ export default function Selector({
           horizontalPosition="left"
         >
           {(closeDropdown) => (
-            <>
+            <div className="flex flex-col gap-1">
               {normalizedOptions.map((option, index) => (
                 <div
                   key={index}
@@ -124,7 +124,7 @@ export default function Selector({
                   {isOptionSelected(option) && <IconCheckSimple size={20} />}
                 </div>
               ))}
-            </>
+            </div>
           )}
         </Dropdown>
       </div>

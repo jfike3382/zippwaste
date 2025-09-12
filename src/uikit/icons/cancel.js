@@ -1,4 +1,4 @@
-export default function Icon({ size = 24 }) {
+export default function Icon({ size = 24, onClick, className }) {
   return (
     <svg
       width={size}
@@ -6,6 +6,8 @@ export default function Icon({ size = 24 }) {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
+      className={className}
     >
       <line
         x1="8.46484"

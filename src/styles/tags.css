@@ -37,7 +37,7 @@
 }
 
 .tag.white.icon-right {
-  @apply py-1 pl-3 pr-1.5 gap-1 font-semibold tracking-tight;
+  @apply py-1 pl-3 pr-1.5 gap-1 font-semibold ;
 }
 
 .tag.small {
