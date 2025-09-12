@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .tag {
-  @apply geist-mono text-sm/4.5 font-semibold px-2.5 py-1.5 rounded-full flex items-center justify-center shrink-0;
+  @apply text-sm/4.5 font-semibold px-2.5 py-1.5 rounded-full flex items-center justify-center shrink-0;
 }
 
 .tag.blue {
@@ -33,7 +33,7 @@
 }
 
 .tag.white {
-  @apply border-standard;
+  @apply border-standard tracking-wide ;
 }
 
 .tag.white.icon-right {

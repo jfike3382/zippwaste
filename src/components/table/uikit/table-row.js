@@ -2,6 +2,7 @@ import ConnectButtons from "./connect-buttons";
 import WebsiteLink from "@/uikit/website-link";
 import ProfileLogo from "@/components/profile-logo";
 import formatLocation from "@/utils/format-data/location";
+import VerifiedIcon from "@/uikit/icons/verified";
 import Link from "next/link";
 
 export default function TableRow({ item }) {
@@ -21,13 +22,14 @@ export default function TableRow({ item }) {
 
           {/* Company Info */}
           <div className="flex-grow flex flex-col gap-2">
-            <h3 className="text-lg font-semibold text-gray-900 group-hover:text-brand-blue-800 transition-colors">
-              {item.name}
-            </h3>
+            <div className="flex flex-row gap-1 items-center">
+              <h3 className="text-lg font-semibold  group-hover:text-brand-blue-800 transition-colors">
+                {item.name}
+              </h3>
+              {item.verified && <VerifiedIcon size={20} />}
+            </div>
             <div className="flex flex-row gap-2 items-center text-sm max-2xl:flex-col max-2xl:items-start ">
-              <p className="line-clamp-1 text-neutral-900">
-                {formatLocation(item)}
-              </p>
+              <p className="line-clamp-1 ">{formatLocation(item)}</p>
               <div className="relative z-30">
                 <WebsiteLink website={item.website} size={16} />
               </div>

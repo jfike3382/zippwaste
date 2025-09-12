@@ -6,36 +6,55 @@ import WebsiteLink from "@/uikit/website-link";
 import FAQ from "./faq";
 import ProfileViews from "./profile-views";
 import Sidebar from "./sidebar";
+import VerifiedIcon from "@/uikit/icons/verified";
 
 export default function MainContent({ item }) {
   return (
-    <div className="flex flex-row flex-1 ">
+    <div className="flex flex-row flex-1">
       <Sidebar item={item} />
-      <div className="main-data-right-container">
+      <div className="main-data-right-container max-w-4xl">
         <div className="w-full flex flex-col gap-8 items-start">
           <ProfileLogo name={item.name} size="l" src={item.logo?.url} />
 
           <div className="flex flex-col gap-2 ">
-            <p className="title-l">{item.name}</p>
+            <div className="flex flex-row gap-2 items-center">
+              <p className="title-l">{item.name}</p>
+              {item.verified && <VerifiedIcon size={28} />}
+            </div>
             <p className="paragraph-l">{FormatLocation(item)}</p>
-            <WebsiteLink website={item.website} size={20} />
+            <WebsiteLink website={item.website} size="m" />
           </div>
 
           <ConnectButtons item={item} size="m" />
         </div>
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-2">
-            <p className="text-secondary title-s">Description</p>
-            <p className="paragraph-l ">
-              {item.description
-                ? item.description
-                : item.firm_data?.description}
-            </p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-secondary title-s">Company address</p>
-            <p className="paragraph-l">{item.address}</p>
-          </div>
+          {(item.description || item.firm_data?.description) && (
+            <div className="flex flex-col gap-2">
+              <p className="text-base font-medium text-secondary">
+                Description
+              </p>
+              <p className="paragraph-l ">
+                {item.description
+                  ? item.description
+                  : item.firm_data?.description}
+              </p>
+            </div>
+          )}
+          {item.address && (
+            <div className="flex flex-col gap-2">
+              <p className="text-base font-medium text-secondary">
+                Company address
+              </p>
+              <p className="paragraph-l">{item.address}</p>
+            </div>
+          )}
+          {item.zip_codes && (
+            <CharacteristicsList
+              data={item.zip_codes}
+              characteristic={"ZIP codes"}
+              titleSize="title-s"
+            />
+          )}
         </div>
         <FAQ item={item} />
         <ProfileViews views={item.views} />
