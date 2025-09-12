@@ -43,7 +43,7 @@ export function ContentMobile({ onClose }) {
 
   return (
     <div className="flex flex-col gap-6 mt-4 items-start w-full">
-      <div className="flex flex-col gap-5 w-full">
+      <div className="hidden">
         <Link
           href="/blog"
           onClick={onClose}
