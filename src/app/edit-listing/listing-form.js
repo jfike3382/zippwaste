@@ -46,6 +46,8 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
     (industry) => industry.name
   );
 
+  const stateOptions = filtersData.us_state.map((state) => state.name);
+
   const handleSaveForLater = async () => {
     setSaving(true);
     try {
@@ -64,10 +66,10 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
 
   return (
     <>
-      <section className="flex flex-col gap-4">
+      <section className="flex flex-col gap-2">
         <div className="flex items-center justify-between">
           <h1 className="title-m">Claim your business</h1>
-          <div className="w-36">
+          <div className="w-36 max-md:hidden">
             <Button
               variant="secondary"
               size="m"
@@ -129,13 +131,15 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
           placeholder="Enter your city"
           required
         />
-        <Input
+        <Selector
           name="state"
           label="State"
           value={state}
-          onChange={handleInputChange}
-          placeholder="Enter your state"
+          onChange={(value) => handleSelectorChange("state", value)}
+          options={stateOptions}
+          placeholder="Select your state"
           required
+          multiSelect={false}
         />
         <div className="flex flex-col gap-4">
           <Selector
@@ -147,7 +151,6 @@ export default function Section({ onSectionChange, data, onFormDataChange }) {
             placeholder="Select your debris types"
             required
             multiSelect={true}
-            maxSelections={3}
           />
           {/* Applied Debris Types Tags */}
           <div className="flex flex-row gap-3 flex-wrap ">

@@ -74,8 +74,10 @@ export default function Selector({
       type="button"
       className={`${selectorStyles} text-left flex items-center justify-between`}
     >
-      {displayValue() || (
-        <span className="text-brand-gray-600">{placeholder}</span>
+      {!multiSelect && displayValue() ? (
+        displayValue()
+      ) : (
+        <span className="text-neutral-600">{placeholder}</span>
       )}
       <Image
         src="/assets/icons/down.svg"
@@ -92,10 +94,10 @@ export default function Selector({
       <label className="input-label">
         {label}
         {optional && (
-          <span className="text-xs text-brand-gray-800"> (Optional)</span>
+          <span className="text-xs text-neutral-800"> (Optional)</span>
         )}
         {multiSelect && maxSelections && (
-          <span className="text-xs text-brand-gray-800">
+          <span className="text-xs text-neutral-800">
             {" "}
             (Up to {maxSelections})
           </span>
@@ -113,15 +115,13 @@ export default function Selector({
               {normalizedOptions.map((option, index) => (
                 <div
                   key={index}
-                  className={`px-3 py-2 hover:bg-brand-gray-200 cursor-pointer flex items-center justify-between ${
-                    isOptionSelected(option) ? "bg-brand-gray-200" : ""
+                  className={`dropdown-cell justify-between ${
+                    isOptionSelected(option) ? "bg-neutral-100" : ""
                   }`}
                   onClick={() => handleOptionClick(option, closeDropdown)}
                 >
                   <span>{option.label}</span>
-                  {multiSelect && isOptionSelected(option) && (
-                    <IconCheckSimple size={24} />
-                  )}
+                  {isOptionSelected(option) && <IconCheckSimple size={20} />}
                 </div>
               ))}
             </>
