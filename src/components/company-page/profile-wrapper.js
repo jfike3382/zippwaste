@@ -7,6 +7,8 @@ import FAQ from "./faq";
 import ProfileViews from "./profile-views";
 import Sidebar from "./sidebar";
 import VerifiedIcon from "@/uikit/icons/verified";
+import ClaimListing from "@/components/global-elements/claim-listing";
+import Button from "@/uikit/button";
 
 export default function MainContent({ item }) {
   return (
@@ -77,6 +79,17 @@ export default function MainContent({ item }) {
           </div>
         </div>
         <FAQ item={item} />
+        <div className="flex flex-col gap-4">
+          <p className="title-m">Is this your company? Have any edits?</p>
+          <p>Request access over the company listing</p>
+          <ClaimListing
+            button={
+              <Button variant="primary" size="m">
+                Claim listing
+              </Button>
+            }
+          />
+        </div>
         <ProfileViews views={item.views} />
       </div>
     </div>

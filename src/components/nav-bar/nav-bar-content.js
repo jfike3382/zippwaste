@@ -21,14 +21,14 @@ export function ContentRight() {
           openRegisterModal();
         }}
       >
-        Claim listing
+        Add my listing
       </Button>
     </div>
   ) : (
     <div className="flex flex-row gap-4 items-center">
       {!companyPage && (
         <Button variant="primary" size="m" href="/edit-listing">
-          Claim listing
+          Add my listing
         </Button>
       )}
 
@@ -66,7 +66,7 @@ export function ContentMobile({ onClose }) {
               openRegisterModal();
             }}
           >
-            Claim listing
+            Add my listing
           </Button>
         </div>
       ) : (
@@ -80,7 +80,7 @@ export function ContentMobile({ onClose }) {
               href="/edit-listing"
               onClick={onClose}
             >
-              Claim listing
+              Add my listing
             </Button>
           )}
         </div>

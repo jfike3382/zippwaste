@@ -57,7 +57,7 @@ const Modal = ({ isOpen, onClose, children, title, size = "m" }) => {
   const overlayClass = size === "xl" ? "xl" : "";
 
   return (
-    <aside className={`modal-overlay ${showClass} ${overlayClass}`}>
+    <aside className={`modal-overlay ${showClass} ${overlayClass} text-neutral-900`}>
       <div className={`modal-backdrop ${showClass}`} onClick={onClose} />
       <div className={`modal-content modal-${size} ${showClass}`}>
         <div className={`flex justify-start ${size === "xl" ? "lg:pt-8" : ""}`}>
