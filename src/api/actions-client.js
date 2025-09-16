@@ -39,4 +39,8 @@ export const ListingApi = {
   unlistCompany: () => {
     return apiRequest(`listing/unlist`, "POST", null, true);
   },
+
+  claimListing: (data) => {
+    return apiRequest(`listing/claim`, "POST", data, false);
+  },
 };

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { getCookie } from "@/utils/cookies";
-import { SubmitContactForm } from "@/api/actions-client";
+import { ListingApi } from "@/api/actions-client";
 import Button from "@/uikit/button";
 import Modal from "@/uikit/modal";
 import Input from "@/uikit/input";
@@ -17,7 +17,7 @@ export default function ContactCTA({ button }) {
 
   const [formData, setFormData] = useState({
     email: userEmail || "",
-    listingUrl: "",
+    listing_url: "",
     message: "",
   });
 
@@ -30,22 +30,21 @@ export default function ContactCTA({ button }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { email, listingUrl, message } = formData;
+    const { email, listing_url, message } = formData;
 
     if (!email.trim()) setEmailInputError(true);
-    if (!listingUrl.trim()) setUrlInputError(true);
+    if (!listing_url.trim()) setUrlInputError(true);
     if (!message.trim()) setMessageInputError(true);
 
-    if (!email.trim() || !listingUrl.trim() || !message.trim()) {
+    if (!email.trim() || !listing_url.trim() || !message.trim()) {
       return;
     }
     setLoading(true);
 
     try {
-      const response = await SubmitContactForm({
+      const response = await ListingApi.claimListing({
         email,
-        topic: "Grant Access To Company Listing",
-        listingUrl,
+        listing_url,
         message,
       });
 
@@ -53,6 +52,12 @@ export default function ContactCTA({ button }) {
         showNotification("error", response.error);
       } else {
         showNotification("success", response.message);
+        closeModal();
+        setFormData({
+          email: userEmail || "",
+          listing_url: "",
+          message: "",
+        });
       }
     } catch (error) {
       showNotification("error", error.message);
@@ -77,10 +82,10 @@ export default function ContactCTA({ button }) {
           <Input
             type="plain"
             label="Listing URL"
-            value={formData.listingUrl}
+            value={formData.listing_url}
             error={urlInputError}
             onChange={(e) =>
-              setFormData({ ...formData, listingUrl: e.target.value })
+              setFormData({ ...formData, listing_url: e.target.value })
             }
             onFocus={() => setUrlInputError(false)}
             required
