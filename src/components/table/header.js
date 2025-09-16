@@ -29,6 +29,17 @@ export default function Header({ itemsTotal = 0 }) {
     }
   };
 
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setSearchInput(value);
+
+    // Automatically search when input becomes empty
+    if (value === "") {
+      updateSearch("");
+      fetchTable({ ...filters, search: "", page: 1 });
+    }
+  };
+
   useEffect(() => {
     setSearchInput(filters.search || "");
   }, [filters.search]);
@@ -43,10 +54,15 @@ export default function Header({ itemsTotal = 0 }) {
         <Input
           placeholder="Filter by zip code"
           value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
+          onChange={handleInputChange}
           onKeyPress={handleKeyPress}
         />
-        <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-neutral-600 bg-white pl-1">
+        <div
+          className={`absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer bg-white pl-1 ${
+            searchInput ? "text-main" : "text-neutral-400"
+          }`}
+          onClick={handleSearch}
+        >
           <ZoomIcon size={24} />
         </div>
       </div>
