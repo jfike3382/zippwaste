@@ -5,6 +5,7 @@ import { NotificationProvider } from "@/providers/notifications";
 import { AuthModalProvider } from "@/providers/auth-modal";
 import { UserStateProvider } from "@/providers/user-state-provider";
 import NavBar from "@/components/nav-bar/nav-bar";
+import ContactCTA from "@/components/global-elements/contact-us";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
             <AuthModalProvider>
               <NavBar />
               {children}
+              <ContactCTA />
             </AuthModalProvider>
           </NotificationProvider>
         </UserStateProvider>

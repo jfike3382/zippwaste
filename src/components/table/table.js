@@ -20,7 +20,7 @@ export default function Table() {
             <TableEmptyState />
           </div>
         ) : (
-          items?.map((item) => <TableRow key={item.id} item={item} />)
+          items?.map((item) => <TableRow key={item.slug} item={item} />)
         )}
       </div>
       <Pagination
