@@ -44,3 +44,10 @@ export const ListingApi = {
     return apiRequest(`listing/claim`, "POST", data, false);
   },
 };
+
+// Support APIs
+export const SupportApi = {
+  SubmitContactForm: (data) => {
+    return apiRequest(`support/contact_us`, "POST", data, false);
+  },
+};

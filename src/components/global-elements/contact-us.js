@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { getCookie } from "@/utils/cookies";
-import { SubmitContactForm } from "@/api/actions-client";
+import { SupportApi } from "@/api/actions-client";
 import Button from "@/uikit/button";
 import Modal from "@/uikit/modal";
 import Input from "@/uikit/input";
@@ -54,7 +54,7 @@ export default function ContactCTA() {
     setLoading(true);
 
     try {
-      const response = await SubmitContactForm({
+      const response = await SupportApi.SubmitContactForm({
         email,
         topic,
         message,
@@ -64,6 +64,7 @@ export default function ContactCTA() {
         showNotification("error", response.error);
       } else {
         showNotification("success", response.message);
+        closeModal();
       }
     } catch (error) {
       showNotification("error", error.message);
