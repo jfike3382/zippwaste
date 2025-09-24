@@ -87,7 +87,7 @@ blockquote::after {
 }
 
 .rich-text-section {
-  @apply flex flex-col gap-6 paragraph-l;
+  @apply flex flex-col gap-4 paragraph-l;
 }
 
 .rich-text-section a {
@@ -95,23 +95,23 @@ blockquote::after {
 }
 
 .rich-text-section h2{
-  @apply title-m pb-6 pt-2;
+  @apply title-m  pb-2 pt-4;
 }
 
 .rich-text-section h3{
-  @apply title-s pb-4 pt-1.5;
+  @apply title-s pb-1.5 pt-3;
 }
 
 .rich-text-section h4 {
-  @apply title-s pb-4 pt-1.5;
+  @apply title-s pb-1.5 pt-2;
 }
 
 .rich-text-section ul {
-  @apply list-disc !pl-5 pt-5;
+  @apply list-disc !pl-5;
 }
 
 .rich-text-section ol {
-  @apply list-decimal !pl-5 pt-5;
+  @apply list-decimal !pl-5;
 }
 
 .rich-text-section li {
