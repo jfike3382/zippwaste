@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { formatDate } from "@/utils/format-data/date";
 
 export default function BlogItem({ blogpost }) {
   return (
@@ -14,11 +15,11 @@ export default function BlogItem({ blogpost }) {
             className="w-32 h-32 object-cover rounded-[2rem]"
           />
           <div className="flex flex-col gap-3">
-            <h2 className="title-m text-brand-gray-900">{blogpost.name}</h2>
-            <p className="text-brand-gray-900 line-clamp-1">
-              {blogpost.subtitle}
+            <h2 className="title-m">{blogpost.name}</h2>
+            <p className=" line-clamp-1">{blogpost.subtitle}</p>
+            <p className="paragraph-s text-secondary">
+              {formatDate(blogpost.created_at)}
             </p>
-            <p className="paragraph-s text-brand-gray-800">{blogpost.date}</p>
           </div>
         </div>
         <div className="divider"></div>
