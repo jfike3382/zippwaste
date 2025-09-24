@@ -29,10 +29,8 @@ export default async function Page() {
   return (
     <>
       <main>
-        <div className="flex min-h-screen">
-          <div className="flex flex-1 ">
-            <PageWrapper posts={data || []} />
-          </div>
+        <div className="flex flex-1 ">
+          <PageWrapper posts={data || []} />
         </div>
       </main>
       <Footer />

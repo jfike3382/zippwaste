@@ -33,7 +33,7 @@
 }
 
 main {
-  @apply flex flex-col flex-1 relative;
+  @apply flex flex-col flex-1 relative min-h-screen;
 }
 
 .main-data-container {
@@ -87,12 +87,38 @@ blockquote::after {
 }
 
 .rich-text-section {
-  @apply flex flex-col gap-4 paragraph-l;
+  @apply flex flex-col gap-6 paragraph-l;
 }
 
 .rich-text-section a {
   @apply text-brand-blue-800 cursor-pointer;
 }
+
+.rich-text-section h2{
+  @apply title-m pb-6 pt-2;
+}
+
+.rich-text-section h3{
+  @apply title-s pb-4 pt-1.5;
+}
+
+.rich-text-section h4 {
+  @apply title-s pb-4 pt-1.5;
+}
+
+.rich-text-section ul {
+  @apply list-disc !pl-5 pt-5;
+}
+
+.rich-text-section ol {
+  @apply list-decimal !pl-5 pt-5;
+}
+
+.rich-text-section li {
+  @apply !pl-5;
+}
+
+
 
 /* Text Styles */
 
