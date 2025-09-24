@@ -64,8 +64,8 @@ export function TableProvider({ children }) {
         tableData,
         tableRef,
         isInitial,
-        items: tableData.items,
-        itemsTotal: tableData.itemsTotal,
+        items: tableData?.items,
+        itemsTotal: tableData?.itemsTotal,
       }}
     >
       {children}

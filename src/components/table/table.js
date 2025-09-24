@@ -15,7 +15,7 @@ export default function Table() {
       }`}
     >
       <div className="grid grid-cols-2 max-xl:grid-cols-1 gap-6">
-        {isInitial && items.length === 0 ? (
+        {isInitial && items?.length === 0 ? (
           <div className="col-span-2 max-lg:col-span-1">
             <TableEmptyState />
           </div>
@@ -24,7 +24,7 @@ export default function Table() {
         )}
       </div>
       <Pagination
-        itemsReceived={items.length}
+        itemsReceived={items?.length}
         itemsTotal={itemsTotal}
         currentPage={currentPage}
       />

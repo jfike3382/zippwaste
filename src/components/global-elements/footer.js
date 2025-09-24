@@ -12,6 +12,7 @@ export default function Footer() {
         <div className="flex flex-col gap-3 flex-1 items-center">
           <div className="flex flex-col gap-3 items-start">
             <span className="text-neutral-400">Company</span>
+            <Link href="/blog">Blog</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="/register">Add my listing</Link>
             <ClaimListing />

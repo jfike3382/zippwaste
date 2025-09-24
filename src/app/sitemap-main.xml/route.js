@@ -1,3 +1,5 @@
+import blogPosts from "@/data/blog-content.json";
+
 const URL = process.env.NEXT_PUBLIC_BASE_URL || "https://zippwaste.com";
 
 function generateSitemapXml(urls) {
@@ -23,11 +25,14 @@ export async function GET() {
     "/register",
     "/forgot-password",
     "/pricing",
+    "/blog",
     "/privacy-policy",
     "/terms-of-use",
   ].map((route) => `${URL}${route}`);
 
-  const allUrls = [...staticRoutes];
+  const blogRoutes = blogPosts.map((post) => `${URL}/blog/${post.slug}`);
+
+  const allUrls = [...staticRoutes, ...blogRoutes];
 
   const xmlContent = generateSitemapXml(allUrls);
 
@@ -38,4 +43,5 @@ export async function GET() {
     },
   });
 }
+
 export const dynamic = "force-static";

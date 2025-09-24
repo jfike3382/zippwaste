@@ -10,10 +10,18 @@ export const SoloApi = {
     };
     return apiRequest(`solo/company/${slug}`, "GET", null, false, headers);
   },
+
+  blogPost: (slug) => {
+    return apiRequest(`solo/blog_post/${slug}`, "GET", null, false);
+  },
 };
 
 export const TableApi = {
   companies: (filters = {}) => {
     return apiRequest("table/companies", "POST", filters, false);
+  },
+
+  blogPosts: (filters = {}) => {
+    return apiRequest("table/blog_posts", "GET", null, false);
   },
 };

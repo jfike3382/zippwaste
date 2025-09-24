@@ -19,7 +19,7 @@ export default function NotFound() {
 
           <Link href="/">
             <Button variant="black" size="m">
-              Go to raizer.app
+              Go to zippwaste.com
             </Button>
           </Link>
         </div>
