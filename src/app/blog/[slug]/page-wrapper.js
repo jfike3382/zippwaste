@@ -11,7 +11,7 @@ export default function BlogPost({ post }) {
           <p className="paragraph-l">{post.subtitle}</p>
           {post.image?.url && (
             <Image
-              src={post.image.url}
+              src={post.image?.url}
               alt={post.name}
               width={800}
               height={400}

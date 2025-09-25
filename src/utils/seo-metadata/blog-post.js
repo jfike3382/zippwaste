@@ -19,7 +19,7 @@ function generateBlogPostMetadata(item, slug) {
       url: `https://zippwaste.com/blog/${slug}`,
       type: "article",
     },
-    images: item?.cover_image ? [{ url: item.cover_image.url }] : [],
+    images: item?.cover_image ? [{ url: item.cover_image?.url }] : [],
     alternates: {
       canonical: `https://zippwaste.com/blog/${slug}`,
     },

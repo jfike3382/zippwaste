@@ -8,7 +8,7 @@ export default function BlogItem({ blogpost }) {
       <div className="flex flex-col gap-16">
         <div className="flex flex-row gap-6 items-center max-md:flex-col max-md:items-start">
           <Image
-            src={blogpost.image.url}
+            src={blogpost.image?.url}
             alt={blogpost.name}
             width={128}
             height={128}
