@@ -2,6 +2,11 @@ import { TableApi } from "@/api/data-client";
 import PageWrapper from "./page-wrapper";
 import generateMetadata from "@/utils/seo-metadata/static";
 import Footer from "@/components/global-elements/footer";
+import { headers } from "next/headers";
+
+// Force dynamic rendering and disable caching
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export const metadata = generateMetadata({
   title: "Blog",
@@ -23,6 +28,9 @@ const getBlogPosts = async () => {
 };
 
 export default async function Page() {
+  // Set no-cache headers
+  const headersList = headers();
+
   const data = await getBlogPosts();
 
   return (
