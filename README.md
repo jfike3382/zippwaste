@@ -18,12 +18,3 @@ This is a [Next.js](https://nextjs.org) project
 3. Merge changes (git merge staging)
 4. Push changes (git push origin main)
 5. Initiate development to the production on Cloudflare
-
-## To-do
-
-Define Global Color Styles
-Define Global Text Style
-Remove Sign in Button from Nav-Bar
-Remove neutral Color from everywhere – use Neutral Instead
-Remove Unused Things from Footer
-Remove Name from Registration Flow
