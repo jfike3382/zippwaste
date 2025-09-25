@@ -4,9 +4,10 @@ import generateMetadata from "@/utils/seo-metadata/static";
 import Footer from "@/components/global-elements/footer";
 import { headers } from "next/headers";
 
-// Force dynamic rendering and disable caching
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+export const fetchCache = "force-no-store";
+export const runtime = "nodejs";
 
 export const metadata = generateMetadata({
   title: "Blog",
@@ -28,8 +29,20 @@ const getBlogPosts = async () => {
 };
 
 export default async function Page() {
-  // Set no-cache headers
+  // Set comprehensive no-cache headers
   const headersList = headers();
+
+  // Add cache control headers for all levels
+  const response = new Response();
+  response.headers.set(
+    "Cache-Control",
+    "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+  );
+  response.headers.set("Pragma", "no-cache");
+  response.headers.set("Expires", "0");
+  response.headers.set("Surrogate-Control", "no-store");
+  response.headers.set("CDN-Cache-Control", "no-store");
+  response.headers.set("Cloudflare-CDN-Cache-Control", "no-store");
 
   const data = await getBlogPosts();
 
