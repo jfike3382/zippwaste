@@ -1,4 +1,3 @@
-import { cache } from "react";
 import { TableApi } from "@/api/data-client";
 import PageWrapper from "./page-wrapper";
 import generateMetadata from "@/utils/seo-metadata/static";
@@ -13,7 +12,7 @@ export const metadata = generateMetadata({
     "startup blog, founder tips, fundraising strategies, growth hacking, venture capital insights, startup news",
 });
 
-const getBlogPosts = cache(async () => {
+const getBlogPosts = async () => {
   try {
     const response = await TableApi.blogPosts();
     return response.main_data;
@@ -21,7 +20,7 @@ const getBlogPosts = cache(async () => {
     console.error("Error fetching blog posts:", error);
     return null;
   }
-});
+};
 
 export default async function Page() {
   const data = await getBlogPosts();
