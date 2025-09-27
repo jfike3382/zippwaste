@@ -4,6 +4,7 @@ import generateMetadata from "@/utils/seo-metadata/static";
 import Footer from "@/components/global-elements/footer";
 
 export const revalidate = 0;
+export const runtime = "edge";
 
 export const metadata = generateMetadata({
   title: "Blog",
