@@ -53,7 +53,7 @@ const renderFeatureSection = (features) => {
 
 export default function PricingFeatures({ plans }) {
   return (
-    <div className="border-standard p-4 bg-neutral-200/[.50] rounded-4xl w-fit tablet-hidden mobile-hidden">
+    <div className="border-standard p-4 bg-neutral-200 rounded-4xl w-fit tablet-hidden mobile-hidden">
       <div className="flex flex-row">
         <div className="flex flex-col gap-6 items-start p-6 w-[300px]">
           {renderFeatureSection(plans[0].features)}

@@ -1,7 +1,7 @@
 /* Colors */
 
 @utility border-standard-color {
-  @apply border-neutral-300/[.70];
+  @apply border-neutral-200;
 }
 
 @utility text-secondary {

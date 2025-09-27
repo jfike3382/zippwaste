@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import CancelIcon from "@/uikit/icons/cancel";
 
 export const useModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +57,9 @@ const Modal = ({ isOpen, onClose, children, title, size = "m" }) => {
   const overlayClass = size === "xl" ? "xl" : "";
 
   return (
-    <aside className={`modal-overlay ${showClass} ${overlayClass} text-neutral-900`}>
+    <aside
+      className={`modal-overlay ${showClass} ${overlayClass} text-neutral-900`}
+    >
       <div className={`modal-backdrop ${showClass}`} onClick={onClose} />
       <div className={`modal-content modal-${size} ${showClass}`}>
         <div className={`flex justify-start ${size === "xl" ? "lg:pt-8" : ""}`}>
@@ -65,12 +67,7 @@ const Modal = ({ isOpen, onClose, children, title, size = "m" }) => {
             onClick={onClose}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <Image
-              src="/assets/icons/cancel.svg"
-              alt="Close"
-              width={24}
-              height={24}
-            />
+            <CancelIcon size={24} />
           </button>
         </div>
         {title && <p className="title-m text-center">{title}</p>}

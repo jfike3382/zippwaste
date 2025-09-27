@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
+import EyeIcon from "@/uikit/icons/eye";
+import EyeOffIcon from "@/uikit/icons/eye-off";
 
 export default function Input({
   name,
@@ -93,16 +94,7 @@ export default function Input({
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-3 top-1/2 -translate-y-1/2 z-20 cursor-pointer"
           >
-            <Image
-              src={
-                showPassword
-                  ? "/assets/icons/eye_off.svg"
-                  : "/assets/icons/eye.svg"
-              }
-              alt={showPassword ? "Hide password" : "Show password"}
-              width={24}
-              height={24}
-            />
+            {showPassword ? <EyeOffIcon size={24} /> : <EyeIcon size={24} />}
           </button>
         )}
       </div>

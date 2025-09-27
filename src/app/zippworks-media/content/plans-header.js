@@ -65,7 +65,7 @@ export default function PricingContainerHeader({ plans, isCollapsed }) {
         />
       </div>
       <div className="bg-white">
-        <div className="border-standard p-4 bg-neutral-200/[.50] rounded-4xl">
+        <div className="border-standard p-4 bg-neutral-200 rounded-4xl">
           <div className="flex flex-row max-xl:flex-col max-xl:gap-4">
             <div className="flex flex-col gap-6 items-start p-6 min-w-[300px]">
               <div className="flex flex-col gap-8">

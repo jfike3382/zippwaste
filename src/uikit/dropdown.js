@@ -26,7 +26,7 @@ export default function Dropdown({
   const sizeStyles = {
     s: "w-[200px]",
     m: "w-[260px]",
-    l: "w-[320px]",
+    l: "w-[360px]",
     xl: "w-[510px]",
     auto: "w-full",
   };

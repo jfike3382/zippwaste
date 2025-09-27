@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
 import Dropdown from "./dropdown";
 import IconCheckSimple from "@/uikit/icons/check-simple";
+import DownIcon from "@/uikit/icons/down";
 
 export default function Selector({
   name,
@@ -79,13 +79,7 @@ export default function Selector({
       ) : (
         <span className="text-neutral-400">{placeholder}</span>
       )}
-      <Image
-        src="/assets/icons/down.svg"
-        alt="Toggle dropdown"
-        width={20}
-        height={20}
-        className="transition-transform duration-200"
-      />
+      <DownIcon size={20} className="transition-transform duration-200" />
     </button>
   );
 

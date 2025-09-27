@@ -4,12 +4,14 @@ import Image from "next/image";
 export default function ProjectLogo() {
   return (
     <Link href="/">
-      <Image
-        src="/assets/images/zippwaste-logo.svg"
-        alt="Zippwaste Logo"
-        width={166}
-        height={32}
-      />
+      <div className="pt-1.5">
+        <Image
+          src="/assets/images/zippwaste-logo.svg"
+          alt="Zippwaste Logo"
+          width={140}
+          height={28}
+        />
+      </div>
     </Link>
   );
 }

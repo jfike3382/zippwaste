@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import CancelIcon from "@/uikit/icons/cancel";
+import MenuIcon from "@/uikit/icons/menu";
 
 import ProjectLogo from "./project-logo";
-import { ContentRight } from "./nav-bar-content";
+import { ContentRight, ContentLeft } from "./nav-bar-content";
 import NavBarMobile from "./nav-bar-mobile";
 
 export default function NavBar() {
@@ -27,8 +28,14 @@ export default function NavBar() {
 
   return (
     <nav className="nav-bar">
-      <div onClick={handleCloseMenu}>
-        <ProjectLogo />
+      <div className="flex items-center gap-8">
+        <div onClick={handleCloseMenu}>
+          <ProjectLogo />
+        </div>
+
+        <div className="tablet-hidden mobile-hidden">
+          <ContentLeft />
+        </div>
       </div>
 
       <div className="nav-bar-right tablet-hidden mobile-hidden">
@@ -39,21 +46,7 @@ export default function NavBar() {
         className="nav-bar-mobile-toggle desktop-hidden"
         onClick={handleToggleMenu}
       >
-        {menuOpen ? (
-          <Image
-            src="/assets/icons/cancel.svg"
-            alt="Close"
-            width={24}
-            height={24}
-          />
-        ) : (
-          <Image
-            src="/assets/icons/menu.svg"
-            alt="Menu"
-            width={24}
-            height={24}
-          />
-        )}
+        {menuOpen ? <CancelIcon size={24} /> : <MenuIcon size={24} />}
       </button>
 
       <NavBarMobile isOpen={menuOpen} onClose={handleCloseMenu} />

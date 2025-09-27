@@ -14,7 +14,7 @@
 }
 
 .switcher-tag.active {
-  @apply bg-neutral-300 border-standard;
+  @apply bg-neutral-200 border-standard;
 }
 .sliding-background {
   @apply absolute bg-white border-standard rounded-4xl h-8 w-0 left-1 transition-all duration-300 ease-in-out;

@@ -12,6 +12,8 @@ export default function Button({
   loading = false,
   icon,
   iconPosition = "center",
+  iconSize,
+  iconStyle,
   spaceBetween = false,
   children,
   onClick,
@@ -38,15 +40,27 @@ export default function Button({
   };
 
   const renderIcon = (iconName) => {
-    const iconSize = size === "s" || size === "icon_s" ? 20 : 24;
-    return (
-      <Image
-        src={`/assets/icons/${iconName}.svg`}
-        width={iconSize}
-        height={iconSize}
-        alt={iconName}
-      />
-    );
+    let iconSizeValue = iconSize;
+
+    if (!iconSizeValue) {
+      if (variant === "icon") {
+        iconSizeValue = 20;
+      } else if (variant === "icon-s") {
+        iconSizeValue = 18;
+      } else if (variant === "icon-xs") {
+        iconSizeValue = 16;
+      } else {
+        iconSizeValue = size === "s" ? 16 : 20;
+      }
+    }
+
+    try {
+      const IconComponent = require(`./icons/${iconName}`).default;
+      return <IconComponent size={iconSizeValue} style={iconStyle} />;
+    } catch (error) {
+      console.warn(`Icon "${iconName}" not found`);
+      return null;
+    }
   };
 
   const renderContent = () => {
