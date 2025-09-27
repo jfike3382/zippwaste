@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function BlogPost({ post }) {
   return (
     <div className="main-data-container">
-      <div className="card-container flex flex-col gap-8 p-8 max-md:px-4">
+      <div className="card-container flex flex-col gap-8 p-8 max-md:p-0">
         <section className="flex flex-col gap-6">
           <h1 className="title-l">{post.name}</h1>
           <p className="paragraph-l">{post.subtitle}</p>

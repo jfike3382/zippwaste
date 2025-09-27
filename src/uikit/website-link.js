@@ -19,7 +19,7 @@ export default function WebsiteLink({ website, size = "s" }) {
         window.open(ensureHttps(website), "_blank");
       }}
     >
-      <div className="flex flex-row items-center gap-1 text-brand-blue-800 border-b border-transparent hover:border-brand-blue-800 w-fit ">
+      <div className="flex flex-row items-center gap-1 text-brand-blue-800 border-b border-transparent hover:border-brand-blue-800 ">
         <ExternalLinkIcon size={iconSize} />
         <p className={`line-clamp-1 ${textClass}`}>
           {website

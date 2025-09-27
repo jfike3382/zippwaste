@@ -14,7 +14,7 @@ export default function TableRow({ item }) {
       ></Link>
 
       <div className="flex flex-col gap-4">
-        <div className="flex flex-row items-center gap-4">
+        <div className="flex flex-row items-center gap-4 max-md:flex-col max-md:items-start">
           {/* Company Logo */}
           <div className="flex-shrink-0">
             <ProfileLogo name={item.name} size="m" src={item.logo?.url} />
@@ -22,12 +22,16 @@ export default function TableRow({ item }) {
 
           {/* Company Info */}
           <div className="flex-grow flex flex-col gap-2">
-            <div className="flex flex-row gap-1 items-center">
-              <h3 className="text-lg font-semibold  group-hover:text-brand-blue-800 transition-colors">
-                {item.name}
-              </h3>
-              {item.verified && <VerifiedIcon size={20} />}
-            </div>
+            <h3 className="text-lg font-semibold group-hover:text-brand-blue-800 transition-colors">
+              {item.name}
+
+              {item.verified && (
+                <span className="inline-flex ml-1 items-center align-text-top">
+                  <VerifiedIcon size={20} />
+                </span>
+              )}
+            </h3>
+
             <div className="flex flex-row gap-2 items-center text-sm max-2xl:flex-col max-2xl:items-start ">
               <p className="line-clamp-1 ">{formatLocation(item)}</p>
               <div className="relative z-30">
