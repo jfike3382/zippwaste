@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import EyeIcon from "@/uikit/icons/eye";
+import EyeIcon from "@/uikit/icons/eye-on";
 import EyeOffIcon from "@/uikit/icons/eye-off";
 
 export default function Input({
