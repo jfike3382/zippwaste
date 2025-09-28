@@ -9,10 +9,7 @@ export default function WebsitePlan({ userInfo, setLoading }) {
   const { showNotification } = useNotification();
 
   const handleSubscription = async () => {
-    if (
-      !userInfo.zippworks_media_price ||
-      !userInfo.zippworks_media_price.plan
-    ) {
+    if (!userInfo.website_plan || !userInfo.website_plan.plan) {
       window.location.href = "/zippworks-media";
       return;
     }
@@ -39,41 +36,38 @@ export default function WebsitePlan({ userInfo, setLoading }) {
       <h2 className="title-m">Website plan</h2>
       <div className="flex flex-col gap-8">
         <SettingsItem
-          title={userInfo.zippworks_media_price?.plan || "No Website Plan"}
+          title={userInfo.website_plan?.plan || "No Website Plan"}
           subtitle={
-            userInfo.zippworks_media_price?.plan ? (
+            userInfo.website_plan?.plan ? (
               <>
-                You are on <span>{userInfo.zippworks_media_price.plan}</span>{" "}
-                plan now
+                You are on <span>{userInfo.website_plan.plan}</span> plan now
               </>
             ) : (
               <>Get a professional website for your business</>
             )
           }
           buttonText={
-            userInfo.zippworks_media_price?.plan
-              ? "Manage subscription"
-              : "View Plans"
+            userInfo.website_plan?.plan ? "Manage subscription" : "View Plans"
           }
           onClick={() => handleSubscription()}
         />
       </div>
 
-      {userInfo.zippworks_media_price?.plan && (
+      {userInfo.website_plan?.plan && (
         <p>
-          {userInfo.zippworks_media_price.end_date ? (
+          {userInfo.website_plan.end_date ? (
             <>
               Your plan expires on{" "}
               <span className="font-semibold">
-                {formatDate(userInfo.zippworks_media_price.end_date)}
+                {formatDate(userInfo.website_plan.end_date)}
               </span>
               .
             </>
-          ) : userInfo.zippworks_media_price.next_charge ? (
+          ) : userInfo.website_plan.next_charge ? (
             <>
               Plan limits will renew by{" "}
               <span className="font-semibold">
-                {formatDate(userInfo.zippworks_media_price.next_charge)}
+                {formatDate(userInfo.website_plan.next_charge)}
               </span>
               .
             </>

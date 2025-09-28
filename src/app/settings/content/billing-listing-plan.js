@@ -9,7 +9,7 @@ export default function Billing({ userInfo, setLoading }) {
   const { showNotification } = useNotification();
 
   const handleSubscription = async () => {
-    if (userInfo.pricing_package === "Starter") {
+    if (userInfo.pricing_package === "Free") {
       window.location.href = "/pricing";
       return;
     }
@@ -47,7 +47,7 @@ export default function Billing({ userInfo, setLoading }) {
         />
       </div>
 
-      {userInfo.pricing_package !== "Starter" && (
+      {userInfo.pricing_package !== "Free" && (
         <p>
           {userInfo.end_date ? (
             <>
