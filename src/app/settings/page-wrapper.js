@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import GlobalLoader from "@/components/global-elements/global-loader";
 import { SettingsApi } from "@/api/actions-client";
 import UserSettings from "@/app/settings/content/user-settings";
-import Billing from "@/app/settings/content/billing";
+import ListingPlan from "@/app/settings/content/billing-listing-plan";
+import WebsitePlan from "@/app/settings/content/billing-website-plan";
 
 export default function PageWrapper() {
   const [userInfo, setUserInfo] = useState({});
@@ -31,7 +32,9 @@ export default function PageWrapper() {
           <div className="flex flex-col gap-12 w-full">
             <UserSettings userInfo={userInfo} setUserInfo={setUserInfo} />
             <div className="divider" />
-            <Billing userInfo={userInfo} setLoading={setLoading} />
+            <ListingPlan userInfo={userInfo} setLoading={setLoading} />
+            <div className="divider" />
+            <WebsitePlan userInfo={userInfo} setLoading={setLoading} />
           </div>
         )}
       </section>

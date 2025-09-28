@@ -53,10 +53,7 @@ export default function UserMenu({ onClose, variant = "default" }) {
           {companyPage.name}
         </Link>
       )}
-      <Link href="/pricing" className="dropdown-cell" onClick={onClose}>
-        <UpgradeIcon size={18} />
-        Listing plans
-      </Link>
+
       <Link href="/settings" className="dropdown-cell" onClick={onClose}>
         <SettingsIcon size={18} />
         Settings
