@@ -6,3 +6,7 @@ const apiRequest = createApiClient(API_BASE_URL);
 export async function ManageSubscription(data) {
   return apiRequest("/checkout/subscription", "POST", data, true);
 }
+
+export async function ZippWorksMediaSubscription(data) {
+  return apiRequest("/checkout/zippworks_media", "POST", data, true);
+}

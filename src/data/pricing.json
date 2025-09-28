@@ -1,13 +1,8 @@
 {
-  "billingOptions": [
-    { "label": "Basic", "value": "3-month" },
-    { "label": "Pro", "value": "6-month" },
-    { "label": "Ultimate", "value": "lifetime" }
-  ],
   "plans": [
     {
-      "id": "starter",
-      "name": "Starter",
+      "id": "free",
+      "name": "Free",
       "price_monthly": "0",
       "price_yearly": "0",
       "period_monthly": "mo",

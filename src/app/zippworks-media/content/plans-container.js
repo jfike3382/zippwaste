@@ -2,7 +2,7 @@
 
 import Button from "@/uikit/button";
 import { useNotification } from "@/providers/notifications";
-import { ManageSubscription } from "@/api/stripe-client";
+import { ZippWorksMediaSubscription } from "@/api/stripe-client";
 import { useActionRouter } from "@/utils/use-action-router";
 import CheckSimpleIcon from "@/uikit/icons/check-simple";
 
@@ -11,18 +11,16 @@ import pricingData from "@/data/zippworks-media-pricing.json";
 export default function Content() {
   const { plans } = pricingData;
   const { showNotification } = useNotification();
-  const { handleActionRouter } = useActionRouter();
+  const { handleActionRegistration } = useActionRouter();
 
   const handleSubscription = async (planId, e) => {
     if (!handleActionRegistration(e)) return;
 
-    const fullPlanId = `${planId}-monthly`;
-
     try {
-      const response = await ManageSubscription({
+      const response = await ZippWorksMediaSubscription({
         success_url: window.location.origin + "/payment-success",
         cancel_url: window.location.href,
-        plan_id: fullPlanId,
+        plan_id: planId,
       });
       if (response.error) {
         showNotification("error", response.error);
