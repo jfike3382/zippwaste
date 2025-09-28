@@ -1,31 +1,47 @@
 [
   {
-    "category": "About Zippwaste",
-    "question": "Who is it for?",
-    "answer": "Text answer"
-  },
-  {
-    "featured_pricing": true,
     "category": "Plans and Payments",
     "question": "How can I purchase the listing plan?",
     "answer": "Sign up, then choose your paid listing plan to unlock the full power of Zippwaste."
   },
   {
-    "featured_pricing": true,
     "category": "Plans and Payments",
     "question": "Some question about Zippwaste?",
     "answer": "Some dummy answer about Zippwaste."
   },
   {
-    "featured_pricing": true,
     "category": "Plans and Payments",
     "question": "Some question about Zippwaste?",
     "answer": "Some dummy answer about Zippwaste."
   },
   {
-    "featured_pricing": true,
     "category": "Plans and Payments",
     "question": "Can I cancel anytime?",
     "answer": "Absolutely. There are no long-term contracts or cancellation fees. You can cancel your subscription at any time from your account settings, and you'll retain access until the end of your current billing period."
+  },
+  {
+    "category": "ZippWorks Media",
+    "question": "What is ZippWorks Media?",
+    "answer": "ZippWorks Media is a division of ZippWaste LLC that specializes in building professional websites exclusively for the waste industry. We design and manage tailored sites for dumpster rental and junk removal companies, combining clean design with proven functionality."
+  },
+  {
+    "category": "ZippWorks Media",
+    "question": "What's included in every website package?",
+    "answer": "Every package includes custom design, hosting, mobile-friendly setup, SSL security, ongoing support, secure hosting, and SEO setup. We also provide booking integrations and CRM connections to help your business attract more leads."
+  },
+  {
+    "category": "ZippWorks Media",
+    "question": "Do I need to handle any technical maintenance?",
+    "answer": "No technical headaches for you! We handle everything - keeping your site secure, updated, and working properly. You can focus on hauling and service while we manage your website completely."
+  },
+  {
+    "category": "ZippWorks Media",
+    "question": "How does your pricing work?",
+    "answer": "We offer clear flat pricing with no surprises. You pay a one-time setup fee to get your website built, then a monthly fee for hosting, maintenance, and ongoing support. No hidden costs or unexpected charges."
+  },
+  {
+    "category": "ZippWorks Media",
+    "question": "Why should I choose ZippWorks Media over other web designers?",
+    "answer": "We specialize exclusively in the waste industry, so we understand your business needs. We provide everything your business needs to look professional online, attract more leads, and stay ahead of the competition - all while you focus on what you do best."
   }
 ]

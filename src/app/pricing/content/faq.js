@@ -3,7 +3,7 @@ import FAQContent from "@/data/faq.json";
 
 export default function Section() {
   const filteredContent = FAQContent.filter(
-    (item) => item.featured_pricing === true
+    (item) => item.category === "Pricing and Payments"
   );
 
   return (

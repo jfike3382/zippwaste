@@ -8,7 +8,7 @@ export default function FAQItem({ faq_item, initialOpen = false }) {
   return (
     <div className="flex flex-col gap-6 w-full p-6 border-standard rounded-3xl">
       <div
-        className="flex flex-row justify-between items-center cursor-pointer"
+        className="flex flex-row gap-4 justify-between items-center cursor-pointer"
         onClick={() => setOpen((v) => !v)}
       >
         <h3 className="title-s font-medium text-start">{faq_item.question}</h3>

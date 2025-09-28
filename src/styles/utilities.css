@@ -40,7 +40,7 @@
 }
 
 @utility title-s {
-  @apply text-lg/5.5 font-medium;
+  @apply text-lg/6 font-medium;
 }
 
 @utility paragraph-xl {
