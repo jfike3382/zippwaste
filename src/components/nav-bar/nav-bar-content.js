@@ -115,10 +115,18 @@ export function ContentRight() {
 
 export function ContentMobile({ onClose }) {
   const { isVisitor, companyPage } = useUserState();
-  const { openRegisterModal } = useModal();
+  const { openRegisterModal, openLoginModal } = useModal();
 
   return (
     <div className="flex flex-col gap-6 mt-4 items-start w-full">
+      <Link
+        href="/zippworks-media"
+        onClick={onClose}
+        className=" text-3xl font-medium w-full"
+      >
+        ZippWorks Media
+      </Link>
+
       <Link
         href="/blog"
         onClick={onClose}
@@ -127,9 +135,27 @@ export function ContentMobile({ onClose }) {
         Blog
       </Link>
 
+      <Link
+        href="/pricing"
+        onClick={onClose}
+        className=" text-3xl font-medium w-full"
+      >
+        Pricing
+      </Link>
+
       <div className="divider" />
       {isVisitor ? (
         <div className="flex flex-col gap-4 w-full">
+          <Button
+            variant="secondary"
+            fullWidth
+            size="m"
+            onClick={() => {
+              openLoginModal();
+            }}
+          >
+            Sign in
+          </Button>
           <Button
             variant="primary"
             fullWidth
