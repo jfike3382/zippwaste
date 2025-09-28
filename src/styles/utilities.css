@@ -4,6 +4,9 @@
   @apply border-neutral-200;
 }
 
+@utility text-main {
+  @apply text-neutral-900;
+}
 @utility text-secondary {
   @apply text-neutral-500;
 }

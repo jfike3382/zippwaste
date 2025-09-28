@@ -1,0 +1,49 @@
+{
+  "plans": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "price_monthly": 59,
+      "period_monthly": "month",
+      "setup_fee_price": 329,
+      "features": [
+        "5-page website (Home, Services, About, Contact, Quote)",
+        "Hosting, SSL, and website security",
+        "Contact form with email lead delivery",
+        "Monthly site monitoring & updates",
+        "Mobile-friendly design"
+      ]
+    },
+    {
+      "id": "growth",
+      "name": "Growth",
+      "price_monthly": 99,
+      "period_monthly": "month",
+      "setup_fee_price": 429,
+      "badge": "Popular",
+      "features": [
+        "Everything in Starter, plus:",
+        "Blog or news section (CMS enabled) for SEO content",
+        "Service area or city pages (dynamic content)",
+        "Up to 10 total pages",
+        "1 small content update per month included",
+        "Enhanced on-page SEO setup"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "price_monthly": 139,
+      "period_monthly": "month",
+      "setup_fee_price": 529,
+      "features": [
+        "Everything in Growth, plus:",
+        "Integration with booking or billing software",
+        "Form submissions connected to email + CRM",
+        "File upload or job request forms",
+        "Priority support (same-day updates)",
+        "Monthly SEO review & recommendations"
+      ]
+    }
+  ]
+}

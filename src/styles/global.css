@@ -28,7 +28,7 @@
 
 @layer base {
   body {
-    @apply inter text-neutral-900 antialiased transition-all duration-200 ease-in-out h-screen;
+    @apply inter text-main antialiased transition-all duration-200 ease-in-out h-screen;
   }
 }
 
