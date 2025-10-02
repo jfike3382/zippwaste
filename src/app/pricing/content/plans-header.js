@@ -3,9 +3,12 @@
 import { useState } from "react";
 import Button from "@/uikit/button";
 import Switcher from "@/uikit/switcher";
+import { ToggleSwitcher } from "@/uikit/toggle-switcher";
+import Tooltip from "@/uikit/tooltip";
 import { useNotification } from "@/providers/notifications";
 import { ManageSubscription } from "@/api/stripe-client";
 import { useActionRouter } from "@/utils/use-action-router";
+import { formatNumber } from "@/utils/format-data/number";
 
 const billingOptions = [
   { label: "Monthly", value: "monthly" },
@@ -14,6 +17,7 @@ const billingOptions = [
 
 export default function PricingContainerHeader({ plans, isCollapsed }) {
   const [billingInterval, setBillingInterval] = useState("monthly");
+  const [boostStates, setBoostStates] = useState({});
   const { showNotification } = useNotification();
   const { handleActionRegistration } = useActionRouter();
 
@@ -27,6 +31,7 @@ export default function PricingContainerHeader({ plans, isCollapsed }) {
         success_url: window.location.origin + "/payment-success",
         cancel_url: window.location.href,
         plan_id: fullPlanId,
+        boosted: boostStates[planId] || false,
       });
       if (response.error) {
         showNotification("error", response.error);
@@ -43,16 +48,31 @@ export default function PricingContainerHeader({ plans, isCollapsed }) {
     if (!handleActionRegistration(e)) return;
   };
 
-  const getCurrentPrice = (plan) => {
-    return billingInterval === "monthly"
-      ? plan.price_monthly
-      : plan.price_yearly;
+  const getCurrentPrice = (plan, planIndex) => {
+    const basePrice = parseInt(
+      billingInterval === "monthly" ? plan.price_monthly : plan.price_yearly
+    );
+
+    // Only add boost price for paid plans (not free plan)
+    if (boostStates[plan.id] && planIndex > 0) {
+      const boostPrice = billingInterval === "monthly" ? 99 : 999;
+      return basePrice + boostPrice;
+    }
+
+    return basePrice;
   };
 
   const getCurrentPeriod = (plan) => {
     return billingInterval === "monthly"
       ? plan.period_monthly
       : plan.period_yearly;
+  };
+
+  const toggleBoost = (planId) => {
+    setBoostStates((prev) => ({
+      ...prev,
+      [planId]: !prev[planId],
+    }));
   };
 
   return (
@@ -73,7 +93,7 @@ export default function PricingContainerHeader({ plans, isCollapsed }) {
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-row gap-1 items-end">
                     <span className="text-3xl geist-mono">
-                      ${getCurrentPrice(plans[0])}
+                      ${formatNumber(getCurrentPrice(plans[0], 0))}
                     </span>
                     <div className="flex items-center">
                       <span className="text-sm text-secondary">/</span>
@@ -108,10 +128,25 @@ export default function PricingContainerHeader({ plans, isCollapsed }) {
                         <p className="tag white small ">{plan.badge}</p>
                       )}
                     </div>
+                    <div className="flex flex-row gap-4 items-center w-full">
+                      <div className="flex items-center gap-1">
+                        <span className="text-sm font-medium">
+                          Boost add-on
+                        </span>
+                        <Tooltip
+                          text="Your listing appears at the very top of search results — above all other plans in your service ZIPs."
+                          orientation="top"
+                        />
+                      </div>
+                      <ToggleSwitcher
+                        checked={boostStates[plan.id] || false}
+                        onChange={() => toggleBoost(plan.id)}
+                      />
+                    </div>
                     <div className="flex flex-col gap-4">
                       <div className="flex flex-row gap-1 items-end">
                         <span className="text-3xl geist-mono">
-                          ${getCurrentPrice(plan)}
+                          ${formatNumber(getCurrentPrice(plan, planIndex + 1))}
                         </span>
                         <div className="flex items-center">
                           <span className="text-sm text-secondary">/</span>
@@ -125,6 +160,7 @@ export default function PricingContainerHeader({ plans, isCollapsed }) {
                       </span>
                     </div>
                   </div>
+
                   <Button
                     variant="black"
                     size="m"
