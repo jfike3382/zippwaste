@@ -54,17 +54,14 @@ export const UserStateProvider = ({ children }) => {
     const authMe = async () => {
       const response = await AuthApi.getMe();
       if (!response.error && response.user) {
-        const oldPricingPlan = getCookie("user_pricing_package");
-
         setCookie("user_pricing_package", response.user.pricing_package);
         setPricingPlan(response.user.pricing_package);
         if (response.user.user_company) {
           setCookie("user_company", JSON.stringify(response.user.user_company));
         }
 
-        if (oldPricingPlan !== response.user.pricing_package) {
-          updateUserState();
-        }
+        // Always update user state after successful auth
+        updateUserState();
       }
       setIsRefreshed(true);
     };
