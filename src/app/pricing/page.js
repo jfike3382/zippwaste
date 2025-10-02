@@ -2,12 +2,12 @@ import generateMetadata from "@/utils/seo-metadata/static";
 import PageWrapper from "./page-wrapper";
 
 export const metadata = generateMetadata({
-  title: "Pricing — Ziipwaste",
+  title: "Pricing — Zippwaste",
   description:
-    "Explore Ziipwaste pricing and unlock full access to investors, fundraising tools, and exclusive features.",
+    "Explore Zippwaste pricing and unlock full access to investors, fundraising tools, and exclusive features.",
   url: "/pricing",
   keywords:
-    "Ziipwaste pricing, startup tools, investor database, fundraising plans, Ziipwaste features",
+    "Zippwaste pricing, startup tools, investor database, fundraising plans, Zippwaste features",
 });
 
 export default function Page() {
