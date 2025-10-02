@@ -8,6 +8,7 @@ import { useUserState } from "@/providers/user-state-provider";
 import UpgradeIcon from "@/uikit/icons/upgrade";
 import SettingsIcon from "@/uikit/icons/settings";
 import LogoutIcon from "@/uikit/icons/logout";
+import LocationIcon from "@/uikit/icons/location";
 
 export default function UserMenu({ onClose, variant = "default" }) {
   const { companyPage } = useUserState();
@@ -44,14 +45,18 @@ export default function UserMenu({ onClose, variant = "default" }) {
         </div>
       </div>
       <div className="divider" />
-      {companyPage && (
-        <Link
-          href={`/company/${companyPage.slug}`}
-          className="dropdown-cell"
-          onClick={onClose}
-        >
-          {companyPage.name}
-        </Link>
+      {companyPage && companyPage.slug && (
+        <>
+          <Link
+            href={`/company/${companyPage.slug}`}
+            className="dropdown-cell"
+            onClick={onClose}
+          >
+            <LocationIcon size={18} />
+            {companyPage.name}
+          </Link>
+          <div className="divider" />
+        </>
       )}
 
       <Link href="/settings" className="dropdown-cell" onClick={onClose}>

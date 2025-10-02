@@ -11,7 +11,7 @@ export const UserStateProvider = ({ children }) => {
   const [isVisitor, setIsVisitor] = useState(false);
   const [isUser, setIsUser] = useState(false);
   const [isCustomer, setIsCustomer] = useState(false);
-  const [compayPage, setcompayPage] = useState(null);
+  const [companyPage, setcompanyPage] = useState(null);
   const [pricingPlan, setPricingPlan] = useState(
     getCookie("user_pricing_package")
   );
@@ -20,13 +20,27 @@ export const UserStateProvider = ({ children }) => {
   const updateUserState = () => {
     const authToken = getCookie("auth_token");
     const pricingPlanCookie = getCookie("user_pricing_package");
-    const compayPageCookie = getCookie("user_company");
+    const companyPageCookie = getCookie("user_company");
 
     setPricingPlan(pricingPlanCookie);
     setIsVisitor(!authToken);
     setIsUser(authToken && pricingPlanCookie === "Starter");
     setIsCustomer(authToken && pricingPlanCookie !== "Starter");
-    setcompayPage(compayPageCookie ? JSON.parse(compayPageCookie) : null);
+
+    // Safely parse the company page cookie with URL decoding
+    try {
+      if (companyPageCookie && companyPageCookie !== "undefined") {
+        // Decode URL-encoded JSON
+        const decodedCookie = decodeURIComponent(companyPageCookie);
+        const parsedCompany = JSON.parse(decodedCookie);
+        setcompanyPage(parsedCompany);
+      } else {
+        setcompanyPage(null);
+      }
+    } catch (error) {
+      console.error("Error parsing user_company cookie:", error);
+      setcompanyPage(null);
+    }
   };
 
   useEffect(() => {
@@ -44,8 +58,8 @@ export const UserStateProvider = ({ children }) => {
 
         setCookie("user_pricing_package", response.user.pricing_package);
         setPricingPlan(response.user.pricing_package);
-        if (response.user.company) {
-          setCookie("user_company", JSON.stringify(response.user.company));
+        if (response.user.user_company) {
+          setCookie("user_company", JSON.stringify(response.user.user_company));
         }
 
         if (oldPricingPlan !== response.user.pricing_package) {
@@ -66,7 +80,7 @@ export const UserStateProvider = ({ children }) => {
         isVisitor,
         isUser,
         isCustomer,
-        compayPage,
+        companyPage,
         pricingPlan,
         isRefreshed,
       }}

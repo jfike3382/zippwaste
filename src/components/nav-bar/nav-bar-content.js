@@ -79,6 +79,13 @@ export function ContentRight() {
   const { isVisitor, companyPage } = useUserState();
   const { openRegisterModal, openLoginModal } = useModal();
 
+  const getButtonText = () => {
+    if (companyPage && typeof companyPage === 'object' && companyPage.published === true) {
+      return "Edit listing";
+    }
+    return "Add my listing";
+  };
+
   return isVisitor ? (
     <div className="flex flex-row">
       <Button
@@ -102,11 +109,9 @@ export function ContentRight() {
     </div>
   ) : (
     <div className="flex flex-row gap-4 items-center">
-      {!companyPage && (
-        <Button variant="primary" size="m" href="/edit-listing">
-          Add my listing
-        </Button>
-      )}
+      <Button variant="primary" size="m" href="/edit-listing">
+        {getButtonText()}
+      </Button>
 
       <UserMenu />
     </div>
@@ -116,6 +121,13 @@ export function ContentRight() {
 export function ContentMobile({ onClose }) {
   const { isVisitor, companyPage } = useUserState();
   const { openRegisterModal, openLoginModal } = useModal();
+
+  const getButtonText = () => {
+    if (companyPage && typeof companyPage === 'object' && companyPage.published === true) {
+      return "Edit listing";
+    }
+    return "Add my listing";
+  };
 
   return (
     <div className="flex flex-col gap-6 mt-4 items-start w-full">
@@ -170,17 +182,15 @@ export function ContentMobile({ onClose }) {
       ) : (
         <div className="flex flex-col gap-4 w-full">
           <UserMenu onClose={onClose} variant="extended" />
-          {!companyPage && (
-            <Button
-              variant="primary"
-              size="m"
-              fullWidth
-              href="/edit-listing"
-              onClick={onClose}
-            >
-              Add my listing
-            </Button>
-          )}
+          <Button
+            variant="primary"
+            size="m"
+            fullWidth
+            href="/edit-listing"
+            onClick={onClose}
+          >
+            {getButtonText()}
+          </Button>
         </div>
       )}
     </div>
