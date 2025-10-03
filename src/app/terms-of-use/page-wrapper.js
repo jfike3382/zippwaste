@@ -1,15 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
+import Script from "next/script";
 
 export default function PageWrapper() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://policies.termageddon.com/api/embed/WVRseVdGUlhiR1pTZWxSMmNsRTlQUT09.js";
-    document.head.appendChild(script);
-  }, []);
-
   return (
     <div className="main-data-container">
       <div className="card-container flex flex-col gap-8 p-8 max-md:px-4">
@@ -21,6 +14,8 @@ export default function PageWrapper() {
         <div
           id="WVRseVdGUlhiR1pTZWxSMmNsRTlQUT09"
           className="policy_embed_div"
+          width="640"
+          height="480"
         >
           Please wait while the policy is loaded. If it does not load, please{" "}
           <a
@@ -33,6 +28,12 @@ export default function PageWrapper() {
           to view the policy.
         </div>
       </div>
+      <Script
+        src="https://policies.termageddon.com/api/embed/WVRseVdGUlhiR1pTZWxSMmNsRTlQUT09.js"
+        strategy="lazyOnload"
+        onLoad={() => console.log("Termageddon script loaded successfully")}
+        onError={(e) => console.error("Failed to load Termageddon script:", e)}
+      />
     </div>
   );
 }
