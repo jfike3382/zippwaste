@@ -55,7 +55,7 @@ export default function PricingContainerHeader({ plans, isCollapsed }) {
 
     // Only add boost price for paid plans (not free plan)
     if (boostStates[plan.id] && planIndex > 0) {
-      const boostPrice = billingInterval === "monthly" ? 99 : 999;
+      const boostPrice = billingInterval === "monthly" ? 39 : 399;
       return basePrice + boostPrice;
     }
 
