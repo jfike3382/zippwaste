@@ -15,7 +15,7 @@
           "icon": "startup",
           "items": [
             { "name": "Verified badge", "available": false },
-            { "name": "Up to 5 ZIP codes", "available": true },
+            { "name": "1 ZIP code", "available": true },
             { "name": "One contact method", "available": true }
           ]
         },
