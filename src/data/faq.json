@@ -6,8 +6,8 @@
   },
   {
     "category": "Plans and Payments",
-    "question": "Can I cancel anytime?",
-    "answer": "Absolutely. There are no long-term contracts or cancellation fees. You can cancel your subscription at any time from your account settings, and you'll retain access until the end of your current billing period."
+    "question": "Can I upgrade or cancel anytime?",
+    "answer": "Absolutely. There are no long-term contracts or cancellation fees. You can cancel, upgrade, or downgrade your subscription at any time from your account settings, and you'll retain access until the end of your current billing period."
   },
   {
     "category": "Plans and Payments",
@@ -23,6 +23,16 @@
     "category": "Plans and Payments",
     "question": "What does the ZIP code limit mean?",
     "answer": "It’s the number of areas your company appears in search results for. Higher plans let you reach more ZIP codes."
+  },
+  {
+    "category": "Plans and Payments",
+    "question": "How are listings displayed in search results?",
+    "answer": "Free listings always appear last. All paid listings are randomly shuffled above free listings, regardless of plan level. Boosted listings appear at the top and are randomly shuffled among other boosted businesses."
+  },
+  {
+    "category": "Plans and Payments",
+    "question": "What is the Boost add-on?",
+    "answer": "Boost moves your listing above all non-boosted listings in search results. If multiple businesses are boosted in the same ZIP codes, their listings are displayed in random order to keep things fair."
   },
   {
     "category": "ZippWorks Media",
