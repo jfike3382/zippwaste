@@ -54,7 +54,7 @@ export default function MainContent({ item }) {
             <CharacteristicsList
               data={item.zip_codes}
               characteristic={"ZIP codes"}
-              titleSize="title-s"
+              visibleItems={20}
             />
           )}
           <div className="hidden max-lg:flex flex-col gap-8">
