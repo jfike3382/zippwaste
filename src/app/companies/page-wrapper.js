@@ -6,7 +6,7 @@ export default function PageWrapper() {
     <>
       <div className="flex  min-h-screen h-full">
         <div className="flex flex-1 ">
-          <p className="title-l">Landing Page Content Here</p>
+          <TableWrapper />
         </div>
       </div>
       <Footer />
