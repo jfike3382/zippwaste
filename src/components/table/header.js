@@ -50,9 +50,9 @@ export default function Header({ itemsTotal = 0 }) {
         <h1 className="title-m">Companies</h1>
         <p className="title-m text-secondary">{formatNumber(itemsTotal)} </p>
       </div>
-      <div className="min-w-[20rem] max-md:w-full relative">
+      <div className="min-w-[24rem] max-md:w-full max-md:min-w-[20rem] relative">
         <Input
-          placeholder="Filter by zip code"
+          placeholder="Search by zip code or company name"
           value={searchInput}
           onChange={handleInputChange}
           onKeyPress={handleKeyPress}
