@@ -17,6 +17,10 @@ export function ContentLeft() {
 
   return (
     <div className="flex items-center gap-2">
+      <Button variant="transparent" size="m" href="/companies">
+        Companies
+      </Button>
+
       <Dropdown
         toggleContent={toggleContent}
         dropdownSize="l"
@@ -80,7 +84,11 @@ export function ContentRight() {
   const { openRegisterModal, openLoginModal } = useModal();
 
   const getButtonText = () => {
-    if (companyPage && typeof companyPage === 'object' && companyPage.published === true) {
+    if (
+      companyPage &&
+      typeof companyPage === "object" &&
+      companyPage.published === true
+    ) {
       return "Edit listing";
     }
     return "Add my listing";
@@ -123,7 +131,11 @@ export function ContentMobile({ onClose }) {
   const { openRegisterModal, openLoginModal } = useModal();
 
   const getButtonText = () => {
-    if (companyPage && typeof companyPage === 'object' && companyPage.published === true) {
+    if (
+      companyPage &&
+      typeof companyPage === "object" &&
+      companyPage.published === true
+    ) {
       return "Edit listing";
     }
     return "Add my listing";
@@ -131,6 +143,14 @@ export function ContentMobile({ onClose }) {
 
   return (
     <div className="flex flex-col gap-6 mt-4 items-start w-full">
+      <Link
+        href="/companies"
+        onClick={onClose}
+        className=" text-3xl font-medium w-full"
+      >
+        Companies
+      </Link>
+
       <Link
         href="/zippworks-media"
         onClick={onClose}
