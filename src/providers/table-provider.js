@@ -18,6 +18,8 @@ export function TableProvider({ children }) {
     curPage: 1,
     perPage: 40,
     pageTotal: 1,
+    expanded: false,
+    zip_code_requested: null,
   });
   const tableRef = useRef(null);
 
@@ -44,6 +46,13 @@ export function TableProvider({ children }) {
       scrollToTop();
       try {
         const response = await TableApi.companies(queryFilters);
+        console.log("API Response:", response);
+        console.log("Main data:", response.main_data);
+        console.log("Expanded from API:", response.main_data?.expanded);
+        console.log(
+          "ZIP code requested:",
+          response.main_data?.zip_code_requested
+        );
         setTableData(response.main_data);
         setisInitial(true);
         return response.main_data;
@@ -66,6 +75,8 @@ export function TableProvider({ children }) {
         isInitial,
         items: tableData?.items,
         itemsTotal: tableData?.itemsTotal,
+        expanded: tableData?.expanded,
+        zip_code_requested: tableData?.zip_code_requested,
       }}
     >
       {children}
