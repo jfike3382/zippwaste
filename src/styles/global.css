@@ -40,6 +40,10 @@ main {
   @apply flex flex-col gap-32 py-20 px-12 items-center justify-center max-md:px-6 max-md:py-16 max-md:gap-16;
 }
 
+.section-container {
+  @apply flex flex-col gap-12 w-full mx-auto py-16 items-center justify-center;
+}
+
 .sidebar-container {
   @apply max-lg:hidden flex flex-col w-[24rem] min-w-[24rem] !h-full p-6 pt-10 bg-neutral-50 border-r border-neutral-200;
 }
@@ -94,11 +98,11 @@ blockquote::after {
   @apply text-brand-blue-800 cursor-pointer;
 }
 
-.rich-text-section h2{
+.rich-text-section h2 {
   @apply title-m  pb-2 pt-4;
 }
 
-.rich-text-section h3{
+.rich-text-section h3 {
   @apply title-s pb-1.5 pt-3;
 }
 
@@ -117,8 +121,6 @@ blockquote::after {
 .rich-text-section li {
   @apply !pl-5;
 }
-
-
 
 /* Text Styles */
 

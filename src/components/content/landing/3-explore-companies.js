@@ -1,65 +1,69 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import Link from "next/link";
-
+import * as React from "react";
+import { useEffect, useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import Button from "@/uikit/button";
+import TableRow from "@/components/table/uikit/table-row";
+import { TableApi } from "@/api/data-client";
 
-import Switcher from "@/uikit/switcher";
-import MenuItem from "@/uikit/menu-item";
-import { getIndustryData } from "@/utils/lists-data";
+function ExploreCompanies() {
+  const [companies, setCompanies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
-export default function ExploreVC() {
-  const [selectedStage, setSelectedStage] = useState("Pre-seed");
+  const fetchCompanies = async () => {
+    try {
+      const response = await TableApi.companies({ per_page: 6 });
+      const companiesData = response.main_data?.items || [];
+      setCompanies(companiesData);
+    } catch (error) {
+      console.error("Failed to fetch companies:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  const stageOptions = [
-    { value: "Pre-seed", label: "Pre-seed" },
-    { value: "Seed", label: "Seed" },
-    { value: "Series A", label: "Series A" },
-    { value: "Series B", label: "Series B" },
-  ];
+  useEffect(() => {
+    fetchCompanies();
+  }, []);
 
-  const industryData = useMemo(
-    () => getIndustryData(selectedStage),
-    [selectedStage]
-  );
+  const memoizedCompanies = useMemo(() => companies.slice(0, 6), [companies]);
+
+  const handleViewAll = () => {
+    router.push("/companies");
+  };
 
   return (
-    <section className="main-landing-section">
+    <section className="section-container">
       <div className="landing-container max-w-[62.5rem]">
-        <h2 className="title-l"> Explore 149,314 investors</h2>
-        <Switcher
-          options={stageOptions}
-          value={selectedStage}
-          onChange={setSelectedStage}
-        />
-        <div className="grid grid-cols-4 gap-y-2 gap-x-8 w-full max-lg:grid-cols-2 max-md:grid-cols-1">
-          {industryData.map((industry, index) => (
-            <Link key={index} href={`/investors?pre-selected=${industry.slug}`}>
-              <MenuItem
-                label={
-                  industry.industry === "All"
-                    ? `All ${selectedStage}`
-                    : industry.industry
-                }
-                icon={industry.icon}
-                lineClamp={true}
-                count={industry.count_investors}
+        <h2 className="title-l">Explore Local Waste Companies</h2>
+
+        {loading ? (
+          <div className="grid grid-cols-2 max-xl:grid-cols-1 gap-6">
+            {[...Array(6)].map((_, index) => (
+              <div
+                key={index}
+                className="h-32 bg-gray-100 animate-pulse rounded-lg"
               />
-            </Link>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 max-xl:grid-cols-1 gap-6">
+            {memoizedCompanies.map((company) => (
+              <TableRow key={company.slug} item={company} />
+            ))}
+          </div>
+        )}
+
         <div className="flex flex-col gap-8">
-          <Button
-            href="/investors"
-            hrefType="internal"
-            variant="black"
-            size="l"
-          >
-            Show all investors
+          <Button onClick={handleViewAll} variant="black" size="l">
+            View All Companies
           </Button>
         </div>
       </div>
     </section>
   );
 }
+
+export default React.memo(ExploreCompanies);
