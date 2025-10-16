@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Button from "@/uikit/button";
+import ZoomIcon from "@/uikit/icons/zoom";
 
 export default function SearchBar() {
   const [zipCode, setZipCode] = useState("");
@@ -35,20 +36,32 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="w-full max-w-[40rem] shadow-l hover:bg-interactive hover:focus-within:bg-white focus-within:bg-white focus-within:border-neutral-500 border-standard rounded-full p-2 flex flex-row gap-3 items-center bg-white max-md:flex-col max-md:rounded-4xl transition-colors">
-      <div className="flex-1 max-md:w-full">
+    <div className="w-full max-w-[40rem] shadow-l hover:bg-interactive hover:focus-within:bg-white focus-within:bg-white focus-within:border-neutral-500 border-standard rounded-full p-2 flex flex-row gap-3 items-center bg-white transition-colors relative">
+      <div className="flex-1">
         <input
           type="text"
           placeholder="Search by zip code or company name"
           value={zipCode}
           onChange={handleInputChange}
           onKeyPress={handleKeyPress}
-          className="w-full px-4 text-lg outline-none border-none shadow-none bg-transparent placeholder:text-neutral-400"
+          className="w-full px-4 max-md:py-2 text-lg outline-none border-none shadow-none bg-transparent placeholder:text-neutral-400 max-md:pr-12"
         />
       </div>
-      <Button variant="black" size="l" onClick={handleSearch}>
-        Search Providers
-      </Button>
+
+      {/* Desktop Button */}
+      <div className="max-md:hidden">
+        <Button variant="black" size="l" onClick={handleSearch}>
+          Search Providers
+        </Button>
+      </div>
+
+      {/* Mobile Search Icon */}
+      <div
+        className="hidden max-md:block absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer p-2"
+        onClick={handleSearch}
+      >
+        <ZoomIcon size={28} />
+      </div>
     </div>
   );
 }
