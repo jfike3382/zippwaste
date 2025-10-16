@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import generateMetadata from "@/utils/seo-metadata/static";
 import PageWrapper from "./page-wrapper";
 
