@@ -24,6 +24,7 @@ export async function GET() {
     "/login",
     "/register",
     "/forgot-password",
+    "/companies",
     "/pricing",
     "/blog",
     "/privacy-policy",

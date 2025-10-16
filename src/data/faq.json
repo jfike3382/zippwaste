@@ -2,71 +2,109 @@
   {
     "category": "Plans and Payments",
     "question": "How can I purchase the listing plan?",
-    "answer": "Sign up, then choose your paid listing plan to unlock the full power of Zippwaste."
+    "answer": "Sign up, then choose your paid listing plan to unlock the full power of Zippwaste.",
+    "landing": false
   },
   {
     "category": "Plans and Payments",
     "question": "Can I upgrade or cancel anytime?",
-    "answer": "Absolutely. There are no long-term contracts or cancellation fees. You can cancel, upgrade, or downgrade your subscription at any time from your account settings, and you'll retain access until the end of your current billing period."
+    "answer": "Absolutely. There are no long-term contracts or cancellation fees. You can cancel, upgrade, or downgrade your subscription at any time from your account settings, and you'll retain access until the end of your current billing period.",
+    "landing": false
   },
   {
     "category": "Plans and Payments",
     "question": "What do the analytics include?",
-    "answer": "You can track how many people view your company page and click your contact links, helping you measure visibility and engagement."
+    "answer": "You can track how many people view your company page and click your contact links, helping you measure visibility and engagement.",
+    "landing": false
   },
   {
     "category": "Plans and Payments",
     "question": "What’s the verified badge?",
-    "answer": "The verified badge confirms your business is authentic and approved, helping build trust with potential customers."
+    "answer": "The verified badge confirms your business is authentic and approved, helping build trust with potential customers.",
+    "landing": false
   },
   {
     "category": "Plans and Payments",
     "question": "What does the ZIP code limit mean?",
-    "answer": "It’s the number of areas your company appears in search results for. Higher plans let you reach more ZIP codes."
+    "answer": "It’s the number of areas your company appears in search results for. Higher plans let you reach more ZIP codes.",
+    "landing": false
   },
   {
     "category": "Plans and Payments",
     "question": "How are listings displayed in search results?",
-    "answer": "Free listings always appear last. All paid listings are randomly shuffled above free listings, regardless of plan level. Boosted listings appear at the top and are randomly shuffled among other boosted businesses."
+    "answer": "Free listings always appear last. All paid listings are randomly shuffled above free listings, regardless of plan level. Boosted listings appear at the top and are randomly shuffled among other boosted businesses.",
+    "landing": false
   },
   {
     "category": "Plans and Payments",
     "question": "What is the Boost add-on?",
-    "answer": "Boost moves your listing above all non-boosted listings in search results. If multiple businesses are boosted in the same ZIP codes, their listings are displayed in random order to keep things fair."
+    "answer": "Boost moves your listing above all non-boosted listings in search results. If multiple businesses are boosted in the same ZIP codes, their listings are displayed in random order to keep things fair.",
+    "landing": false
   },
   {
     "category": "ZippWorks Media",
     "question": "What is ZippWorks Media?",
-    "answer": "ZippWorks Media is a division of ZippWaste LLC that specializes in building professional websites exclusively for the waste industry. We design and manage tailored sites for dumpster rental and junk removal companies, combining clean design with proven functionality."
+    "answer": "ZippWorks Media is a division of ZippWaste LLC that specializes in building professional websites exclusively for the waste industry. We design and manage tailored sites for dumpster rental and junk removal companies, combining clean design with proven functionality.",
+    "landing": false
   },
   {
     "category": "ZippWorks Media",
     "question": "How does your pricing work?",
-    "answer": "We offer clear flat pricing with no surprises. You pay a one-time setup fee to get your website built, then a monthly fee for hosting, maintenance, and ongoing support. No hidden costs or unexpected charges."
+    "answer": "We offer clear flat pricing with no surprises. You pay a one-time setup fee to get your website built, then a monthly fee for hosting, maintenance, and ongoing support. No hidden costs or unexpected charges.",
+    "landing": false
   },
   {
     "category": "ZippWorks Media",
     "question": "What's included in every website package?",
-    "answer": "Every package includes custom design, hosting, mobile-friendly setup, SSL security, ongoing technical support, secure hosting, and basic SEO setup so your site is ready for search engines. Advanced features like booking software integrations and CRM connections are included in our Pro plan."
+    "answer": "Every package includes custom design, hosting, mobile-friendly setup, SSL security, ongoing technical support, secure hosting, and basic SEO setup so your site is ready for search engines. Advanced features like booking software integrations and CRM connections are included in our Pro plan.",
+    "landing": false
   },
   {
     "category": "ZippWorks Media",
     "question": "What’s the difference between Basic and Enhanced SEO?",
-    "answer": "SEO (Search Engine Optimization) means improving your website so it can show up higher in Google and other search engines. All ZippWorks sites include a Basic SEO setup — titles, meta descriptions, clean structure, image alt tags, and a site that’s fast, secure, and mobile-friendly. The Enhanced SEO in our Growth plan adds tools to help you rank for more keywords, like a blog/news section for SEO content and extra service/city pages. Our Pro plan takes it further with monthly SEO reviews and recommendations to keep improving your rankings over time."
+    "answer": "SEO (Search Engine Optimization) means improving your website so it can show up higher in Google and other search engines. All ZippWorks sites include a Basic SEO setup — titles, meta descriptions, clean structure, image alt tags, and a site that’s fast, secure, and mobile-friendly. The Enhanced SEO in our Growth plan adds tools to help you rank for more keywords, like a blog/news section for SEO content and extra service/city pages. Our Pro plan takes it further with monthly SEO reviews and recommendations to keep improving your rankings over time.",
+    "landing": false
   },
   {
     "category": "ZippWorks Media",
     "question": "Do I need to handle any technical maintenance?",
-    "answer": "No technical headaches for you! We handle everything - keeping your site secure, updated, and working properly. You can focus on hauling and service while we manage your website completely."
+    "answer": "No technical headaches for you! We handle everything - keeping your site secure, updated, and working properly. You can focus on hauling and service while we manage your website completely.",
+    "landing": false
   },
   {
     "category": "ZippWorks Media",
     "question": "What about content changes?",
-    "answer": "Technical maintenance is unlimited in all plans. Content edits depend on your plan: Starter - content edits are billed separately. Growth - 1 small content edit included per month. Pro - faster turnaround & more flexibility with content updates, plus monthly SEO recommendations."
+    "answer": "Technical maintenance is unlimited in all plans. Content edits depend on your plan: Starter - content edits are billed separately. Growth - 1 small content edit included per month. Pro - faster turnaround & more flexibility with content updates, plus monthly SEO recommendations.",
+    "landing": false
   },
   {
     "category": "ZippWorks Media",
     "question": "Why should I choose ZippWorks Media over other web designers?",
-    "answer": "We specialize exclusively in the waste industry, so we understand your business needs. We provide everything your business needs to look professional online, attract more leads, and stay ahead of the competition - all while you focus on what you do best."
+    "answer": "We specialize exclusively in the waste industry, so we understand your business needs. We provide everything your business needs to look professional online, attract more leads, and stay ahead of the competition - all while you focus on what you do best.",
+    "landing": false
+  },
+  {
+    "category": "General",
+    "question": "How does Zippwaste help me find waste services?",
+    "answer": "Zippwaste connects you with local dumpster rental and junk removal companies in your area. Simply search by ZIP code, compare services, and contact providers directly.",
+    "landing": true
+  },
+  {
+    "category": "General",
+    "question": "Is Zippwaste free to use?",
+    "answer": "Yes! Searching for and contacting waste service providers on Zippwaste is completely free for customers.",
+    "landing": true
+  },
+  {
+    "category": "General",
+    "question": "How do I know if a company is reliable?",
+    "answer": "We verify our listed companies and provide customer reviews, ratings, and business details to help you make informed decisions.",
+    "landing": true
+  },
+  {
+    "category": "General",
+    "question": "What types of waste services can I find?",
+    "answer": "You can find dumpster rental companies, junk removal services, construction debris haulers, and residential cleanup services in your local area.",
+    "landing": true
   }
 ]

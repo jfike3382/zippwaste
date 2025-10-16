@@ -4,8 +4,6 @@ import Section2 from "@/components/content/landing/2-how-it-works";
 
 import Section4 from "@/components/content/landing/4-zippworks-media";
 import Section5 from "@/components/content/landing/5-faq";
-import PreFooter from "@/components/content/landing/6-pre-footer";
-
 export default function PageWrapper() {
   return (
     <>
@@ -14,7 +12,6 @@ export default function PageWrapper() {
 
       <Section4 />
       <Section5 />
-      <PreFooter />
       <Footer />
     </>
   );
