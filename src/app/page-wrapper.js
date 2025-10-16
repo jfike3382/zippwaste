@@ -8,7 +8,7 @@ import Section5 from "@/components/content/landing/5-pre-footer";
 export default function PageWrapper() {
   return (
     <>
-      <div className="main-data-container">
+      <div className="main-data-container !gap-18">
         <Section1 />
         <Section2 />
         <Section3 />

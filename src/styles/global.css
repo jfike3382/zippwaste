@@ -133,6 +133,10 @@ blockquote::after {
   @apply border-l border-neutral-300 w-px;
 }
 
+.gradient-divider {
+  @apply w-full h-[1px] [background-image:linear-gradient(to_right,rgba(23,23,23,0)_0%,rgba(23,23,23,1)_50%,rgba(23,23,23,0)_100%)];
+}
+
 .logo {
   @apply flex items-center justify-center bg-neutral-200 border-standard overflow-hidden relative text-base font-medium shrink-0;
 }

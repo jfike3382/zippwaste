@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .tag {
-  @apply text-sm/4.5 font-semibold px-2.5 py-1.5 rounded-full flex items-center justify-center shrink-0;
+  @apply text-xs/4.5 font-semibold px-2.5 py-1.5 rounded-full flex flex-row gap-1.5 items-center justify-center shrink-0 shadow-base;
 }
 
 .tag.blue {
@@ -33,11 +33,11 @@
 }
 
 .tag.white {
-  @apply border-standard tracking-wide ;
+  @apply border-standard tracking-widest bg-white;
 }
 
 .tag.white.icon-right {
-  @apply py-1 pl-3 pr-1.5 gap-1 font-semibold ;
+  @apply py-1 pl-3 pr-1.5 gap-1 font-semibold;
 }
 
 .tag.small {
