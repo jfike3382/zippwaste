@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function TableRow({ item }) {
   return (
-    <div className="relative w-full p-6 border-standard rounded-3xl bg-white group">
+    <div className="relative w-full p-6 border-standard rounded-3xl bg-white group hover:bg-neutral-50 hover:shadow-base transition-colors">
       <Link
         href={`/company/${item.slug}`}
         className="absolute inset-0 z-15"

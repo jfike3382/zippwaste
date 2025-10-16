@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Input from "@/uikit/input";
 import Button from "@/uikit/button";
 
 export default function SearchBar() {
@@ -11,10 +10,7 @@ export default function SearchBar() {
 
   const handleInputChange = (e) => {
     const value = e.target.value;
-    // Only allow numbers
-    if (/^\d*$/.test(value)) {
-      setZipCode(value);
-    }
+    setZipCode(value);
   };
 
   const handleSearch = () => {
@@ -39,16 +35,18 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="w-full max-w-[40rem] flex flex-row gap-3 max-md:flex-col">
-      <div className="flex-1">
-        <Input
-          placeholder="Enter ZIP CODE"
+    <div className="w-full max-w-[40rem] shadow-l hover:bg-interactive hover:focus-within:bg-white focus-within:bg-white focus-within:border-neutral-500 border-standard rounded-full p-2 flex flex-row gap-3 items-center bg-white max-md:flex-col max-md:rounded-4xl transition-colors">
+      <div className="flex-1 max-md:w-full">
+        <input
+          type="text"
+          placeholder="Search by zip code or company name"
           value={zipCode}
           onChange={handleInputChange}
           onKeyPress={handleKeyPress}
+          className="w-full px-4 text-lg outline-none border-none shadow-none bg-transparent placeholder:text-neutral-400"
         />
       </div>
-      <Button variant="primary" size="m" onClick={handleSearch}>
+      <Button variant="black" size="l" onClick={handleSearch}>
         Search Providers
       </Button>
     </div>

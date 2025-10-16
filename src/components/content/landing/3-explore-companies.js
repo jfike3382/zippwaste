@@ -46,7 +46,7 @@ function ExploreCompanies() {
     <>
       <div className="gradient-divider" />
       <section className="section-container max-w-[70rem]">
-        <h2 className="title-xl">Explore Companies</h2>
+        <h2 className="title-xl">Explore 7,000+ companies</h2>
         <BubbleFilter
           options={filtersData.type}
           selectedValue={serviceType}

@@ -41,7 +41,7 @@ main {
 }
 
 .section-container {
-  @apply flex flex-col gap-12 w-full mx-auto py-16 items-center justify-center;
+  @apply flex flex-col gap-12 w-full mx-auto py-16 items-center justify-center max-md:py-8;
 }
 
 .sidebar-container {
