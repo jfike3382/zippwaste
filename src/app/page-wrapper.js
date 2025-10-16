@@ -1,14 +1,20 @@
-import TableWrapper from "@/components/table/table-wrapper";
 import Footer from "@/components/global-elements/footer";
+import Section1 from "@/components/content/landing/1-hero-section";
+import Section2 from "@/components/content/landing/2-how-it-works";
+
+import Section4 from "@/components/content/landing/4-zippworks-media";
+import Section5 from "@/components/content/landing/5-faq";
+import PreFooter from "@/components/content/landing/6-pre-footer";
 
 export default function PageWrapper() {
   return (
     <>
-      <div className="flex  min-h-screen h-full">
-        <div className="flex flex-1 ">
-          <p className="title-l">Landing Page Content Here</p>
-        </div>
-      </div>
+      <Section1 />
+      <Section2 />
+
+      <Section4 />
+      <Section5 />
+      <PreFooter />
       <Footer />
     </>
   );

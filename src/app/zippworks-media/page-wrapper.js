@@ -1,12 +1,12 @@
-import Pricing from "./content/hero-section";
-import FAQ from "./content/faq";
+import HeroSection from "../../components/content/zippworks-media/hero-section";
+import FAQ from "../../components/content/zippworks-media/faq";
 import Footer from "@/components/global-elements/footer";
 
 export default function PageWrapper() {
   return (
     <>
       <div className="main-data-container">
-        <Pricing />
+        <HeroSection />
         <FAQ />
       </div>
       <Footer />
