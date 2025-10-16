@@ -32,7 +32,7 @@
 }
 
 @utility title-l {
-  @apply text-[2rem]/[2.5rem] max-md:text-2xl/7 font-medium;
+  @apply text-[2rem]/[2.75rem] max-md:text-2xl/7 font-medium;
 }
 
 @utility title-m {
