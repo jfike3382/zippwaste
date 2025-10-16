@@ -7,10 +7,10 @@ export default function Section() {
     <section className="border-b border-black py-20 px-5 flex flex-col gap-20 items-center justify-center max-md:py-16 relative">
       <div className="landing-container relative z-40 mt-20">
         <div className="flex flex-col gap-8 items-center text-center max-w-[62.5rem]">
-          <h1 className="title-2xl">
+          <h1 className="title-xl">
             Find Dumpster Rental & Junk Removal Services Near You
           </h1>
-          <p>
+          <p className="paragraph-xl flex flex-col gap-1">
             Stop calling around — search once, filter by what you need, and
             reach the right local provider fast.
           </p>
