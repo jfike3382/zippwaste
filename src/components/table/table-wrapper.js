@@ -43,9 +43,9 @@ function TableContainer() {
   );
 }
 
-export default function TableWrapper() {
+export default function TableWrapper({ initialSearch = "" }) {
   return (
-    <FiltersProvider>
+    <FiltersProvider initialSearch={initialSearch}>
       <TableProvider>
         <TableContainer />
       </TableProvider>

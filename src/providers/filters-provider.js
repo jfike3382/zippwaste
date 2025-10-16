@@ -8,14 +8,25 @@ const initialState = {
 
 const FiltersContext = createContext();
 
-export function FiltersProvider({ children }) {
-  const [filters, setFilters] = useState(initialState);
+export function FiltersProvider({ children, initialSearch = "" }) {
+  const [filters, setFilters] = useState({
+    search: initialSearch,
+    type: "Dumpster rental",
+    page: 1,
+  });
   const [filtersReady, setFiltersReady] = useState(false);
 
   useEffect(() => {
-    setFilters(initialState);
+    // Don't reset if we have initialSearch, just mark as ready
+    if (!initialSearch) {
+      setFilters({
+        search: "",
+        type: "Dumpster rental", 
+        page: 1,
+      });
+    }
     setTimeout(() => setFiltersReady(true), 0);
-  }, []);
+  }, [initialSearch]);
 
   const updateFilter = (filterName, values) => {
     const newFilters = {

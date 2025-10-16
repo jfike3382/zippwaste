@@ -10,10 +10,12 @@ export const metadata = generateMetadata({
     "business directory, search by zip code, company listings, local businesses, directory platform, Wized Xano Webflow Memberstack, custom directory, claim business listing, membership tiers",
 });
 
-export default async function Page() {
+export default async function Page({ searchParams }) {
+  const search = searchParams?.search || "";
+
   return (
     <main>
-      <PageWrapper />
+      <PageWrapper initialSearch={search} />
     </main>
   );
 }
