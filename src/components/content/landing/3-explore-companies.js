@@ -43,37 +43,40 @@ function ExploreCompanies() {
   };
 
   return (
-    <section className="section-container">
-      <h2 className="title-l">Explore Local Waste Companies</h2>
-      <BubbleFilter
-        options={filtersData.type}
-        selectedValue={serviceType}
-        onChange={handleTypeChange}
-      />
+    <>
+      <div className="gradient-divider" />
+      <section className="section-container max-w-[70rem]">
+        <h2 className="title-xl">Explore Companies</h2>
+        <BubbleFilter
+          options={filtersData.type}
+          selectedValue={serviceType}
+          onChange={handleTypeChange}
+        />
 
-      <div
-        className={`grid grid-cols-2 max-xl:grid-cols-1 gap-6 transition-opacity duration-300 ${
-          loading ? "opacity-50" : "opacity-100"
-        }`}
-      >
-        {companies.length > 0
-          ? memoizedCompanies.map((company) => (
-              <TableRow key={company.slug} item={company} />
-            ))
-          : [...Array(6)].map((_, index) => (
-              <div
-                key={index}
-                className="h-32 bg-gray-100 animate-pulse rounded-lg"
-              />
-            ))}
-      </div>
+        <div
+          className={`w-full grid grid-cols-2 max-xl:grid-cols-1 gap-6 transition-opacity duration-300 ${
+            loading ? "opacity-50" : "opacity-100"
+          }`}
+        >
+          {companies.length > 0
+            ? memoizedCompanies.map((company) => (
+                <TableRow key={company.slug} item={company} />
+              ))
+            : [...Array(6)].map((_, index) => (
+                <div
+                  key={index}
+                  className="h-32 bg-gray-100 animate-pulse rounded-lg"
+                />
+              ))}
+        </div>
 
-      <div className="flex flex-col gap-8">
-        <Button onClick={handleViewAll} variant="black" size="l">
-          View All Companies
-        </Button>
-      </div>
-    </section>
+        <div className="flex flex-col gap-8">
+          <Button onClick={handleViewAll} variant="black" size="l">
+            Explore all companies
+          </Button>
+        </div>
+      </section>
+    </>
   );
 }
 
