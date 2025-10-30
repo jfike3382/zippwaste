@@ -21,12 +21,12 @@ export default function Section() {
 
       <div className="flex flex-row gap-12 items-center text-xl text-secondary max-md:flex-wrap max-md:gap-8 max-md:justify-center">
         <div className="flex items-center gap-2">
-          <span className="font-semibold text-main">7,000+</span>
+          <span className="font-semibold text-main">15,500+</span>
           <span className="text-base">Companies</span>
         </div>
         <div className="divider vertical h-6 max-md:hidden"></div>
         <div className="flex items-center gap-2">
-          <span className="font-semibold text-main ">500+</span>
+          <span className="font-semibold text-main ">4,000+</span>
           <span className="text-base">Cities</span>
         </div>
         <div className="divider vertical h-6 max-md:hidden"></div>
