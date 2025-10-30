@@ -35,7 +35,7 @@ export default function PreFooter() {
           </div>
         </div>
         <h2 className="title-l font-medium text-center ">
-          We help over 7,000 companies to promote their waste removal business.
+          We help over 15,500 companies to promote their waste removal business.
           Advertise with us!
         </h2>
 
