@@ -1,19 +1,13 @@
 {
   "type": [{ "name": "Dumpster rental" }, { "name": "Junk removal" }],
   "dumpster_size": [
-    { "name": "3 Yard Dumpster Bag" },
-    { "name": "5 Yard Dumpster Bag" },
-    { "name": "8 Yard Dumpster Bag" },
-    { "name": "10 Yard Roll-Off" },
-    { "name": "14-16 Yard Roll-Off" },
-    { "name": "20 Yard Roll-Off" },
-    { "name": "30 Yard Roll-Off" },
-    { "name": "40 Yard Roll-Off" },
-    { "name": "4-8 Yard Dump Trailer" },
-    { "name": "10 Yard Dump Trailer" },
-    { "name": "14 to 16 Yard Dump Trailer" },
-    { "name": "Front Load" },
-    { "name": "Compactors" }
+  { "name": "Roll-Off Dumpsters", "isHeader": true },
+  { "name": "Roll Off - 10 Yard" },
+  { "name": "Roll Off - 15 Yard" },
+  { "name": "Roll Off - 20 Yard" },
+  { "name": "Roll Off - 25 Yard" },
+  { "name": "Roll Off - 30 Yard" },
+  { "name": "Roll Off - 40 Yard" }
   ],
   "project_size": [
     { "name": "Small" },
