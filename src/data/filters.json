@@ -63,10 +63,16 @@
   { "name": "Split Chamber - 30 Yard" }
 ]
   "project_size": [
-    { "name": "Small" },
-    { "name": "Medium" },
-    { "name": "Large" },
-    { "name": "Disassembly / Demolition" }
+  { "name": "Small" },
+  { "name": "Medium" },
+  { "name": "Large" },
+  { "name": "Demo / Disassembly" },
+  { "name": "Eviction Cleanout" },
+  { "name": "Garage / Shed / Attic Cleanout" },
+  { "name": "Heavy Equipment Required" },
+  { "name": "Hoarding / Estate Cleanout" },
+  { "name": "Hot Tub / Shed Removal" },
+  { "name": "Office / Commercial Cleanout" }
   ],
   "debris_type": [
   { "name": "Appliances" },
