@@ -1,14 +1,67 @@
 {
   "type": [{ "name": "Dumpster rental" }, { "name": "Junk removal" }],
-  "dumpster_size": [
-  { "header": "Roll-Off Dumpsters" },
-  { "name": "Roll Off - 10 Yard" },
-  { "name": "Roll Off - 15 Yard" },
-  { "name": "Roll Off - 20 Yard" },
-  { "name": "Roll Off - 25 Yard" },
-  { "name": "Roll Off - 30 Yard" },
-  { "name": "Roll Off - 40 Yard" }
-  ],
+ "dumpster_size": [
+  { "name": "Compactor - 10 Yard" },
+  { "name": "Compactor - 20 Yard" },
+  { "name": "Compactor - 25 Yard" },
+  { "name": "Compactor - 30 Yard" },
+  { "name": "Compactor - 35 Yard" },
+  { "name": "Compactor - 40 Yard" },
+
+  { "name": "Covered Roll-Off - 20 Yard" },
+  { "name": "Covered Roll-Off - 25 Yard" },
+  { "name": "Covered Roll-Off - 30 Yard" },
+  { "name": "Covered Roll-Off - 40 Yard" },
+
+  { "name": "Dump Trailer - 10 Yard" },
+  { "name": "Dump Trailer - 12 Yard" },
+  { "name": "Dump Trailer - 14 Yard" },
+  { "name": "Dump Trailer - 15 Yard" },
+  { "name": "Dump Trailer - 16 Yard" },
+  { "name": "Dump Trailer - 20 Yard" },
+  { "name": "Dump Trailer - 6 Yard" },
+
+  { "name": "Dumpster Bag - 3 Yard" },
+
+  { "name": "Front Load - 2 Yard" },
+  { "name": "Front Load - 4 Yard" },
+  { "name": "Front Load - 6 Yard" },
+  { "name": "Front Load - 8 Yard" },
+
+  { "name": "High-Side Roll-Off - 30 Yard" },
+  { "name": "High-Side Roll-Off - 40 Yard" },
+
+  { "name": "Lowboy Roll-Off - 10 Yard" },
+  { "name": "Lowboy Roll-Off - 12 Yard" },
+  { "name": "Lowboy Roll-Off - 20 Yard" },
+
+  { "name": "Recycling Dumpster - 4 Yard" },
+  { "name": "Recycling Dumpster - 6 Yard" },
+  { "name": "Recycling Dumpster - 8 Yard" },
+
+  { "name": "Roll-Off - 10 Yard" },
+  { "name": "Roll-Off - 15 Yard" },
+  { "name": "Roll-Off - 20 Yard" },
+  { "name": "Roll-Off - 25 Yard" },
+  { "name": "Roll-Off - 30 Yard" },
+  { "name": "Roll-Off - 40 Yard" },
+
+  { "name": "Scrap Metal - 10 Yard" },
+  { "name": "Scrap Metal - 20 Yard" },
+  { "name": "Scrap Metal - 30 Yard" },
+  { "name": "Scrap Metal - 40 Yard" },
+
+  { "name": "Sealed Roll-Off - 20 Yard" },
+  { "name": "Sealed Roll-Off - 25 Yard" },
+  { "name": "Sealed Roll-Off - 30 Yard" },
+
+  { "name": "Sludge Container - 15 Yard" },
+  { "name": "Sludge Container - 25 Yard" },
+  { "name": "Sludge Container - 30 Yard" },
+
+  { "name": "Split Chamber - 20 Yard" },
+  { "name": "Split Chamber - 30 Yard" }
+]
   "project_size": [
     { "name": "Small" },
     { "name": "Medium" },
