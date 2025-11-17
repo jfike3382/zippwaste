@@ -1,7 +1,7 @@
 {
   "type": [{ "name": "Dumpster rental" }, { "name": "Junk removal" }],
   "dumpster_size": [
-  { "name": "Roll-Off Dumpsters", "isHeader": true },
+  { "header": "Roll-Off Dumpsters" },
   { "name": "Roll Off - 10 Yard" },
   { "name": "Roll Off - 15 Yard" },
   { "name": "Roll Off - 20 Yard" },
