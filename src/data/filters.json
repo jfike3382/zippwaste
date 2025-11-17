@@ -94,11 +94,12 @@
   { "name": "Other" }
   ],
   "duration": [
-    { "name": "1 Hour / Express Service" },
-    { "name": "Daily / Less than a week" },
-    { "name": "7 Day" },
-    { "name": "Monthly" },
-    { "name": "Long-Term" }
+  { "name": "Same-Day" },
+  { "name": "1 Day" },
+  { "name": "Daily" },
+  { "name": "Weekly" },
+  { "name": "Monthly" },
+  { "name": "Long-Term" }
   ],
   "us_state": [
     { "name": "AL" },
